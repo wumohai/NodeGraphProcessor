@@ -10,8 +10,8 @@ using System;
 using UnityEditor.SceneManagement;
 
 using Status = UnityEngine.UIElements.DropdownMenuAction.Status;
-
 using Object = UnityEngine.Object;
+using StickyNoteView = UnityEditor.Experimental.GraphView.StickyNote;
 
 namespace GraphProcessor
 {
@@ -250,6 +250,7 @@ namespace GraphProcessor
 		public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
 		{
 			BuildGroupContextualMenu(evt);
+			BuildStickyNodeContextualMenu(evt);
 			BuildViewContextualMenu(evt);
 			base.BuildContextualMenu(evt);
 			BuildSelectAssetContextualMenu(evt);
@@ -261,6 +262,12 @@ namespace GraphProcessor
 		{
 			Vector2 position = evt.mousePosition - (Vector2)viewTransform.position;
             evt.menu.AppendAction("Group", (e) => AddSelectionsToGroup(AddGroup(new Group("New Group", position))), DropdownMenuAction.AlwaysEnabled);
+		}
+
+		protected void BuildStickyNodeContextualMenu(ContextualMenuPopulateEvent evt)
+		{
+			Vector2 position = evt.mousePosition - (Vector2)viewTransform.position;
+			evt.menu.AppendAction("Sticky Note", (e) => AddStickyNote(new StickyNote(position)), DropdownMenuAction.AlwaysEnabled);
 		}
 
 		protected void BuildViewContextualMenu(ContextualMenuPopulateEvent evt)
@@ -550,6 +557,19 @@ namespace GraphProcessor
 			foreach (var groupView in groupViews)
 				RemoveElement(groupView);
 			groupViews.Clear();
+		}
+
+		/// <summary>
+		/// Add a new sticky note at position
+		/// </summary>
+		/// <param name="position">Absolute position in pixels</param>
+		public void AddStickyNote(StickyNote position)
+		{
+			graph.AddStickyNote(position);
+		}
+
+		public void AddStickyNoteView(StickyNote note)
+		{
 		}
 
 		public bool ConnectView(EdgeView e, bool autoDisconnectInputs = true)
