@@ -13,16 +13,18 @@ namespace GraphProcessor
 	{
 		public string		name;
 		public bool			allowMultiple = false;
+		public bool			horizontal = true;
 
 		/// <summary>
 		/// Mark the field as an input port
 		/// </summary>
 		/// <param name="name">display name</param>
 		/// <param name="allowMultiple">is connecting multiple edges allowed</param>
-		public InputAttribute(string name = null, bool allowMultiple = false)
+		public InputAttribute(string name = null, bool allowMultiple = false, bool horizontal = true)
 		{
 			this.name = name;
 			this.allowMultiple = allowMultiple;
+			this.horizontal = horizontal;
 		}
 	}
 
@@ -34,16 +36,18 @@ namespace GraphProcessor
 	{
 		public string		name;
 		public bool			allowMultiple = true;
+		public bool			horizontal = true;
 
 		/// <summary>
 		/// Mark the field as an output port
 		/// </summary>
 		/// <param name="name">display name</param>
 		/// <param name="allowMultiple">is connecting multiple edges allowed</param>
-		public OutputAttribute(string name = null, bool allowMultiple = true)
+		public OutputAttribute(string name = null, bool allowMultiple = true, bool horizontal = false)
 		{
 			this.name = name;
 			this.allowMultiple = allowMultiple;
+			this.horizontal = horizontal;
 		}
 	}
 

@@ -101,14 +101,16 @@ namespace GraphProcessor
 			public bool							input;
 			public bool							isMultiple;
 			public CustomPortBehaviorDelegate	behavior;
+			public bool							horizontal;
 
-			public NodeFieldInformation(FieldInfo info, string name, bool input, bool isMultiple, CustomPortBehaviorDelegate behavior)
+			public NodeFieldInformation(FieldInfo info, string name, bool input, bool isMultiple, bool horizontal, CustomPortBehaviorDelegate behavior)
 			{
 				this.input = input;
 				this.isMultiple = isMultiple;
 				this.info = info;
 				this.name = name;
 				this.fieldName = info.Name;
+				this.horizontal = horizontal;
 				this.behavior = behavior;
 			}
 		}
@@ -164,7 +166,7 @@ namespace GraphProcessor
 				else
 				{
 					// If we don't have a custom behavior on the node, we just have to create a simple port
-					AddPort(nodeField.input, nodeField.fieldName, new PortData { acceptMultipleEdges = nodeField.isMultiple, displayName = nodeField.name });
+					AddPort(nodeField.input, nodeField.fieldName, new PortData { acceptMultipleEdges = nodeField.isMultiple, displayName = nodeField.name, horizontal = nodeField.horizontal });
 				}
 			}
 		}
@@ -267,6 +269,7 @@ namespace GraphProcessor
 				var inputAttribute = field.GetCustomAttribute< InputAttribute >();
 				var outputAttribute = field.GetCustomAttribute< OutputAttribute >();
 				bool isMultiple = false;
+				bool horizontal = true;
 				bool input = false;
 				string name = field.Name;
 
@@ -274,7 +277,8 @@ namespace GraphProcessor
 					continue ;
 
 				//check if field is a collection type
-				isMultiple = (inputAttribute != null) ? inputAttribute.allowMultiple : (outputAttribute.allowMultiple);
+				isMultiple = (inputAttribute != null) ? inputAttribute.allowMultiple : outputAttribute.allowMultiple;
+				horizontal = inputAttribute?.horizontal ?? outputAttribute?.horizontal ?? true;
 				input = inputAttribute != null;
 
 				if (!String.IsNullOrEmpty(inputAttribute?.name))
@@ -283,7 +287,7 @@ namespace GraphProcessor
 					name = outputAttribute.name;
 
 				// By default we set the behavior to null, if the field have a custom behavior, it will be set in the loop just below
-				nodeFields[field.Name] = new NodeFieldInformation(field, name, input, isMultiple, null);
+				nodeFields[field.Name] = new NodeFieldInformation(field, name, input, isMultiple, horizontal, null);
 			}
 
 			foreach (var method in methods)

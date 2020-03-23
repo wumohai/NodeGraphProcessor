@@ -32,6 +32,9 @@ namespace GraphProcessor
 		NodeSettingsView						settingsContainer;
 		VisualElement							settingButton;
 
+		VisualElement							verticalInputContainer;
+		VisualElement							verticalOutputContainer;
+
 		Label									computeOrderLabel = new Label();
 
 		public event Action< PortView >			onPortConnected;
@@ -121,6 +124,8 @@ namespace GraphProcessor
             initializing = true;
 
             SetPosition(nodeTarget.position);
+
+			// verticalInputContainer = 
 		}
 
 		void InitializeSettings()
@@ -230,8 +235,10 @@ namespace GraphProcessor
 
 		public PortView AddPort(FieldInfo fieldInfo, Direction direction, BaseEdgeConnectorListener listener, PortData portData)
 		{
-			// TODO: hardcoded value
-			PortView p = new PortView(Orientation.Horizontal, direction, fieldInfo, portData, listener);
+			PortView p = new PortView(
+				portData.horizontal ? Orientation.Horizontal : Orientation.Vertical,
+				direction, fieldInfo, portData, listener
+			);
 
 			if (p.direction == Direction.Input)
 			{

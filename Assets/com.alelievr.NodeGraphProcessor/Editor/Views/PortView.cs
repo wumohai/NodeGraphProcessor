@@ -33,6 +33,7 @@ namespace GraphProcessor
         public PortView(Orientation orientation, Direction direction, FieldInfo fieldInfo, PortData portData, BaseEdgeConnectorListener edgeConnectorListener)
             : base(orientation, direction, Capacity.Multi, portData.displayType ?? fieldInfo.FieldType)
 		{
+			Debug.Log("orientation: " + orientation);
 			this.fieldInfo = fieldInfo;
 			this.listener = edgeConnectorListener;
 			this.portType = portData.displayType ?? fieldInfo.FieldType;
