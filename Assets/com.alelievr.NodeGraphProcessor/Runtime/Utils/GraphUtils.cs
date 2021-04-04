@@ -69,25 +69,13 @@ namespace GraphProcessor
                 
                 n.state = State.Grey;
 
-                if (n.node is ParameterNode parameterNode && parameterNode.accessor == ParameterAccessor.Get)
-                {
-                    foreach (var setter in graph.nodes.Where(x=> 
-                        x.node is ParameterNode p &&
-                        p.parameterGUID == parameterNode.parameterGUID &&
-                        p.accessor == ParameterAccessor.Set))
-                    {
-                        if (setter.state == State.White)
-                            DFS(setter);
-                    }
-                }
-                else
-                {
+
                     foreach (var input in n.inputs)
                     {
                         if (input.state == State.White)
                             DFS(input);
                     }
-                }
+                
 
                 n.state = State.Black;
 

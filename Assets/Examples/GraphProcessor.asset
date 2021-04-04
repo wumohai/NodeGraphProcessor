@@ -12,76 +12,2641 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
   m_Name: GraphProcessor
   m_EditorClassIdentifier: 
-  serializedNodes:
-  - type: MultiAddNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    jsonDatas: '{"GUID":"0550468c-feb4-41bc-a68d-54ff890ed71f","computeOrder":2,"position":{"serializedVersion":"2","x":300.1890563964844,"y":284.3100280761719,"width":100.0,"height":100.0},"expanded":false,"debug":true,"nodeLock":false,"output":42.0}'
-  - type: FloatNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    jsonDatas: '{"GUID":"c0f7a068-db0c-48bc-bae1-acd2aeff6b32","computeOrder":1,"position":{"serializedVersion":"2","x":155.5122833251953,"y":241.94142150878907,"width":74.0,"height":101.0},"expanded":false,"debug":false,"nodeLock":false,"output":21.0,"input":21.0}'
-  - type: FloatNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    jsonDatas: '{"GUID":"38f97e90-225e-4549-ab7b-ca707a5664a0","computeOrder":0,"position":{"serializedVersion":"2","x":155.3175811767578,"y":353.2192687988281,"width":74.0,"height":101.0},"expanded":false,"debug":false,"nodeLock":false,"output":21.0,"input":21.0}'
-  - type: PrintNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    jsonDatas: '{"GUID":"c1be8783-9f9f-46ff-a094-356f4e658c8d","computeOrder":3,"position":{"serializedVersion":"2","x":459.2174072265625,"y":247.65219116210938,"width":72.0,"height":96.0},"expanded":false,"debug":true,"nodeLock":false}'
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 0}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: nodes
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[GraphProcessor.BaseNode, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 1|NodeGraphProcessor.Examples.ConsoleNode, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: 23387d0c-2314-4c64-b45e-6f7934ef1ef5
+    - Name: computeOrder
+      Entry: 3
+      Data: 2
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 359.150024
+    - Name: 
+      Entry: 4
+      Data: 234.000031
+    - Name: 
+      Entry: 4
+      Data: 170
+    - Name: 
+      Entry: 4
+      Data: 123.000015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: executed
+    - Name: $v
+      Entry: 7
+      Data: 4|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Executed
+    - Name: fieldName
+      Entry: 1
+      Data: executed
+    - Name: info
+      Entry: 7
+      Data: 5|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: obj
+    - Name: $v
+      Entry: 7
+      Data: 6|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Object
+    - Name: fieldName
+      Entry: 1
+      Data: obj
+    - Name: info
+      Entry: 7
+      Data: 7|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: logText
+    - Name: $v
+      Entry: 7
+      Data: 8|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Log
+    - Name: fieldName
+      Entry: 1
+      Data: logText
+    - Name: info
+      Entry: 7
+      Data: 9|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 1
+      Data: If Object is null, this will be the log.
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: executes
+    - Name: $v
+      Entry: 7
+      Data: 10|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Executes
+    - Name: fieldName
+      Entry: 1
+      Data: executes
+    - Name: info
+      Entry: 7
+      Data: 11|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: false
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 12|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 13|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 14|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 15|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: GraphProcessor.BaseNode+PortUpdate, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: fieldNames
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: executed
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: node
+      Entry: 9
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: executed
+      Entry: 7
+      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: executes
+      Entry: 7
+      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: obj
+      Entry: 6
+      Data: 
+    - Name: logText
+      Entry: 1
+      Data: vbnfgh
+    - Name: logType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|AbstractNodeChild2, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: 7314bcfb-fd45-42b1-842d-9939392ab09d
+    - Name: computeOrder
+      Entry: 3
+      Data: 0
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 143
+    - Name: 
+      Entry: 4
+      Data: 266
+    - Name: 
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 18|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: input
+    - Name: $v
+      Entry: 7
+      Data: 19|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: In
+    - Name: fieldName
+      Entry: 1
+      Data: input
+    - Name: info
+      Entry: 7
+      Data: 20|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: output
+    - Name: $v
+      Entry: 7
+      Data: 21|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Out
+    - Name: fieldName
+      Entry: 1
+      Data: output
+    - Name: info
+      Entry: 7
+      Data: 22|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: false
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 23|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 13
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 24|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 25|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: GraphProcessor.BaseNode+PortUpdate, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: fieldNames
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: input
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: node
+      Entry: 9
+      Data: 17
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 4
+      Data: 0
+    - Name: output
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 27|NodeGraphProcessor.Examples.ConsoleNode, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: 5a1add8d-c5a8-40a5-8709-7dd021f89493
+    - Name: computeOrder
+      Entry: 3
+      Data: 1
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 104
+    - Name: 
+      Entry: 4
+      Data: 92
+    - Name: 
+      Entry: 4
+      Data: 170
+    - Name: 
+      Entry: 4
+      Data: 123
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 28|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: executed
+    - Name: $v
+      Entry: 7
+      Data: 29|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Executed
+    - Name: fieldName
+      Entry: 1
+      Data: executed
+    - Name: info
+      Entry: 9
+      Data: 5
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: obj
+    - Name: $v
+      Entry: 7
+      Data: 30|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Object
+    - Name: fieldName
+      Entry: 1
+      Data: obj
+    - Name: info
+      Entry: 9
+      Data: 7
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: logText
+    - Name: $v
+      Entry: 7
+      Data: 31|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Log
+    - Name: fieldName
+      Entry: 1
+      Data: logText
+    - Name: info
+      Entry: 9
+      Data: 9
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 1
+      Data: If Object is null, this will be the log.
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: executes
+    - Name: $v
+      Entry: 7
+      Data: 32|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Executes
+    - Name: fieldName
+      Entry: 1
+      Data: executes
+    - Name: info
+      Entry: 9
+      Data: 11
+    - Name: input
+      Entry: 5
+      Data: false
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 33|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 13
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 34|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 35|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: GraphProcessor.BaseNode+PortUpdate, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: fieldNames
+      Entry: 7
+      Data: 36|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: executed
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: node
+      Entry: 9
+      Data: 27
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: executed
+      Entry: 7
+      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: executes
+      Entry: 7
+      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: obj
+      Entry: 6
+      Data: 
+    - Name: logText
+      Entry: 1
+      Data: Log
+    - Name: logType
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 37|PrintNode, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: 49523292-db5e-4ff0-89c7-7473a292eac3
+    - Name: computeOrder
+      Entry: 3
+      Data: 3
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 500
+    - Name: 
+      Entry: 4
+      Data: 476
+    - Name: 
+      Entry: 4
+      Data: 69
+    - Name: 
+      Entry: 4
+      Data: 90
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 38|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 39|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: obj
+    - Name: $v
+      Entry: 7
+      Data: 40|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: obj
+    - Name: fieldName
+      Entry: 1
+      Data: obj
+    - Name: info
+      Entry: 7
+      Data: 41|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 42|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 43|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 44|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 45|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: obj
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 46|DrawerFieldTestNode, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: fd229d8c-6e76-485d-acbf-e65d3ac8d008
+    - Name: computeOrder
+      Entry: 3
+      Data: 4
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 435.84
+    - Name: 
+      Entry: 4
+      Data: 565
+    - Name: 
+      Entry: 4
+      Data: 142
+    - Name: 
+      Entry: 4
+      Data: 339
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 47|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 39
+    - Name: 
+      Entry: 12
+      Data: 12
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: vector4
+    - Name: $v
+      Entry: 7
+      Data: 48|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Vector 4
+    - Name: fieldName
+      Entry: 1
+      Data: vector4
+    - Name: info
+      Entry: 7
+      Data: 49|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: vector3
+    - Name: $v
+      Entry: 7
+      Data: 50|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Vector 3
+    - Name: fieldName
+      Entry: 1
+      Data: vector3
+    - Name: info
+      Entry: 7
+      Data: 51|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: vector2
+    - Name: $v
+      Entry: 7
+      Data: 52|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Vector 2
+    - Name: fieldName
+      Entry: 1
+      Data: vector2
+    - Name: info
+      Entry: 7
+      Data: 53|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: floatInput
+    - Name: $v
+      Entry: 7
+      Data: 54|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Float
+    - Name: fieldName
+      Entry: 1
+      Data: floatInput
+    - Name: info
+      Entry: 7
+      Data: 55|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: intInput
+    - Name: $v
+      Entry: 7
+      Data: 56|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Int
+    - Name: fieldName
+      Entry: 1
+      Data: intInput
+    - Name: info
+      Entry: 7
+      Data: 57|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: intInput2
+    - Name: $v
+      Entry: 7
+      Data: 58|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Empty
+    - Name: fieldName
+      Entry: 1
+      Data: intInput2
+    - Name: info
+      Entry: 7
+      Data: 59|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: stringInput
+    - Name: $v
+      Entry: 7
+      Data: 60|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: String
+    - Name: fieldName
+      Entry: 1
+      Data: stringInput
+    - Name: info
+      Entry: 7
+      Data: 61|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: color
+    - Name: $v
+      Entry: 7
+      Data: 62|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Color
+    - Name: fieldName
+      Entry: 1
+      Data: color
+    - Name: info
+      Entry: 7
+      Data: 63|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: gameObject
+    - Name: $v
+      Entry: 7
+      Data: 64|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Game Object
+    - Name: fieldName
+      Entry: 1
+      Data: gameObject
+    - Name: info
+      Entry: 7
+      Data: 65|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animationCurve
+    - Name: $v
+      Entry: 7
+      Data: 66|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Animation Curve
+    - Name: fieldName
+      Entry: 1
+      Data: animationCurve
+    - Name: info
+      Entry: 7
+      Data: 67|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: rigidbody
+    - Name: $v
+      Entry: 7
+      Data: 68|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Rigidbody
+    - Name: fieldName
+      Entry: 1
+      Data: rigidbody
+    - Name: info
+      Entry: 7
+      Data: 69|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: layerMask
+    - Name: $v
+      Entry: 7
+      Data: 70|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Layer Mask
+    - Name: fieldName
+      Entry: 1
+      Data: layerMask
+    - Name: info
+      Entry: 7
+      Data: 71|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 72|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 43
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 73|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 74|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vector4
+      Entry: 7
+      Data: UnityEngine.Vector4, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vector3
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vector2
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: floatInput
+      Entry: 4
+      Data: 0
+    - Name: intInput
+      Entry: 3
+      Data: 0
+    - Name: intInput2
+      Entry: 3
+      Data: 0
+    - Name: stringInput
+      Entry: 6
+      Data: 
+    - Name: color
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: gameObject
+      Entry: 6
+      Data: 
+    - Name: animationCurve
+      Entry: 6
+      Data: 
+    - Name: rigidbody
+      Entry: 6
+      Data: 
+    - Name: layerMask
+      Entry: 7
+      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 75|InspectorNode, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: 535ea53c-0931-40df-ba18-b553e53306e7
+    - Name: computeOrder
+      Entry: 3
+      Data: 5
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 97.35002
+    - Name: 
+      Entry: 4
+      Data: 493.200043
+    - Name: 
+      Entry: 4
+      Data: 178.000031
+    - Name: 
+      Entry: 4
+      Data: 115.000008
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 76|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 77|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: input
+    - Name: $v
+      Entry: 7
+      Data: 78|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: In
+    - Name: fieldName
+      Entry: 1
+      Data: input
+    - Name: info
+      Entry: 7
+      Data: 79|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: output
+    - Name: $v
+      Entry: 7
+      Data: 80|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Out
+    - Name: fieldName
+      Entry: 1
+      Data: output
+    - Name: info
+      Entry: 7
+      Data: 81|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: false
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 82|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 83|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 84|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 85|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 4
+      Data: 0
+    - Name: output
+      Entry: 4
+      Data: 0
+    - Name: additionalSettings
+      Entry: 5
+      Data: false
+    - Name: additionalParam
+      Entry: 6
+      Data: 
+    - Name: ButtonName
+      Entry: 6
+      Data: 
+    - Name: Toggle
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 86|MessageNode, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: 50ab9161-8a79-4907-8313-60effcea9501
+    - Name: computeOrder
+      Entry: 3
+      Data: 6
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 320.200043
+    - Name: 
+      Entry: 4
+      Data: 494.400055
+    - Name: 
+      Entry: 4
+      Data: 294
+    - Name: 
+      Entry: 4
+      Data: 115.000008
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 87|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 88|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: input
+    - Name: $v
+      Entry: 7
+      Data: 89|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: In
+    - Name: fieldName
+      Entry: 1
+      Data: input
+    - Name: info
+      Entry: 7
+      Data: 90|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 91|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 92|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 93|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 94|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 4
+      Data: 0
+    - Name: messageType
+      Entry: 3
+      Data: 3
+    - Name: IntMaterialLookup
+      Entry: 7
+      Data: 95|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[UnityEngine.Material,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 96|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StringStringDictionary
+      Entry: 7
+      Data: 97|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 88
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: One
+    - Name: $v
+      Entry: 1
+      Data: Ramblings of a mad man
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Seven
+    - Name: $v
+      Entry: 1
+      Data: Ramblings of a mad man
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CustomLabels
+      Entry: 7
+      Data: 98|System.Collections.Generic.Dictionary`2[[MessageNode+SomeEnum, Assembly-CSharp],[MessageNode+MyCustomType,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 99|System.Collections.Generic.EnumEqualityComparer`1[[MessageNode+SomeEnum,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: MessageNode+MyCustomType, Assembly-CSharp
+    - Name: SomeMember
+      Entry: 3
+      Data: 0
+    - Name: SomePrefab
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: MessageNode+MyCustomType, Assembly-CSharp
+    - Name: SomeMember
+      Entry: 3
+      Data: 0
+    - Name: SomePrefab
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StringListDictionary
+      Entry: 7
+      Data: 100|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 88
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Numbers
+    - Name: $v
+      Entry: 7
+      Data: 101|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: EnumObjectLookup
+      Entry: 7
+      Data: 102|System.Collections.Generic.Dictionary`2[[MessageNode+SomeEnum, Assembly-CSharp],[MessageNode+MyCustomType,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 99
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: MessageNode+MyCustomType, Assembly-CSharp
+    - Name: SomeMember
+      Entry: 3
+      Data: 0
+    - Name: SomePrefab
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: MessageNode+MyCustomType, Assembly-CSharp
+    - Name: SomeMember
+      Entry: 3
+      Data: 0
+    - Name: SomePrefab
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 103|MessageNode2, Assembly-CSharp
+    - Name: GUID
+      Entry: 1
+      Data: a91ba7bd-1de2-4510-9329-d5d09801dc48
+    - Name: computeOrder
+      Entry: 3
+      Data: 7
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 519.6001
+    - Name: 
+      Entry: 4
+      Data: 501.550079
+    - Name: 
+      Entry: 4
+      Data: 131
+    - Name: 
+      Entry: 4
+      Data: 75.0000153
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: nodeFields
+      Entry: 7
+      Data: 104|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[GraphProcessor.BaseNode+NodeFieldInformation,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 105|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: input
+    - Name: $v
+      Entry: 7
+      Data: 106|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: In
+    - Name: fieldName
+      Entry: 1
+      Data: input
+    - Name: info
+      Entry: 7
+      Data: 107|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: true
+    - Name: isMultiple
+      Entry: 5
+      Data: false
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: output
+    - Name: $v
+      Entry: 7
+      Data: 108|GraphProcessor.BaseNode+NodeFieldInformation, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: name
+      Entry: 1
+      Data: Out
+    - Name: fieldName
+      Entry: 1
+      Data: output
+    - Name: info
+      Entry: 7
+      Data: 109|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 5
+      Data: false
+    - Name: isMultiple
+      Entry: 5
+      Data: true
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: behavior
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: customPortTypeBehaviorMap
+      Entry: 7
+      Data: 110|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[GraphProcessor.CustomPortTypeBehaviorDelegate,
+        com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 111|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldsToUpdate
+      Entry: 7
+      Data: 112|System.Collections.Generic.Stack`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: updatedFields
+      Entry: 7
+      Data: 113|System.Collections.Generic.HashSet`1[[GraphProcessor.BaseNode+PortUpdate,
+        com.alelievr.NodeGraphProcessor.Runtime]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: input
+      Entry: 4
+      Data: 0
+    - Name: output
+      Entry: 4
+      Data: 0
+    - Name: FloatList
+      Entry: 6
+      Data: 
+    - Name: FloatRangeArray
+      Entry: 6
+      Data: 
+    - Name: ReadOnlyArray1
+      Entry: 7
+      Data: 114|System.Int32[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ReadOnlyArray2
+      Entry: 7
+      Data: 115|System.Int32[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SomeStructList
+      Entry: 6
+      Data: 
+    - Name: FiveItemsPerPage
+      Entry: 6
+      Data: 
+    - Name: IndexLabels
+      Entry: 6
+      Data: 
+    - Name: MoreListSettings
+      Entry: 7
+      Data: 116|System.Int32[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: InjectListElementGUI
+      Entry: 6
+      Data: 
+    - Name: CustomButtons
+      Entry: 6
+      Data: 
+    - Name: CustomAddBehaviour
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   edges:
-  - GUID: 8ab4031d-be46-47c0-99cb-85e9ef8f5cc7
+  - GUID: 8a48abcc-6937-4480-8881-37d623d2954c
     owner: {fileID: 11400000}
-    inputNodeGUID: 0550468c-feb4-41bc-a68d-54ff890ed71f
-    outputNodeGUID: 38f97e90-225e-4549-ab7b-ca707a5664a0
-    inputFieldName: inputs
-    outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: 315bdfa4-1c69-468e-a016-ea135ebf44d3
-    owner: {fileID: 11400000}
-    inputNodeGUID: 0550468c-feb4-41bc-a68d-54ff890ed71f
-    outputNodeGUID: c0f7a068-db0c-48bc-bae1-acd2aeff6b32
-    inputFieldName: inputs
-    outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: 17f7c56c-14db-4b72-86fd-b7478606be0c
-    owner: {fileID: 11400000}
-    inputNodeGUID: c1be8783-9f9f-46ff-a094-356f4e658c8d
-    outputNodeGUID: 0550468c-feb4-41bc-a68d-54ff890ed71f
+    inputNodeGUID: 23387d0c-2314-4c64-b45e-6f7934ef1ef5
+    outputNodeGUID: 7314bcfb-fd45-42b1-842d-9939392ab09d
     inputFieldName: obj
     outputFieldName: output
     inputPortIdentifier: 
     outputPortIdentifier: 
-  groups: []
-  stackNodes: []
-  pinnedElements:
-  - position:
+  - GUID: 1f19ae37-e48a-4469-97f0-cb62dec2e1dc
+    owner: {fileID: 11400000}
+    inputNodeGUID: 23387d0c-2314-4c64-b45e-6f7934ef1ef5
+    outputNodeGUID: 5a1add8d-c5a8-40a5-8709-7dd021f89493
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups:
+  - title: dfgdfgdfg
+    color: {r: 0, g: 0, b: 0, a: 0.3}
+    position:
       serializedVersion: 2
-      x: 0
-      y: 119
-      width: 150
+      x: 170
+      y: 137
+      width: 400
       height: 200
-    opened: 1
-    editorType:
-      serializedType: GraphProcessor.ExposedParameterView, com.alelievr.NodeGraphProcessor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  - position:
-      serializedVersion: 2
-      x: 0
-      y: 226
-      width: 150
-      height: 200
-    opened: 1
-    editorType:
-      serializedType: GraphProcessor.ProcessorView, com.alelievr.NodeGraphProcessor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  - position:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 150
-      height: 200
-    opened: 1
-    editorType:
-      serializedType: GraphProcessor.ExposedParameterView, com.alelievr.NodeGraphProcessor.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  exposedParameters: []
+    size: {x: 400, y: 200}
+    innerNodeGUIDs:
+    - 23387d0c-2314-4c64-b45e-6f7934ef1ef5
+    - 7314bcfb-fd45-42b1-842d-9939392ab09d
+    - 5a1add8d-c5a8-40a5-8709-7dd021f89493
+  stackNodes:
+  - position: {x: 718.52, y: -2.1200256}
+    title: Stack
+    acceptDrop: 1
+    acceptNewNode: 1
+    nodeGUIDs:
+    - 49523292-db5e-4ff0-89c7-7473a292eac3
+    - fd229d8c-6e76-485d-acbf-e65d3ac8d008
+  pinnedElements: []
   stickyNotes: []
-  position: {x: 153, y: -84, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
-  references:
-    version: 1
+  position: {x: -29, y: -9, z: 0}
+  scale: {x: 0.8695652, y: 0.8695652, z: 1}

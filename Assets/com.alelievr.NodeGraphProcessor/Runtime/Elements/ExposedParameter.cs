@@ -4,17 +4,13 @@ using UnityEngine;
 
 namespace GraphProcessor
 {
-	[Serializable]
-	public class ExposedParameter : ISerializationCallbackReceiver
+    public class ExposedParameter
 	{
-        [Serializable]
         public class Settings
         {
             public bool isHidden = false;
             public bool expanded = false;
-
-            [SerializeField]
-            internal string guid = null;
+            public string guid = null;
 
             public override bool Equals(object obj)
             {
@@ -32,13 +28,8 @@ namespace GraphProcessor
 
 		public string				guid; // unique id to keep track of the parameter
 		public string				name;
-		[Obsolete("Use GetValueType()")]
-		public string				type;
-		[Obsolete("Use value instead")]
-		public SerializableObject	serializedValue;
-		public bool					input = true;
-        [SerializeReference]
-		public Settings             settings;
+
+        public Settings             settings;
 		public string shortType => GetValueType()?.Name;
 
         public void Initialize(string name, object value)
@@ -50,58 +41,11 @@ namespace GraphProcessor
 			this.value = value;
         }
 
-		void ISerializationCallbackReceiver.OnAfterDeserialize()
-		{
-			// SerializeReference migration step:
-#pragma warning disable CS0618
-			if (serializedValue?.value != null) // old serialization system can't serialize null values
-			{
-				value = serializedValue.value;
-				Debug.Log("Migrated: " + serializedValue.value + " | " + serializedValue.serializedName);
-				serializedValue.value = null;
-			}
-#pragma warning restore CS0618
-		}
-
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {}
-
         protected virtual Settings CreateSettings() => new Settings();
 
         public virtual object value { get; set; }
         public virtual Type GetValueType() => value.GetType();
-
-        static Dictionary<Type, Type> exposedParameterTypeCache = new Dictionary<Type, Type>();
-        internal ExposedParameter Migrate()
-        {
-            if (exposedParameterTypeCache.Count == 0)
-            {
-                foreach (var type in AppDomain.CurrentDomain.GetAllTypes())
-                {
-                    if (type.IsSubclassOf(typeof(ExposedParameter)) && !type.IsAbstract)
-                    {
-                        var paramType = Activator.CreateInstance(type) as ExposedParameter;
-                        exposedParameterTypeCache[paramType.GetValueType()] = type;
-                    }
-                }
-            }
-#pragma warning disable CS0618 // Use of obsolete fields
-            var oldType = Type.GetType(type);
-#pragma warning restore CS0618
-            if (oldType == null || !exposedParameterTypeCache.TryGetValue(oldType, out var newParamType))
-                return null;
-            
-            var newParam = Activator.CreateInstance(newParamType) as ExposedParameter;
-
-            newParam.guid = guid;
-            newParam.name = name;
-            newParam.input = input;
-            newParam.settings = newParam.CreateSettings();
-            newParam.settings.guid = guid;
-
-            return newParam;
-     
-        }
-
+        
         public static bool operator ==(ExposedParameter param1, ExposedParameter param2)
         {
             if (ReferenceEquals(param1, null) && ReferenceEquals(param2, null))
@@ -129,24 +73,10 @@ namespace GraphProcessor
         }
 
         public override int GetHashCode() => guid.GetHashCode();
-
-        public ExposedParameter Clone()
-        {
-            var clonedParam = Activator.CreateInstance(GetType()) as ExposedParameter;
-
-            clonedParam.guid = guid;
-            clonedParam.name = name;
-            clonedParam.input = input;
-            clonedParam.settings = settings;
-            clonedParam.value = value;
-
-            return clonedParam;
-        }
-	}
+    }
 
     // Due to polymorphic constraints with [SerializeReference] we need to explicitly create a class for
     // every parameter type available in the graph (i.e. templating doesn't work)
-    [System.Serializable]
     public class ColorParameter : ExposedParameter
     {
         public enum ColorMode
@@ -155,7 +85,7 @@ namespace GraphProcessor
             HDR
         }
 
-        [Serializable]
+        
         public class ColorSettings : Settings
         {
             public ColorMode mode;
@@ -164,7 +94,7 @@ namespace GraphProcessor
                 => base.Equals(param) && mode == ((ColorSettings)param).mode;
         }
 
-        [SerializeField] Color val;
+        Color val;
 
         public override object value { get => val; set => val = (Color)value; }
         protected override Settings CreateSettings() => new ColorSettings();

@@ -184,9 +184,9 @@ namespace GraphProcessor
 				node.UpdateAllPorts();
 			} catch (Exception) { }
 
-			foreach (var p in node.inputPorts)
+			foreach (var p in node.GetInputPorts())
 				AddPort(p, true);
-			foreach (var p in node.outputPorts)
+			foreach (var p in node.GetOutputPorts())
 				AddPort(p, false);
 
 			void AddPort(NodePort p, bool input)

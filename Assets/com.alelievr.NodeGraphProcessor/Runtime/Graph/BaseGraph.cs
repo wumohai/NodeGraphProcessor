@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine.Serialization;
 using UnityEngine.SceneManagement;
 
@@ -32,8 +33,7 @@ namespace GraphProcessor
 		BreadthFirst,
 	}
 
-	[System.Serializable]
-	public class BaseGraph : ScriptableObject, ISerializationCallbackReceiver
+	public class BaseGraph : SerializedScriptableObject
 	{
 		static readonly int			maxComputeOrderDepth = 1000;
 		
@@ -41,23 +41,9 @@ namespace GraphProcessor
 		public static readonly int loopComputeOrder = -2;
 		/// <summary>Invalid compute order number of a node can't process</summary>
 		public static readonly int invalidComputeOrder = -1;
-
-		/// <summary>
-		/// Json list of serialized nodes only used for copy pasting in the editor. Note that this field isn't serialized
-		/// </summary>
-		/// <typeparam name="JsonElement"></typeparam>
-		/// <returns></returns>
-		[SerializeField, Obsolete("Use BaseGraph.nodes instead")]
-		public List< JsonElement >						serializedNodes = new List< JsonElement >();
-
-		/// <summary>
-		/// List of all the nodes in the graph.
-		/// </summary>
-		/// <typeparam name="BaseNode"></typeparam>
-		/// <returns></returns>
-		[SerializeReference]
-		public List< BaseNode >							nodes = new List< BaseNode >();
-
+		
+		public List<BaseNode> nodes= new List<BaseNode>();
+		
 		/// <summary>
 		/// Dictionary to access node per GUID, faster than a search in a list
 		/// </summary>
@@ -72,7 +58,6 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="SerializableEdge"></typeparam>
 		/// <returns></returns>
-		[SerializeField]
 		public List< SerializableEdge >					edges = new List< SerializableEdge >();
 		/// <summary>
 		/// Dictionary of edges per GUID, faster than a search in a list
@@ -88,7 +73,6 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="Group"></typeparam>
 		/// <returns></returns>
-        [SerializeField, FormerlySerializedAs("commentBlocks")]
         public List< Group >                     		groups = new List< Group >();
 
 		/// <summary>
@@ -96,7 +80,6 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="stackNodes"></typeparam>
 		/// <returns></returns>
-		[SerializeField, SerializeReference] // Polymorphic serialization
 		public List< BaseStackNode >					stackNodes = new List< BaseStackNode >();
 
 		/// <summary>
@@ -104,21 +87,8 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="PinnedElement"></typeparam>
 		/// <returns></returns>
-		[SerializeField]
 		public List< PinnedElement >					pinnedElements = new List< PinnedElement >();
 
-		/// <summary>
-		/// All exposed parameters in the graph
-		/// </summary>
-		/// <typeparam name="ExposedParameter"></typeparam>
-		/// <returns></returns>
-		[SerializeField, SerializeReference]
-		public List< ExposedParameter >					exposedParameters = new List< ExposedParameter >();
-
-		[SerializeField, FormerlySerializedAs("exposedParameters")] // We keep this for upgrade
-		List< ExposedParameter >						serializedParameterList = new List<ExposedParameter>();
-
-		[SerializeField]
 		public List< StickyNote >						stickyNotes = new List<StickyNote>();
 
 		[System.NonSerialized]
@@ -163,8 +133,6 @@ namespace GraphProcessor
         {
 			if (isEnabled)
 				return;
-
-			MigrateGraphIfNeeded();
 			InitializeGraphElements();
 			DestroyBrokenGraphElements();
 			UpdateComputeOrder();
@@ -431,13 +399,6 @@ namespace GraphProcessor
 			pinned.opened = false;
 		}
 
-		public void OnBeforeSerialize()
-		{
-			// Cleanup broken elements
-			stackNodes.RemoveAll(s => s == null);
-			nodes.RemoveAll(n => n == null);
-		}
-
 		// We can deserialize data here because it's called in a unity context
 		// so we can load objects references
 		public void Deserialize()
@@ -448,50 +409,9 @@ namespace GraphProcessor
 				foreach (var node in nodes)
 					node.DisableInternal();
 			}
-
-			MigrateGraphIfNeeded();
-
+			
 			InitializeGraphElements();
 		}
-
-		void MigrateGraphIfNeeded()
-		{
-#pragma warning disable CS0618
-			// Migration step from JSON serialized nodes to [SerializeReference]
-			if (serializedNodes.Count > 0)
-			{
-				nodes.Clear();
-				foreach (var serializedNode in serializedNodes.ToList())
-				{
-                    var node = JsonSerializer.DeserializeNode(serializedNode) as BaseNode;
-                    if (node != null)
-                        nodes.Add(node);
-				}
-				serializedNodes.Clear();
-
-				// we also migrate parameters here:
-				var paramsToMigrate = serializedParameterList.ToList();
-				exposedParameters.Clear();
-				foreach (var param in paramsToMigrate)
-				{
-					if (param == null)
-						continue;
-
-					var newParam = param.Migrate();
-
-					if (newParam == null)
-					{
-						Debug.LogError($"Can't migrate parameter of type {param.type}, please create an Exposed Parameter class that implements this type.");
-						continue;
-					}
-					else
-						exposedParameters.Add(newParam);
-				}
-			}
-#pragma warning restore CS0618
-		}
-
-		public void OnAfterDeserialize() {}
 
 		/// <summary>
 		/// Update the compute order of the nodes in the graph
@@ -526,171 +446,7 @@ namespace GraphProcessor
 					break;
 			}
 		}
-
-		/// <summary>
-		/// Add an exposed parameter
-		/// </summary>
-		/// <param name="name">parameter name</param>
-		/// <param name="type">parameter type (must be a subclass of ExposedParameter)</param>
-		/// <param name="value">default value</param>
-		/// <returns>The unique id of the parameter</returns>
-		public string AddExposedParameter(string name, Type type, object value = null)
-		{
-
-			if (!type.IsSubclassOf(typeof(ExposedParameter)))
-			{
-				Debug.LogError($"Can't add parameter of type {type}, the type doesn't inherit from ExposedParameter.");
-			}
-
-			var param = Activator.CreateInstance(type) as ExposedParameter;
-
-			// patch value with correct type:
-			if (param.GetValueType().IsValueType)
-				value = Activator.CreateInstance(param.GetValueType());
-			
-			param.Initialize(name, value);
-			exposedParameters.Add(param);
-
-			onExposedParameterListChanged?.Invoke();
-
-			return param.guid;
-		}
-
-		/// <summary>
-		/// Add an already allocated / initialized parameter to the graph
-		/// </summary>
-		/// <param name="parameter">The parameter to add</param>
-		/// <returns>The unique id of the parameter</returns>
-		public string AddExposedParameter(ExposedParameter parameter)
-		{
-			string guid = Guid.NewGuid().ToString(); // Generated once and unique per parameter
-
-			parameter.guid = guid;
-			exposedParameters.Add(parameter);
-
-			onExposedParameterListChanged?.Invoke();
-
-			return guid;
-		}
-
-		/// <summary>
-		/// Remove an exposed parameter
-		/// </summary>
-		/// <param name="ep">the parameter to remove</param>
-		public void RemoveExposedParameter(ExposedParameter ep)
-		{
-			exposedParameters.Remove(ep);
-
-			onExposedParameterListChanged?.Invoke();
-		}
-
-		/// <summary>
-		/// Remove an exposed parameter
-		/// </summary>
-		/// <param name="guid">GUID of the parameter</param>
-		public void RemoveExposedParameter(string guid)
-		{
-			if (exposedParameters.RemoveAll(e => e.guid == guid) != 0)
-				onExposedParameterListChanged?.Invoke();
-		}
-
-		/// <summary>
-		/// Update an exposed parameter value
-		/// </summary>
-		/// <param name="guid">GUID of the parameter</param>
-		/// <param name="value">new value</param>
-		public void UpdateExposedParameter(string guid, object value)
-		{
-			var param = exposedParameters.Find(e => e.guid == guid);
-			if (param == null)
-				return;
-
-			if (value != null && !param.GetValueType().IsAssignableFrom(value.GetType()))
-				throw new Exception("Type mismatch when updating parameter " + param.name + ": from " + param.GetValueType() + " to " + value.GetType().AssemblyQualifiedName);
-
-			param.value = value;
-			onExposedParameterModified?.Invoke(param);
-		}
-
-		/// <summary>
-		/// Update the exposed parameter name
-		/// </summary>
-		/// <param name="parameter">The parameter</param>
-		/// <param name="name">new name</param>
-		public void UpdateExposedParameterName(ExposedParameter parameter, string name)
-		{
-			parameter.name = name;
-			onExposedParameterModified?.Invoke(parameter);
-		}
-
-		/// <summary>
-		/// Update parameter visibility
-		/// </summary>
-		/// <param name="parameter">The parameter</param>
-		/// <param name="isHidden">is Hidden</param>
-		public void NotifyExposedParameterChanged(ExposedParameter parameter)
-		{
-			onExposedParameterModified?.Invoke(parameter);
-		}
-
-		public void NotifyExposedParameterValueChanged(ExposedParameter parameter)
-		{
-			onExposedParameterValueChanged?.Invoke(parameter);
-		}
-
-		/// <summary>
-		/// Get the exposed parameter from name
-		/// </summary>
-		/// <param name="name">name</param>
-		/// <returns>the parameter or null</returns>
-		public ExposedParameter GetExposedParameter(string name)
-		{
-			return exposedParameters.FirstOrDefault(e => e.name == name);
-		}
-
-		/// <summary>
-		/// Get exposed parameter from GUID
-		/// </summary>
-		/// <param name="guid">GUID of the parameter</param>
-		/// <returns>The parameter</returns>
-		public ExposedParameter GetExposedParameterFromGUID(string guid)
-		{
-			return exposedParameters.FirstOrDefault(e => e?.guid == guid);
-		}
-
-		/// <summary>
-		/// Set parameter value from name. (Warning: the parameter name can be changed by the user)
-		/// </summary>
-		/// <param name="name">name of the parameter</param>
-		/// <param name="value">new value</param>
-		/// <returns>true if the value have been assigned</returns>
-		public bool SetParameterValue(string name, object value)
-		{
-			var e = exposedParameters.FirstOrDefault(p => p.name == name);
-
-			if (e == null)
-				return false;
-
-			e.value = value;
-
-			return true;
-		}
-
-		/// <summary>
-		/// Get the parameter value
-		/// </summary>
-		/// <param name="name">parameter name</param>
-		/// <returns>value</returns>
-		public object GetParameterValue(string name) => exposedParameters.FirstOrDefault(p => p.name == name)?.value;
-
-		/// <summary>
-		/// Get the parameter value template
-		/// </summary>
-		/// <param name="name">parameter name</param>
-		/// <typeparam name="T">type of the parameter</typeparam>
-		/// <returns>value</returns>
-		public T GetParameterValue< T >(string name) => (T)GetParameterValue(name);
-
+		
 		/// <summary>
 		/// Link the current graph to the scene in parameter, allowing the graph to pick and serialize objects from the scene.
 		/// </summary>

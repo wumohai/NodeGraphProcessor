@@ -117,11 +117,6 @@ namespace GraphProcessor
 		[NonSerialized]
 		protected NodeInspectorObject		nodeInspector;
 
-		/// <summary>
-		/// Workaround object for creating exposed parameter property fields.
-		/// </summary>
-		public ExposedParameterFieldFactory exposedParameterFactory { get; private set; }
-
 		public SerializedObject		serializedGraph { get; private set; }
 
 		Dictionary<Type, (Type nodeType, MethodInfo initalizeNodeFromObject)> nodeTypePerCreateAssetType = new Dictionary<Type, (Type, MethodInfo)>();
@@ -364,10 +359,6 @@ namespace GraphProcessor
 							UpdateSerializedProperties();
 							RemoveElement(group);
 							return true;
-						case ExposedParameterFieldView blackboardField:
-							graph.RemoveExposedParameter(blackboardField.parameter);
-							UpdateSerializedProperties();
-							return true;
 						case BaseStackNodeView stackNodeView:
 							graph.RemoveStackNode(stackNodeView.stackNode);
 							UpdateSerializedProperties();
@@ -595,22 +586,6 @@ namespace GraphProcessor
 			var mousePos = (e.currentTarget as VisualElement).ChangeCoordinatesTo(contentViewContainer, e.localMousePosition);
 			var dragData = DragAndDrop.GetGenericData("DragSelection") as List< ISelectable >;
 
-			// Drag and Drop for elements inside the graph
-			if (dragData != null)
-			{
-				var exposedParameterFieldViews = dragData.OfType<ExposedParameterFieldView>();
-				if (exposedParameterFieldViews.Any())
-				{
-					foreach (var paramFieldView in exposedParameterFieldViews)
-					{
-						RegisterCompleteObjectUndo("Create Parameter Node");
-						var paramNode = BaseNode.CreateFromType< ParameterNode >(mousePos);
-						paramNode.parameterGUID = paramFieldView.parameter.guid;
-						AddNode(paramNode);
-					}
-				}
-			}
-
 			// External objects drag and drop
 			if (DragAndDrop.objectReferences.Length > 0)
 			{
@@ -647,16 +622,7 @@ namespace GraphProcessor
 			var dragObjects = DragAndDrop.objectReferences;
             bool dragging = false;
 
-            if (dragData != null)
-            {
-                // Handle drag from exposed parameter view
-                if (dragData.OfType<ExposedParameterFieldView>().Any())
-				{
-                    dragging = true;
-				}
-            }
-
-			if (dragObjects.Length > 0)
+            if (dragObjects.Length > 0)
 				dragging = true;
 
             if (dragging)
@@ -726,9 +692,6 @@ namespace GraphProcessor
 			}
 
 			this.graph = graph;
-
-			exposedParameterFactory = new ExposedParameterFieldFactory(graph);
-
 			UpdateSerializedProperties();
 
             connectorListener = CreateEdgeConnectorListener();
@@ -1382,9 +1345,6 @@ namespace GraphProcessor
 			Undo.undoRedoPerformed -= ReloadView;
 			Object.DestroyImmediate(nodeInspector);
 			NodeProvider.UnloadGraph(graph);
-			exposedParameterFactory.Dispose();
-			exposedParameterFactory = null;
-
 			graph.onExposedParameterListChanged -= OnExposedParameterListChanged;
 			graph.onExposedParameterModified += (s) => onExposedParameterModified?.Invoke(s);
 			graph.onGraphChanges -= GraphChangesCallback;

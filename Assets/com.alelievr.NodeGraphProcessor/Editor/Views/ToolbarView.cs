@@ -137,8 +137,6 @@ namespace GraphProcessor
 
 			bool processorVisible = graphView.GetPinnedElementStatus< ProcessorView >() != Status.Hidden;
 			showProcessor = AddToggle("Show Processor", processorVisible, (v) => graphView.ToggleView< ProcessorView>());
-			bool exposedParamsVisible = graphView.GetPinnedElementStatus< ExposedParameterView >() != Status.Hidden;
-			showParameters = AddToggle("Show Parameters", exposedParamsVisible, (v) => graphView.ToggleView< ExposedParameterView>());
 
 			AddButton("Show In Project", () => EditorGUIUtility.PingObject(graphView.graph), false);
 		}
@@ -147,8 +145,6 @@ namespace GraphProcessor
 		{
 			if (showProcessor != null)
 				showProcessor.value = graphView.GetPinnedElementStatus< ProcessorView >() != Status.Hidden;
-			if (showParameters != null)
-				showParameters.value = graphView.GetPinnedElementStatus< ExposedParameterView >() != Status.Hidden;
 		}
 
 		void DrawImGUIButtonList(List< ToolbarButtonData > buttons)

@@ -7,6 +7,7 @@ using System.Reflection;
 using System;
 using System.Collections;
 using System.Linq;
+using Sirenix.OdinInspector;
 using UnityEditor.UIElements;
 
 using Status = UnityEngine.UIElements.DropdownMenuAction.Status;
@@ -14,18 +15,22 @@ using NodeView = UnityEditor.Experimental.GraphView.Node;
 
 namespace GraphProcessor
 {
-	[NodeCustomEditor(typeof(BaseNode))]
+	[BoxGroup]
+	[HideReferenceObjectPicker]
 	public class BaseNodeView : NodeView
 	{
 		public BaseNode							nodeTarget;
 
+		[HideInInspector]
 		public List< PortView >					inputPortViews = new List< PortView >();
+		[HideInInspector]
 		public List< PortView >					outputPortViews = new List< PortView >();
 
 		public BaseGraphView					owner { private set; get; }
 
 		protected Dictionary< string, List< PortView > > portsPerFieldName = new Dictionary< string, List< PortView > >();
 
+		[HideInInspector]
         public VisualElement 					controlsContainer;
 		protected VisualElement					debugContainer;
 		protected VisualElement					rightTitleContainer;
@@ -43,7 +48,7 @@ namespace GraphProcessor
 		public event Action< PortView >			onPortDisconnected;
 
 		protected virtual bool					hasSettings { get; set; }
-
+		[HideInInspector]
         public bool								initializing = false; //Used for applying SetPosition on locked node at init.
 
         readonly string							baseNodeStyle = "GraphProcessorStyles/BaseNodeView";
@@ -109,12 +114,12 @@ namespace GraphProcessor
 		{
 			var listener = owner.connectorListener;
 
-			foreach (var inputPort in nodeTarget.inputPorts)
+			foreach (var inputPort in nodeTarget.GetInputPorts())
 			{
 				AddPort(inputPort.fieldInfo, Direction.Input, listener, inputPort.portData);
 			}
 
-			foreach (var outputPort in nodeTarget.outputPorts)
+			foreach (var outputPort in nodeTarget.GetOutputPorts())
 			{
 				AddPort(outputPort.fieldInfo, Direction.Output, listener, outputPort.portData);
 			}
@@ -1023,8 +1028,8 @@ namespace GraphProcessor
 			// If a port behavior was attached to one port, then
 			// the port count might have been updated by the node
 			// so we have to refresh the list of port views.
-			UpdatePortViewWithPorts(nodeTarget.inputPorts, inputPortViews);
-			UpdatePortViewWithPorts(nodeTarget.outputPorts, outputPortViews);
+			UpdatePortViewWithPorts(nodeTarget.GetInputPorts(), inputPortViews);
+			UpdatePortViewWithPorts(nodeTarget.GetOutputPorts(), outputPortViews);
 
 			void UpdatePortViewWithPorts(NodePortContainer ports, List< PortView > portViews)
 			{
