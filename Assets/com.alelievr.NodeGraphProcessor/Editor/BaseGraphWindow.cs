@@ -62,8 +62,6 @@ namespace GraphProcessor
             // We wait for the graph to be initialized
             if (graph.isEnabled)
                 InitializeGraph(graph);
-            else
-                graph.onEnabled += () => InitializeGraph(graph);
 		}
 
 		/// <summary>

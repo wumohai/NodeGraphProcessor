@@ -594,8 +594,10 @@ namespace GraphProcessor
 			var selectedNodes = selection.Where(s => s is BaseNodeView).ToList();
 			var selectedNodesNotInInspector = selectedNodes.Except(nodeInspector.selectedNodes).ToList();
 			var nodeInInspectorWithoutSelectedNodes = nodeInspector.selectedNodes.Except(selectedNodes).ToList();
-
-			return selectedNodesNotInInspector.Any() || nodeInInspectorWithoutSelectedNodes.Any();
+			//有另外一种可能，先选中其中一个节点A，然后选中Assets面板中一个资产，当前激活object就为这个新选中的资产，
+			//此时再回来节点编辑器选择节点A将不会再Inspector面板显示，这不太行，所以需要最后再加一种判断
+			return selectedNodesNotInInspector.Any() || nodeInInspectorWithoutSelectedNodes.Any() || 
+			       Selection.activeObject != nodeInspector;
 		}
 
 		void DragPerformedCallback(DragPerformEvent e)
@@ -905,22 +907,16 @@ namespace GraphProcessor
 
 		public void UpdateNodeInspectorSelection()
 		{
-			if (nodeInspector.previouslySelectedObject != Selection.activeObject)
-				nodeInspector.previouslySelectedObject = Selection.activeObject;
-
-			HashSet<BaseNodeView> selectedNodeViews = new HashSet<BaseNodeView>();
 			nodeInspector.selectedNodes.Clear();
 			foreach (var e in selection)
 			{
 				if (e is BaseNodeView v && this.Contains(v) && v.nodeTarget.needsInspector)
-					selectedNodeViews.Add(v);
+					nodeInspector.selectedNodes.Add(v);
 			}
 
-			if (selectedNodeViews.Count > 0)
+			if (nodeInspector.selectedNodes.Count > 0)
 			{
-				nodeInspector.UpdateSelectedNodes(selectedNodeViews);
-				if (Selection.activeObject != nodeInspector)
-					Selection.activeObject = nodeInspector;
+				Selection.activeObject = nodeInspector;
 			}
 		}
 

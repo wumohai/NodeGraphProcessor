@@ -74,26 +74,12 @@ namespace GraphProcessor
     /// </summary>
     public class NodeInspectorObject : SerializedScriptableObject
     {
-        /// <summary>Previously selected object by the inspector</summary>
-        [HideInInspector]
-        public Object previouslySelectedObject;
         /// <summary>List of currently selected nodes</summary>
         public HashSet<BaseNodeView> selectedNodes = new HashSet<BaseNodeView>();
-
-        /// <summary>Triggered when the selection is updated</summary>
-        public event Action nodeSelectionUpdated;
-
-        /// <summary>Updates the selection from the graph</summary>
-        public virtual void UpdateSelectedNodes(HashSet<BaseNodeView> views)
-        {
-            selectedNodes = views;
-            nodeSelectionUpdated?.Invoke();
-        }
 
         public virtual void NodeViewRemoved(BaseNodeView view)
         {
             selectedNodes.Remove(view);
-            nodeSelectionUpdated?.Invoke();
         }
     }
 }
