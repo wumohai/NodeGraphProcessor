@@ -27,7 +27,7 @@ public class IfNode : ConditionalNode
 		string fieldName = condition ? nameof(@true) : nameof(@false);
 
 		// Return all the nodes connected to either the true or false node
-		return GetOutputPorts().FirstOrDefault(n => n.fieldName == fieldName)
+		return outputPorts.FirstOrDefault(n => n.fieldName == fieldName)
 			.GetEdges().Select(e => e.inputNode as ConditionalNode);
 	}
 }

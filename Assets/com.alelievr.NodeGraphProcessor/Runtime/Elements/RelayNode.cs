@@ -64,13 +64,16 @@ public class RelayNode : BaseNode
 	[CustomPortOutput(nameof(output), typeof(object), true)]
 	public void PushOutputs(List< SerializableEdge > edges, NodePort outputPort)
 	{
-		if (GetInputPorts().Count == 0)
+		if (inputPorts.Count == 0)
 			return;
 
-		var inputPortEdges = GetInputPorts()[0].GetEdges();
+		var inputPortEdges = inputPorts[0].GetEdges();
 
 		if (outputPort.portData.identifier != packIdentifier && outputIndex >= 0 && (unpackOutput || inputPortEdges.Count == 1))
 		{
+			if (output.values == null)
+				return;
+
 			// When we unpack the output, there is one port per type of data in output
 			// That means that this function will be called the same number of time than the output port count
 			// Thus we use a class field to keep the index.
@@ -94,10 +97,10 @@ public class RelayNode : BaseNode
 	{
 		// When the node is initialized, the input ports is empty because it's this function that generate the ports
 		int sizeInPixel = 0;
-		if (GetInputPorts().Count != 0)
+		if (inputPorts.Count != 0)
 		{
 			// Add the size of all input edges:
-			var inputEdges = GetInputPorts()[0]?.GetEdges();
+			var inputEdges = inputPorts[0]?.GetEdges();
 			sizeInPixel = inputEdges.Sum(e => Mathf.Max(0, e.outputPort.portData.sizeInPixel - 8));
 		}
 		
@@ -118,7 +121,7 @@ public class RelayNode : BaseNode
 	[CustomPortBehavior(nameof(output))]
 	IEnumerable< PortData > OutputPortBehavior(List< SerializableEdge > edges)
 	{
-		if (GetInputPorts().Count == 0)
+		if (inputPorts.Count == 0)
 		{
 			// Default dummy port to avoid having a relay without any output:
 			yield return new PortData {
@@ -130,7 +133,7 @@ public class RelayNode : BaseNode
 			yield break;
 		}
 
-		var inputPortEdges = GetInputPorts()[0].GetEdges();
+		var inputPortEdges = inputPorts[0].GetEdges();
 		var underlyingPortData = GetUnderlyingPortDataList();
 		if (unpackOutput && inputPortEdges.Count == 1)
 		{
@@ -171,7 +174,7 @@ public class RelayNode : BaseNode
 	public List<(Type type, string name)> GetUnderlyingPortDataList()
 	{
 		// get input edges:
-		if (GetInputPorts().Count == 0)
+		if (inputPorts.Count == 0)
 			return s_empty;
 
 		var inputEdges = GetNonRelayEdges();
@@ -184,11 +187,11 @@ public class RelayNode : BaseNode
 
 	public List<SerializableEdge> GetNonRelayEdges()
 	{
-		var inputEdges = GetInputPorts()?[0]?.GetEdges();
+		var inputEdges = inputPorts?[0]?.GetEdges();
 
 		// Iterate until we don't have a relay node in input
 		while (inputEdges.Count == 1 && inputEdges.First().outputNode.GetType() == typeof(RelayNode))
-			inputEdges = inputEdges.First().outputNode.GetInputPorts()[0]?.GetEdges();
+			inputEdges = inputEdges.First().outputNode.inputPorts[0]?.GetEdges();
 
 		return inputEdges;
 	}

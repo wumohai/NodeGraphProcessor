@@ -7,7 +7,6 @@ using System.Reflection;
 using System;
 using System.Collections;
 using System.Linq;
-using Sirenix.OdinInspector;
 using UnityEditor.UIElements;
 
 using Status = UnityEngine.UIElements.DropdownMenuAction.Status;
@@ -15,22 +14,18 @@ using NodeView = UnityEditor.Experimental.GraphView.Node;
 
 namespace GraphProcessor
 {
-	[BoxGroup]
-	[HideReferenceObjectPicker]
+	[NodeCustomEditor(typeof(BaseNode))]
 	public class BaseNodeView : NodeView
 	{
 		public BaseNode							nodeTarget;
 
-		[HideInInspector]
 		public List< PortView >					inputPortViews = new List< PortView >();
-		[HideInInspector]
 		public List< PortView >					outputPortViews = new List< PortView >();
 
 		public BaseGraphView					owner { private set; get; }
 
 		protected Dictionary< string, List< PortView > > portsPerFieldName = new Dictionary< string, List< PortView > >();
 
-		[HideInInspector]
         public VisualElement 					controlsContainer;
 		protected VisualElement					debugContainer;
 		protected VisualElement					rightTitleContainer;
@@ -41,6 +36,7 @@ namespace GraphProcessor
 		VisualElement							settings;
 		NodeSettingsView						settingsContainer;
 		Button									settingButton;
+		TextField								titleTextField;
 
 		Label									computeOrderLabel = new Label();
 
@@ -48,7 +44,7 @@ namespace GraphProcessor
 		public event Action< PortView >			onPortDisconnected;
 
 		protected virtual bool					hasSettings { get; set; }
-		[HideInInspector]
+
         public bool								initializing = false; //Used for applying SetPosition on locked node at init.
 
         readonly string							baseNodeStyle = "GraphProcessorStyles/BaseNodeView";
@@ -79,11 +75,14 @@ namespace GraphProcessor
 
 			if (!node.deletable)
 				capabilities &= ~Capabilities.Deletable;
+			// Note that the Renamable capability is useless right now as it haven't been implemented in Graphview
+			if (node.isRenamable)
+				capabilities |= Capabilities.Renamable;
 
 			owner.computeOrderUpdated += ComputeOrderUpdatedCallback;
 			node.onMessageAdded += AddMessageView;
 			node.onMessageRemoved += RemoveMessageView;
-			node.onPortsUpdated += UpdatePortsForField;
+			node.onPortsUpdated += a => schedule.Execute(_ => UpdatePortsForField(a)).ExecuteLater(0);
 
             styleSheets.Add(Resources.Load<StyleSheet>(baseNodeStyle));
 
@@ -107,6 +106,7 @@ namespace GraphProcessor
 			this.RefreshPorts();
 
 			RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
+			RegisterCallback<DetachFromPanelEvent>(e => ExceptionToLog.Call(Disable));
 			OnGeometryChanged(null);
 		}
 
@@ -114,12 +114,12 @@ namespace GraphProcessor
 		{
 			var listener = owner.connectorListener;
 
-			foreach (var inputPort in nodeTarget.GetInputPorts())
+			foreach (var inputPort in nodeTarget.inputPorts)
 			{
 				AddPort(inputPort.fieldInfo, Direction.Input, listener, inputPort.portData);
 			}
 
-			foreach (var outputPort in nodeTarget.GetOutputPorts())
+			foreach (var outputPort in nodeTarget.outputPorts)
 			{
 				AddPort(outputPort.fieldInfo, Direction.Output, listener, outputPort.portData);
 			}
@@ -167,14 +167,70 @@ namespace GraphProcessor
 			if (nodeTarget.debug)
 				mainContainer.Add(debugContainer);
 
-			title = (string.IsNullOrEmpty(nodeTarget.name)) ? nodeTarget.GetType().Name : nodeTarget.name;
-			
 			initializing = true;
 
+			UpdateTitle();
             SetPosition(nodeTarget.position);
 			SetNodeColor(nodeTarget.color);
             
 			AddInputContainer();
+
+			// Add renaming capability
+			if ((capabilities & Capabilities.Renamable) != 0)
+				SetupRenamableTitle();
+		}
+
+		void SetupRenamableTitle()
+		{
+			var titleLabel = this.Q("title-label") as Label;
+
+			titleTextField = new TextField{ isDelayed = true };
+			titleTextField.style.display = DisplayStyle.None;
+			titleLabel.parent.Insert(0, titleTextField);
+
+			titleLabel.RegisterCallback<MouseDownEvent>(e => {
+				if (e.clickCount == 2 && e.button == (int)MouseButton.LeftMouse)
+					OpenTitleEditor();
+			});
+
+			titleTextField.RegisterValueChangedCallback(e => CloseAndSaveTitleEditor(e.newValue));
+
+			titleTextField.RegisterCallback<MouseDownEvent>(e => {
+				if (e.clickCount == 2 && e.button == (int)MouseButton.LeftMouse)
+					CloseAndSaveTitleEditor(titleTextField.value);
+			});
+
+			titleTextField.RegisterCallback<FocusOutEvent>(e => CloseAndSaveTitleEditor(titleTextField.value));
+
+			void OpenTitleEditor()
+			{
+				// show title textbox
+				titleTextField.style.display = DisplayStyle.Flex;
+				titleLabel.style.display = DisplayStyle.None;
+				titleTextField.focusable = true;
+
+				titleTextField.SetValueWithoutNotify(title);
+				titleTextField.Focus();
+				titleTextField.SelectAll();
+			}
+
+			void CloseAndSaveTitleEditor(string newTitle)
+			{
+				owner.RegisterCompleteObjectUndo("Renamed node " + newTitle);
+				nodeTarget.SetCustomName(newTitle);
+
+				// hide title TextBox
+				titleTextField.style.display = DisplayStyle.None;
+				titleLabel.style.display = DisplayStyle.Flex;
+				titleTextField.focusable = false;
+
+				UpdateTitle();
+			}
+		}
+
+		void UpdateTitle()
+		{
+			title = (nodeTarget.GetCustomName() == null) ? nodeTarget.GetType().Name : nodeTarget.GetCustomName();
 		}
 
 		public void UpdateNodeSerializedPropertyBindings()
@@ -585,6 +641,8 @@ namespace GraphProcessor
 		public virtual void Enable(bool fromInspector = false) => DrawDefaultInspector(fromInspector);
 		public virtual void Enable() => DrawDefaultInspector(false);
 
+		public virtual void Disable() {}
+
 		Dictionary<string, List<(object value, VisualElement target)>> visibleConditions = new Dictionary<string, List<(object value, VisualElement target)>>();
 		Dictionary<string, VisualElement>  hideElementIfConnected = new Dictionary<string, VisualElement>();
 		Dictionary<FieldInfo, List<VisualElement>> fieldControlsMap = new Dictionary<FieldInfo, List<VisualElement>>();
@@ -883,11 +941,13 @@ namespace GraphProcessor
 		{
             if (initializing || !nodeTarget.isLocked)
             {
-                initializing = false;
                 base.SetPosition(newPos);
 
-                owner.RegisterCompleteObjectUndo("Moved graph node");
+				if (!initializing)
+					owner.RegisterCompleteObjectUndo("Moved graph node");
+
                 nodeTarget.position = newPos;
+                initializing = false;
             }
 		}
 
@@ -1001,38 +1061,19 @@ namespace GraphProcessor
 			}
 		}
 
-		// void UpdatePortConnections(List< PortView > portViews)
-		// {
-		// 	foreach (var pv in portViews)
-		// 	{
-		// 		Debug.Log("pv: " + pv.portName);
-				
-		// 		// Go over all connected edges and disconnect them if the serialized edge have been removed
-		// 		// This can happens when the new port type is incompatible with the old one.
-		// 		foreach (var edge in pv.GetEdges().ToList())
-		// 		{
-		// 			// TODO: check edge connection compatibility !
-		// 			Debug.Log("Edge !");
-		// 			if (owner.graph.edges.Contains(edge.serializedEdge))
-		// 			{
-		// 				owner.Disconnect(edge);
-		// 				// owner.RemoveElement(edge);
-		// 				// base.RefreshPorts(); // We don't call this.RefreshPorts because it will cause an infinite loop
-		// 			}
-		// 		}
-		// 	}
-		// }
-
 		public virtual new bool RefreshPorts()
 		{
 			// If a port behavior was attached to one port, then
 			// the port count might have been updated by the node
 			// so we have to refresh the list of port views.
-			UpdatePortViewWithPorts(nodeTarget.GetInputPorts(), inputPortViews);
-			UpdatePortViewWithPorts(nodeTarget.GetOutputPorts(), outputPortViews);
+			UpdatePortViewWithPorts(nodeTarget.inputPorts, inputPortViews);
+			UpdatePortViewWithPorts(nodeTarget.outputPorts, outputPortViews);
 
 			void UpdatePortViewWithPorts(NodePortContainer ports, List< PortView > portViews)
 			{
+				if (ports.Count == 0 && portViews.Count == 0) // Nothing to update
+					return;
+
 				// When there is no current portviews, we can't zip the list so we just add all
 				if (portViews.Count == 0)
 					SyncPortCounts(ports, new PortView[]{});

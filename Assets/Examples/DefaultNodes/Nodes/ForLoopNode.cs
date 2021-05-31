@@ -29,14 +29,14 @@ public class ForLoopNode : ConditionalNode
 	public IEnumerable< ConditionalNode >	GetExecutedNodesLoopBody()
 	{
 		// Return all the nodes connected to the executes port
-		return GetOutputPorts().FirstOrDefault(n => n.fieldName == nameof(loopBody))
+		return outputPorts.FirstOrDefault(n => n.fieldName == nameof(loopBody))
 			.GetEdges().Select(e => e.inputNode as ConditionalNode);
 	}
 
 	public IEnumerable< ConditionalNode >	GetExecutedNodesLoopCompleted()
 	{
 		// Return all the nodes connected to the executes port
-		return GetOutputPorts().FirstOrDefault(n => n.fieldName == nameof(loopCompleted))
+		return outputPorts.FirstOrDefault(n => n.fieldName == nameof(loopCompleted))
 			.GetEdges().Select(e => e.inputNode as ConditionalNode);
 	}
 }

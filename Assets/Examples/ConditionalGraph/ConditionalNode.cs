@@ -41,7 +41,7 @@ namespace NodeGraphProcessor.Examples
 		public override IEnumerable< ConditionalNode >	GetExecutedNodes()
 		{
 			// Return all the nodes connected to the executes port
-			return GetOutputPorts().FirstOrDefault(n => n.fieldName == nameof(executes))
+			return outputPorts.FirstOrDefault(n => n.fieldName == nameof(executes))
 				.GetEdges().Select(e => e.inputNode as ConditionalNode);
 		}
 	}
@@ -65,7 +65,7 @@ namespace NodeGraphProcessor.Examples
 
 		public IEnumerable< ConditionalNode > GetExecuteAfterNodes()
 		{
-			return GetOutputPorts().FirstOrDefault(n => n.fieldName == nameof(executeAfter))
+			return outputPorts.FirstOrDefault(n => n.fieldName == nameof(executeAfter))
 			                  .GetEdges().Select(e => e.inputNode as ConditionalNode);
 		}
 	}

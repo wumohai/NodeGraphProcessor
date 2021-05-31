@@ -9,8 +9,10 @@ using UnityEditor;
 namespace GraphProcessor
 {
     // Warning: this class only support the serialization of UnityObject and primitive
+    [System.Serializable]
     public class SerializableObject
     {
+        [System.Serializable]
         class ObjectWrapper
         {
             public UnityEngine.Object value;

@@ -184,9 +184,9 @@ namespace GraphProcessor
 				node.UpdateAllPorts();
 			} catch (Exception) { }
 
-			foreach (var p in node.GetInputPorts())
+			foreach (var p in node.inputPorts)
 				AddPort(p, true);
-			foreach (var p in node.GetOutputPorts())
+			foreach (var p in node.outputPorts)
 				AddPort(p, false);
 
 			void AddPort(NodePort p, bool input)
@@ -254,22 +254,28 @@ namespace GraphProcessor
 
 		public static Type GetNodeViewTypeFromType(Type nodeType)
 		{
-			Type	view;
+			Type view;
 
-			if (nodeViewPerType.TryGetValue(nodeType, out view))
-				return view;
+            if (nodeViewPerType.TryGetValue(nodeType, out view))
+                return view;
 
-			// Allow for inheritance in node views: multiple C# node using the same view
-			foreach (var type in nodeViewPerType)
-			{
-				if (nodeType.IsSubclassOf(type.Key))
-					return type.Value;
-			}
+            Type baseType = null;
 
-			return view;
-		}
+            // Allow for inheritance in node views: multiple C# node using the same view
+            foreach (var type in nodeViewPerType)
+            {
+                // Find a view (not first fitted view) of nodeType
+                if (nodeType.IsSubclassOf(type.Key) && (baseType == null || type.Value.IsSubclassOf(baseType)))
+                    baseType = type.Value;
+            }
 
-		public static IEnumerable<(string path, Type type)>	GetNodeMenuEntries(BaseGraph graph = null)
+            if (baseType != null)
+                return baseType;
+
+            return view;
+        }
+
+        public static IEnumerable<(string path, Type type)>	GetNodeMenuEntries(BaseGraph graph = null)
 		{
 			foreach (var node in genericNodes.nodePerMenuTitle)
 				yield return (node.Key, node.Value);
