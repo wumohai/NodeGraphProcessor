@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using GraphProcessor;
 using UnityEngine;
 
@@ -18,6 +19,9 @@ namespace NodeGraphProcessor.Examples
 		[Setting("Log Type")]
 		public LogType logType = LogType.Log;
 
+		[ShowInInspector(true)]
+		public Dictionary<string, string> TestDic = new Dictionary<string, string>();
+		
 		protected override void Process()
 		{
 			switch(logType)

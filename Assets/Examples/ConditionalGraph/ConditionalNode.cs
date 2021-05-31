@@ -15,6 +15,7 @@ namespace NodeGraphProcessor.Examples
 	public abstract class ConditionalNode : BaseNode, IConditionalNode
 	{
 		// These booleans will controls wether or not the execution of the folowing nodes will be done or discarded.
+		[HideInInspector]
 		[Input(name = "Executed", allowMultiple = true)]
 		public ConditionalLink	executed;
 
@@ -35,6 +36,7 @@ namespace NodeGraphProcessor.Examples
 	/// </summary>
 	public abstract class LinearConditionalNode : ConditionalNode, IConditionalNode
 	{
+		[HideInInspector]
 		[Output(name = "Executes")]
 		public ConditionalLink	executes;
 
@@ -52,6 +54,7 @@ namespace NodeGraphProcessor.Examples
 	/// </summary>
 	public abstract class WaitableNode : LinearConditionalNode
 	{
+		[HideInInspector]
 		[Output(name = "Execute After")]
 		public ConditionalLink executeAfter;
 

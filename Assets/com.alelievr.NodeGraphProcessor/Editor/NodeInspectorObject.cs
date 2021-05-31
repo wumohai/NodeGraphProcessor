@@ -75,6 +75,7 @@ namespace GraphProcessor
     public class NodeInspectorObject : SerializedScriptableObject
     {
         /// <summary>Previously selected object by the inspector</summary>
+        [HideInInspector]
         public Object previouslySelectedObject;
         /// <summary>List of currently selected nodes</summary>
         public HashSet<BaseNodeView> selectedNodes = new HashSet<BaseNodeView>();
