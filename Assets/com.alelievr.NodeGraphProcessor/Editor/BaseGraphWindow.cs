@@ -31,6 +31,7 @@ namespace GraphProcessor
 
 		/// <summary>
 		/// Called by Unity when the window is enabled / opened
+		/// 只会在EditorWindow初次打开/重新编译/进入PlayMode的时候才会执行一次
 		/// </summary>
 		protected virtual void OnEnable()
 		{
@@ -40,7 +41,7 @@ namespace GraphProcessor
 			graphUnloaded = baseGraph => { baseGraph?.OnGraphDisable(); }; 
 			
 			if (graph != null)
-				LoadGraph();
+				InitializeGraph(graph);
 			else
 				reloadWorkaround = true;
 		}
@@ -52,18 +53,11 @@ namespace GraphProcessor
 			// editor window is deserialized, causing the graph view to not be loaded
 			if (reloadWorkaround && graph != null)
 			{
-				LoadGraph();
+				InitializeGraph(graph);
 				reloadWorkaround = false;
 			}
 		}
-
-		void LoadGraph()
-		{
-            // We wait for the graph to be initialized
-            if (graph.isEnabled)
-                InitializeGraph(graph);
-		}
-
+		
 		/// <summary>
 		/// Called by Unity when the window is disabled (happens on domain reload)
 		/// </summary>
