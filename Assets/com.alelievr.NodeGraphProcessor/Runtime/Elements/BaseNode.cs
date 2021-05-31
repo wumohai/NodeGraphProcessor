@@ -10,8 +10,7 @@ namespace GraphProcessor
 {
 	public delegate IEnumerable< PortData > CustomPortBehaviorDelegate(List< SerializableEdge > edges);
 	public delegate IEnumerable< PortData > CustomPortTypeBehaviorDelegate(string fieldName, string displayName, object value);
-
-	[Serializable]
+	
 	public abstract class BaseNode
 	{
 		[SerializeField]
@@ -62,12 +61,12 @@ namespace GraphProcessor
 		/// Container of input ports
 		/// </summary>
 		[NonSerialized]
-		public readonly NodeInputPortContainer	inputPorts;
+		public NodeInputPortContainer	inputPorts;
 		/// <summary>
 		/// Container of output ports
 		/// </summary>
 		[NonSerialized]
-		public readonly NodeOutputPortContainer	outputPorts;
+		public NodeOutputPortContainer	outputPorts;
 
 		//Node view datas
 		public Rect					position;
@@ -220,7 +219,12 @@ namespace GraphProcessor
 			this.graph = graph;
 
 			ExceptionToLog.Call(() => Enable());
+			inputPorts = new NodeInputPortContainer(this);
+			outputPorts = new NodeOutputPortContainer(this);
+			nodeFields = new Dictionary<string, NodeFieldInformation>();
+			customPortTypeBehaviorMap = new Dictionary<Type, CustomPortTypeBehaviorDelegate>();
 
+			InitializeInOutDatas();
 			InitializePorts();
 		}
 
@@ -467,6 +471,8 @@ namespace GraphProcessor
 		{
 			bool changed  = false;
 
+			fieldsToUpdate ??= new Stack<PortUpdate>();
+			updatedFields ??= new HashSet<PortUpdate>();
 			fieldsToUpdate.Clear();
 			updatedFields.Clear();
 
@@ -546,7 +552,7 @@ namespace GraphProcessor
 				string name = field.Name;
 				string tooltip = null;
 
-				if (showInInspector != null)
+				//if (showInInspector != null)
 					_needsInspector = true;
 
 				if (inputAttribute == null && outputAttribute == null)

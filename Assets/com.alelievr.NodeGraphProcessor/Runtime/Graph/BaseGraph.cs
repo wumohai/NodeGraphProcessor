@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine.Serialization;
 using UnityEngine.SceneManagement;
 
@@ -31,9 +32,8 @@ namespace GraphProcessor
 		DepthFirst,
 		BreadthFirst,
 	}
-
-	[System.Serializable]
-	public class BaseGraph : ScriptableObject, ISerializationCallbackReceiver
+	
+	public class BaseGraph : SerializedScriptableObject
 	{
 		static readonly int			maxComputeOrderDepth = 1000;
 		
@@ -55,7 +55,6 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="BaseNode"></typeparam>
 		/// <returns></returns>
-		[SerializeReference]
 		public List< BaseNode >							nodes = new List< BaseNode >();
 
 		/// <summary>
@@ -436,9 +435,8 @@ namespace GraphProcessor
 			pinned.opened = false;
 		}
 
-		public void OnBeforeSerialize()
+		protected override void OnBeforeSerialize()
 		{
-			// Cleanup broken elements
 			stackNodes.RemoveAll(s => s == null);
 			nodes.RemoveAll(n => n == null);
 		}
@@ -495,8 +493,6 @@ namespace GraphProcessor
 			}
 #pragma warning restore CS0618
 		}
-
-		public void OnAfterDeserialize() {}
 
 		/// <summary>
 		/// Update the compute order of the nodes in the graph
