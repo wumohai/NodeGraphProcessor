@@ -158,7 +158,7 @@ namespace GraphProcessor
 		
 		public HashSet< BaseNode >		graphOutputs { get; private set; } = new HashSet<BaseNode>();
 
-        protected virtual void OnEnable()
+        public void OnGraphEnable()
         {
 			if (isEnabled)
 				return;
@@ -202,7 +202,7 @@ namespace GraphProcessor
 			}
 		}
 
-		protected virtual void OnDisable()
+		public void OnGraphDisable()
 		{
 			isEnabled = false;
 			foreach (var node in nodes)

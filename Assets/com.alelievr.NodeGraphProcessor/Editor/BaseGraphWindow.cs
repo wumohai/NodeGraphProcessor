@@ -35,7 +35,10 @@ namespace GraphProcessor
 		protected virtual void OnEnable()
 		{
 			InitializeRootView();
-
+			
+			graphLoaded = baseGraph => { baseGraph?.OnGraphEnable(); }; 
+			graphUnloaded = baseGraph => { baseGraph?.OnGraphDisable(); }; 
+			
 			if (graph != null)
 				LoadGraph();
 			else
