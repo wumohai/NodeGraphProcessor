@@ -23,7 +23,7 @@ public class GraphBehaviourEditor : Editor
         var root = new VisualElement();
         var graphContainer = graphEditor != null ? graphEditor.CreateInspectorGUI().Q("ExposedParameters") : null;
 
-        root.Add(new Button(() => EditorWindow.GetWindow<AllGraphWindow>().InitializeGraph(behaviour.graph))
+        root.Add(new Button(() => EditorWindow.GetWindow<UniversalGraphWindow>().InitializeGraph(behaviour.graph))
         {
             text = "Open"
         });

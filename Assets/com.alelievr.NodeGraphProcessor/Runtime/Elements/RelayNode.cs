@@ -30,7 +30,7 @@ public class RelayNode : BaseNode
 	[System.NonSerialized]
 	int				outputIndex = 0;
 
-	SerializableType inputType = new SerializableType(typeof(object));
+	public SerializableType inputType = new SerializableType(typeof(object));
 
 	const int		k_MaxPortSize = 14;
 
@@ -108,7 +108,7 @@ public class RelayNode : BaseNode
 			inputType.type = edges[0].outputPort.portData.displayType;
 		else
 			inputType.type = typeof(object);
-
+		
 		yield return new PortData {
 			displayName = "",
 			displayType = inputType.type,

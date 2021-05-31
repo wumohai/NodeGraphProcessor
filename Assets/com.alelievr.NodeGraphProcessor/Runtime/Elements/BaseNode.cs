@@ -527,8 +527,8 @@ namespace GraphProcessor
 		internal void DisableInternal()
 		{
 			// port containers are initialized in the OnEnable
-			inputPorts.Clear();
-			outputPorts.Clear();
+			inputPorts?.Clear();
+			outputPorts?.Clear();
 
 			ExceptionToLog.Call(() => Disable());
 		}

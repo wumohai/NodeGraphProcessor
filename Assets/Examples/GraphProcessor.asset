@@ -27,16 +27,16 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 3
     - Name: 
       Entry: 7
-      Data: 1|NodeGraphProcessor.Examples.WaitFrameNode, Assembly-CSharp
+      Data: 1|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
     - Name: nodeCustomName
       Entry: 6
       Data: 
     - Name: GUID
       Entry: 1
-      Data: 8dc38e9a-a085-40aa-a861-d260d5d9cbd1
+      Data: 3d4ed499-b2d6-4c6e-aeb2-45b408cce878
     - Name: computeOrder
       Entry: 3
       Data: 0
@@ -45,82 +45,16 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 145.695648
+      Data: 260
     - Name: 
       Entry: 4
-      Data: 244.739136
+      Data: 139
     - Name: 
       Entry: 4
-      Data: 192
+      Data: 200
     - Name: 
       Entry: 4
-      Data: 99
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: executed
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: executes
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: executeAfter
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: onProcessFinished
-      Entry: 6
-      Data: 
-    - Name: frame
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|GraphProcessor.ParameterNode, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: 2b738f2e-3fc3-4e3a-98ac-1fada580c26a
-    - Name: computeOrder
-      Entry: 3
-      Data: 1
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: -51.6956635
-    - Name: 
-      Entry: 4
-      Data: 427.782623
-    - Name: 
-      Entry: 4
-      Data: 125
-    - Name: 
-      Entry: 4
-      Data: 37
+      Data: 200
     - Name: 
       Entry: 8
       Data: 
@@ -134,41 +68,155 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: input
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
       Entry: 6
+      Data: 
+    - Name: names
+      Entry: 6
+      Data: 
+    - Name: types
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: output
       Entry: 7
-      Data: 3|UnityEngine.Vector3Int, UnityEngine.CoreModule
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 6
+      Data: 
+    - Name: names
+      Entry: 6
+      Data: 
+    - Name: types
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: parameterGUID
-      Entry: 1
-      Data: 72697518-d317-4b35-b29e-524a9d4aa81a
-    - Name: accessor
+    - Name: unpackOutput
+      Entry: 5
+      Data: false
+    - Name: packInput
+      Entry: 5
+      Data: false
+    - Name: inputEdgeCount
       Entry: 3
       Data: 0
+    - Name: inputType
+      Entry: 7
+      Data: 2|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: serializedType
+      Entry: 1
+      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|NodeGraphProcessor.Examples.ConsoleNode, Assembly-CSharp
+      Data: 3|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
     - Name: nodeCustomName
       Entry: 6
       Data: 
     - Name: GUID
       Entry: 1
-      Data: 833cd145-ae77-4373-8ddd-a0e66ea104b0
+      Data: d5aaa4e7-c236-4521-9ff9-dcba34b6aa2e
+    - Name: computeOrder
+      Entry: 3
+      Data: 1
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 437
+    - Name: 
+      Entry: 4
+      Data: 289
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: input
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 6
+      Data: 
+    - Name: names
+      Entry: 6
+      Data: 
+    - Name: types
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: output
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 6
+      Data: 
+    - Name: names
+      Entry: 6
+      Data: 
+    - Name: types
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: unpackOutput
+      Entry: 5
+      Data: false
+    - Name: packInput
+      Entry: 5
+      Data: false
+    - Name: inputEdgeCount
+      Entry: 3
+      Data: 0
+    - Name: inputType
+      Entry: 7
+      Data: 4|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: serializedType
+      Entry: 1
+      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 7eefc4fe-6b92-4cfa-b078-194d70816c9e
     - Name: computeOrder
       Entry: 3
       Data: 2
@@ -177,79 +225,16 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 161.739136
+      Data: 229
     - Name: 
       Entry: 4
-      Data: 459.130463
+      Data: 490
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 200
     - Name: 
       Entry: 4
-      Data: 100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: executed
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: executes
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: obj
-      Entry: 6
-      Data: 
-    - Name: logText
-      Entry: 1
-      Data: Log
-    - Name: logType
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|GraphProcessor.ParameterNode, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: 721254a9-9de2-482b-a794-bdec98d0edc7
-    - Name: computeOrder
-      Entry: 3
-      Data: 3
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 223.478271
-    - Name: 
-      Entry: 4
-      Data: 670.4348
-    - Name: 
-      Entry: 4
-      Data: 100
-    - Name: 
-      Entry: 4
-      Data: 100
+      Data: 200
     - Name: 
       Entry: 8
       Data: 
@@ -263,80 +248,53 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: input
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
       Entry: 6
+      Data: 
+    - Name: names
+      Entry: 6
+      Data: 
+    - Name: types
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: output
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
       Entry: 6
       Data: 
-    - Name: parameterGUID
-      Entry: 1
-      Data: 35fa54c7-fc62-41a4-9b33-277454624293
-    - Name: accessor
+    - Name: names
+      Entry: 6
+      Data: 
+    - Name: types
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: unpackOutput
+      Entry: 5
+      Data: false
+    - Name: packInput
+      Entry: 5
+      Data: false
+    - Name: inputEdgeCount
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
+    - Name: inputType
       Entry: 7
-      Data: 6|NodeGraphProcessor.Examples.ConsoleNode, Assembly-CSharp
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
+      Data: 6|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: serializedType
       Entry: 1
-      Data: 77099110-40d6-4287-870f-6e2627ee1ef1
-    - Name: computeOrder
-      Entry: 3
-      Data: 4
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 396.521759
-    - Name: 
-      Entry: 4
-      Data: 527.8261
-    - Name: 
-      Entry: 4
-      Data: 100
-    - Name: 
-      Entry: 4
-      Data: 100
+      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
     - Name: 
       Entry: 8
       Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: executed
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: executes
-      Entry: 7
-      Data: NodeGraphProcessor.Examples.ConditionalLink, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: obj
-      Entry: 6
-      Data: 
-    - Name: logText
-      Entry: 1
-      Data: Log
-    - Name: logType
-      Entry: 3
-      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -348,101 +306,29 @@ MonoBehaviour:
       Data: 
   serializedNodes: []
   edges:
-  - GUID: 68301c8a-30ff-4fe7-aee5-4dff87ca9775
+  - GUID: 431a7eb8-981a-4635-8c26-db9f8e2ee2a6
     owner: {fileID: 11400000}
-    inputNodeGUID: 833cd145-ae77-4373-8ddd-a0e66ea104b0
-    outputNodeGUID: 2b738f2e-3fc3-4e3a-98ac-1fada580c26a
-    inputFieldName: obj
+    inputNodeGUID: d5aaa4e7-c236-4521-9ff9-dcba34b6aa2e
+    outputNodeGUID: 3d4ed499-b2d6-4c6e-aeb2-45b408cce878
+    inputFieldName: input
     outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: output
-  - GUID: ec73c850-5c63-4dc2-b931-56f66aa69655
+    inputPortIdentifier: 0
+    outputPortIdentifier: 0
+  - GUID: 378a1734-8202-4c0e-bc39-0def48024d16
     owner: {fileID: 11400000}
-    inputNodeGUID: 77099110-40d6-4287-870f-6e2627ee1ef1
-    outputNodeGUID: 721254a9-9de2-482b-a794-bdec98d0edc7
-    inputFieldName: obj
+    inputNodeGUID: 7eefc4fe-6b92-4cfa-b078-194d70816c9e
+    outputNodeGUID: d5aaa4e7-c236-4521-9ff9-dcba34b6aa2e
+    inputFieldName: input
     outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: output
+    inputPortIdentifier: 0
+    outputPortIdentifier: 0
   groups: []
   stackNodes: []
-  pinnedElements:
-  - position:
-      serializedVersion: 2
-      x: 0
-      y: 119
-      width: 150
-      height: 200
-    opened: 1
-    editorType:
-      serializedType: GraphProcessor.ExposedParameterView, com.alelievr.NodeGraphProcessor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  - position:
-      serializedVersion: 2
-      x: 0
-      y: 226
-      width: 150
-      height: 200
-    opened: 1
-    editorType:
-      serializedType: GraphProcessor.ProcessorView, com.alelievr.NodeGraphProcessor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  - position:
-      serializedVersion: 2
-      x: 0
-      y: 558
-      width: 150
-      height: 200
-    opened: 1
-    editorType:
-      serializedType: GraphProcessor.ExposedParameterView, com.alelievr.NodeGraphProcessor.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  exposedParameters:
-  - id: 0
-  - id: 1
+  pinnedElements: []
+  exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 153, y: -84, z: 0}
+  position: {x: -76, y: -34, z: 0}
   scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 1
-    00000000:
-      type: {class: Vector3IntParameter, ns: GraphProcessor, asm: com.alelievr.NodeGraphProcessor.Runtime}
-      data:
-        guid: 72697518-d317-4b35-b29e-524a9d4aa81a
-        name: New Vector 3 Int
-        type: 
-        serializedValue:
-          serializedType: 
-          serializedName: 
-          serializedValue: 
-        input: 1
-        settings:
-          id: 2
-        val: {x: 0, y: 0, z: 0}
-    00000001:
-      type: {class: GameObjectParameter, ns: GraphProcessor, asm: com.alelievr.NodeGraphProcessor.Runtime}
-      data:
-        guid: 35fa54c7-fc62-41a4-9b33-277454624293
-        name: New Game Object
-        type: 
-        serializedValue:
-          serializedType: 
-          serializedName: 
-          serializedValue: 
-        input: 1
-        settings:
-          id: 3
-        val: {fileID: 0}
-    00000002:
-      type: {class: ExposedParameter/Settings, ns: GraphProcessor, asm: com.alelievr.NodeGraphProcessor.Runtime}
-      data:
-        isHidden: 0
-        expanded: 0
-        guid: 72697518-d317-4b35-b29e-524a9d4aa81a
-    00000003:
-      type: {class: ExposedParameter/Settings, ns: GraphProcessor, asm: com.alelievr.NodeGraphProcessor.Runtime}
-      data:
-        isHidden: 0
-        expanded: 0
-        guid: 35fa54c7-fc62-41a4-9b33-277454624293
