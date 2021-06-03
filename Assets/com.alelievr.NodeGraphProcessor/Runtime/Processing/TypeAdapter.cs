@@ -46,6 +46,7 @@ namespace GraphProcessor
 
         static void LoadAllAdapters()
         {
+            //TODO 优化成只从固定几个程序集收集ITypeAdapter，不然几万的类型耗时太高
             foreach (Type type in AppDomain.CurrentDomain.GetAllTypes())
             {
                 if (typeof(ITypeAdapter).IsAssignableFrom(type))

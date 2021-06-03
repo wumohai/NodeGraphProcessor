@@ -82,6 +82,7 @@ namespace GraphProcessor
 		public BaseNode				owner;
 		/// <summary>
 		/// The fieldInfo from the fieldName
+		/// 这个Port对应Node中的字段反射信息
 		/// </summary>
 		public FieldInfo			fieldInfo;
 		/// <summary>
@@ -92,11 +93,6 @@ namespace GraphProcessor
 		Dictionary< SerializableEdge, PushDataDelegate >	pushDataDelegates = new Dictionary< SerializableEdge, PushDataDelegate >();
 		List< SerializableEdge >	edgeWithRemoteCustomIO = new List< SerializableEdge >();
 
-		/// <summary>
-		/// Owner of the FieldInfo, to be used in case of Get/SetValue
-		/// </summary>
-		public object				fieldOwner;
-
 		CustomPortIODelegate		customPortIOMethod;
 
 		/// <summary>
@@ -105,30 +101,20 @@ namespace GraphProcessor
 		/// More info: https://codeblog.jonskeet.uk/2008/08/09/making-reflection-fly-and-exploring-delegates/
 		/// </summary>
 		public delegate void PushDataDelegate();
-
+		
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="owner">owner node</param>
 		/// <param name="fieldName">the C# property name</param>
 		/// <param name="portData">Data of the port</param>
-		public NodePort(BaseNode owner, string fieldName, PortData portData) : this(owner, owner, fieldName, portData) {}
-
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="owner">owner node</param>
-		/// <param name="fieldOwner"></param>
-		/// <param name="fieldName">the C# property name</param>
-		/// <param name="portData">Data of the port</param>
-		public NodePort(BaseNode owner, object fieldOwner, string fieldName, PortData portData)
+		public NodePort(BaseNode owner, string fieldName, PortData portData)
 		{
 			this.fieldName = fieldName;
 			this.owner     = owner;
 			this.portData  = portData;
-			this.fieldOwner = fieldOwner;
 
-			fieldInfo = fieldOwner.GetType().GetField(
+			fieldInfo = owner.GetType().GetField(
 				fieldName,
 				BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 			customPortIOMethod = CustomPortIO.GetCustomPortMethod(owner.GetType(), fieldName);
@@ -267,7 +253,7 @@ namespace GraphProcessor
 				return ;
 
 			//if there are custom IO implementation on the other ports, they'll need our value in the passThrough buffer
-			object ourValue = fieldInfo.GetValue(fieldOwner);
+			object ourValue = fieldInfo.GetValue(owner);
 			foreach (var edge in edgeWithRemoteCustomIO)
 				edge.passThroughBuffer = ourValue;
 		}
@@ -279,14 +265,14 @@ namespace GraphProcessor
 		{
 			// Clear lists, set classes to null and struct to default value.
 			if (typeof(IList).IsAssignableFrom(fieldInfo.FieldType))
-				(fieldInfo.GetValue(fieldOwner) as IList)?.Clear();
+				(fieldInfo.GetValue(owner) as IList)?.Clear();
 			else if (fieldInfo.FieldType.GetTypeInfo().IsClass)
-				fieldInfo.SetValue(fieldOwner, null);
+				fieldInfo.SetValue(owner, null);
 			else
 			{
 				try
 				{
-					fieldInfo.SetValue(fieldOwner, Activator.CreateInstance(fieldInfo.FieldType));
+					fieldInfo.SetValue(owner, Activator.CreateInstance(fieldInfo.FieldType));
 				} catch {} // Catch types that don't have any constructors
 			}
 		}
@@ -306,16 +292,16 @@ namespace GraphProcessor
 			// check if this port have connection to ports that have custom output functions
 			if (edgeWithRemoteCustomIO.Count == 0)
 				return ;
-
 			// Only one input connection is handled by this code, if you want to
 			// take multiple inputs, you must create a custom input function see CustomPortsNode.cs
 			if (edges.Count > 0)
-				fieldInfo.SetValue(fieldOwner, edges.First().passThroughBuffer);
+				fieldInfo.SetValue(owner, edges.First().passThroughBuffer);
 		}
 	}
 
 	/// <summary>
 	/// Container of ports and the edges connected to these ports
+	/// 可包含多个Port，例如一个InputPortContainer可以包含多个InputPort来表述一个节点的多个入端口
 	/// </summary>
 	public abstract class NodePortContainer : List< NodePort >
 	{

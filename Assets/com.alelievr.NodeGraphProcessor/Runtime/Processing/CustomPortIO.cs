@@ -25,6 +25,7 @@ namespace GraphProcessor
 		{
 			BindingFlags bindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
+			//TODO 优化成只从固定几个程序集收集ITypeAdapter，不然几万的类型耗时太高
 			foreach (var type in AppDomain.CurrentDomain.GetAllTypes())
 			{
 				if (type.IsAbstract || type.ContainsGenericParameters)
