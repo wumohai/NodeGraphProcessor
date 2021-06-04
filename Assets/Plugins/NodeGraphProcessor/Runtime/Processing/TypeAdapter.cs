@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
+using UnityEngine.Profiling;
 
 namespace GraphProcessor
 {
@@ -46,8 +47,7 @@ namespace GraphProcessor
 
         static void LoadAllAdapters()
         {
-            //TODO 优化成只从固定几个程序集收集ITypeAdapter，不然几万的类型耗时太高
-            foreach (Type type in AppDomain.CurrentDomain.GetAllTypes())
+            foreach (Type type in UtilityRefelection.GetAllTypes())
             {
                 if (typeof(ITypeAdapter).IsAssignableFrom(type))
                 {
@@ -111,7 +111,7 @@ namespace GraphProcessor
                 if (!adapters.ContainsKey((kp.Key.to, kp.Key.from)))
                     Debug.LogError($"Missing convertion method. There is one for {kp.Key.from} to {kp.Key.to} but not for {kp.Key.to} to {kp.Key.from}");
             }
-
+            
             adaptersLoaded = true;
         }
 

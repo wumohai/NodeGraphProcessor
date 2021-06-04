@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq.Expressions;
+using UnityEngine.Profiling;
 
 namespace GraphProcessor
 {
@@ -24,9 +25,8 @@ namespace GraphProcessor
 		static void LoadCustomPortMethods()
 		{
 			BindingFlags bindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
-
-			//TODO 优化成只从固定几个程序集收集ITypeAdapter，不然几万的类型耗时太高
-			foreach (var type in AppDomain.CurrentDomain.GetAllTypes())
+			Profiler.BeginSample("ssssss");
+			foreach (var type in UtilityRefelection.GetAllTypes())
 			{
 				if (type.IsAbstract || type.ContainsGenericParameters)
 					continue ;
@@ -37,18 +37,16 @@ namespace GraphProcessor
 
 				foreach (var method in methods)
 				{
-					var portInputAttr = method.GetCustomAttribute< CustomPortInputAttribute >();
-					var portOutputAttr = method.GetCustomAttribute< CustomPortOutputAttribute >();
+					UtilityAttribute.TryGetMethodInfoAttribute(method, out CustomPortInputAttribute portInputAttr);
+					UtilityAttribute.TryGetMethodInfoAttribute(method, out CustomPortOutputAttribute portOutputAttr);
 
 					if (portInputAttr == null && portOutputAttr == null)
 						continue ;
 					
 					var p = method.GetParameters();
-					bool nodePortSignature = false;
+					bool nodePortSignature = p.Length == 2 && p[1].ParameterType == typeof(NodePort);
 
 					// Check if the function can take a NodePort in optional param
-					if (p.Length == 2 && p[1].ParameterType == typeof(NodePort))
-						nodePortSignature = true;
 
 					CustomPortIODelegate deleg;
 #if ENABLE_IL2CPP
@@ -96,6 +94,7 @@ namespace GraphProcessor
 					AddAssignableTypes(fieldType, customType);
 				}
 			}
+			Profiler.EndSample();
 		}
 
 		public static CustomPortIODelegate GetCustomPortMethod(Type nodeType, string fieldName)
