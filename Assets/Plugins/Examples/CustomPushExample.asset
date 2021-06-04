@@ -30,7 +30,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|NodeGraphProcessor.Examples.Comparison, Assembly-CSharp
+      Data: 1|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
