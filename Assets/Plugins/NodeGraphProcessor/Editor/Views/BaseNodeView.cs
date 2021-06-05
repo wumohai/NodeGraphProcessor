@@ -19,6 +19,7 @@ namespace GraphProcessor
 	[HideReferenceObjectPicker]
 	public class BaseNodeView : NodeView
 	{
+		//TODO 当前更新模式是只要此BaseNode数据发生变化，就全量更新其对应NodeView的所有数据，后续出现卡顿可以考虑去掉这个特性
 		[OnValueChanged(nameof(UpdateFieldValues), true)]
 		public BaseNode							nodeTarget;
 

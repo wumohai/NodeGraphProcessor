@@ -82,4 +82,20 @@ namespace GraphProcessor
             selectedNodes.Remove(view);
         }
     }
+
+    /// <summary>
+    /// 手动清理NodeInspectorObject，防止出现编辑已经非法的数据，因为NodeView是每次重新编译/PlayMode后重新构建的
+    /// 所以如果这里不做清理在重新编译/PlayMode后编辑的就是已经失效的数据
+    /// </summary>
+    public class ResetSelectNodeInfo : Editor
+    {
+        [InitializeOnLoadMethod]
+        public static void _ResetSelectNodeInfo()
+        {
+            if (Selection.activeObject is NodeInspectorObject nodeInspectorObject)
+            {
+                nodeInspectorObject.selectedNodes.Clear();
+            }
+        }
+    }
 }
