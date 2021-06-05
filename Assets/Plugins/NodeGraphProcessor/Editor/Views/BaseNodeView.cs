@@ -19,6 +19,7 @@ namespace GraphProcessor
 	[HideReferenceObjectPicker]
 	public class BaseNodeView : NodeView
 	{
+		[OnValueChanged(nameof(UpdateFieldValues), true)]
 		public BaseNode							nodeTarget;
 
 		[HideInInspector]

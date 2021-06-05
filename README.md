@@ -1,4 +1,5 @@
 # NodeGraphProcessor + Odin
+
 Node graph editor framework focused on data processing using Unity UIElements, GraphView and C# 4.7
 
 这个项目是本人NodeGraphProcessor接入Odin序列化的示例。**本仓库将持续跟进更新。 目前已同步更新至 https://github.com/alelievr/NodeGraphProcessor/commit/ba0468c2edc067ab7376d3f67daef80eeefa380f**
@@ -188,7 +189,7 @@ public class Inheritance2 : Inheritance1
 
 ## TODO
 
- - [ ] 在Inseoctor面板修改的Node数据需要即时渲染在Graph上。原因是仓库原生版本是用了BaseNodeView + NodeCustomEditor做协调同步，而我们使用Odin序列化后就丢失了特定NodeView的相关信息，待修复
+ - [x] 在Inseoctor面板修改的Node数据需要即时渲染在Graph上。原因是仓库原生版本是用了BaseNodeView + NodeCustomEditor做协调同步，而我们使用Odin序列化后就丢失了特定NodeView的相关信息，已修复，使用`[OnValueChanged(nameof(UpdateFieldValues), true)]`即可自动监控Node的数据变化然后进行绘制更新
  - [x] ~~不同的Graph需要有不同的节点搜索范围。例如行为树Graph在创建节点时只会搜索行为树相关节点内容而不会搜索到碰撞关系编辑器相关节点内容~~ （这是原生库自带的功能，填充NodeMenuItem的onlyCompatibleWithGraph即可，手动流汗黄豆）
  - [x] 优化节点之间值传递消耗为0GC (由于支持自定义每个端口的处理，而框架不可能知道我们自定义节点端口的逻辑是什么样的，所以自定义节点值传递已无优化空间，只能通过反射进行，但这种反射传递值只发生在进行自定义端口处理的时候，默认情况下是直接通过表达式树赋值的，效率尚可），但如果想要进一步优化拆装箱和反射消耗，我们可以自己手写那些原本被框架所托管的代码来达到优化的目的。
  - [x] 优化一些反射操作的扫描程序集范围，现在耗时非常严重，甚至还扫描了mscorlib程序集中的类型
