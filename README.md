@@ -184,7 +184,7 @@ public class Inheritance2 : Inheritance1
 }
 ```
 
-更多示例可见仓库中的 https://www.github.com/wqaetly/NodeGraphProcessor/Assets/Plugins/Examples/DefaultNodes/Nodes/ 
+更多示例可见仓库中的 https://github.com/wqaetly/NodeGraphProcessor/tree/master/Assets/Plugins/Examples/DefaultNodes/Nodes 
 
 ## TODO
 
