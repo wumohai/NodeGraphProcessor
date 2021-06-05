@@ -19,6 +19,7 @@ public class MessageNode : BaseNode
 
 	protected override void Process()
 	{
+		TryGetInputValue(nameof(input), ref input);
 		if (input != 42)
 			AddMessage(k_InputIsNot42Error, messageType);
 		else

@@ -19,8 +19,18 @@ namespace NodeGraphProcessor.Examples
 
 		public override string		name => "Comparison";
 
+		public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+		{
+			if (compared is T finalValue)
+			{
+				value = finalValue;
+			}
+		}
+
 		protected override void Process()
 		{
+			TryGetInputValue(nameof(inA), ref inA);
+			TryGetInputValue(nameof(inB), ref inB);
 			switch (compareFunction)
 			{
 				default:

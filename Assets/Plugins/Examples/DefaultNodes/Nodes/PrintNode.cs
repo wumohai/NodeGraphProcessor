@@ -11,6 +11,11 @@ public class PrintNode : BaseNode
 	public object	obj;
 
 	public override string name => "Print";
+	
+	protected override void Process()
+	{
+		TryGetInputValue(nameof(obj), ref obj);
+	}
 }
 
 [NodeMenuItem("Conditional/Print")]
@@ -20,4 +25,9 @@ public class ConditionalPrintNode : LinearConditionalNode
 	public object	obj;
 
 	public override string name => "Print";
+	
+	protected override void Process()
+	{
+		TryGetInputValue(nameof(obj), ref obj);
+	}
 }

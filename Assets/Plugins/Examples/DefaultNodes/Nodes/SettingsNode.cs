@@ -23,5 +23,17 @@ public class SettingsNode : BaseNode
 	[Output]
 	public float			output;
 
-	protected override void Process() {}
+	protected override void Process()
+	{
+		TryGetInputValue(nameof(input), ref input);
+		output = input;
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
+	}
 }

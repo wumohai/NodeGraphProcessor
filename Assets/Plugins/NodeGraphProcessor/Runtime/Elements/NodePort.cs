@@ -163,7 +163,7 @@ namespace GraphProcessor
 			}
 		}
 
-		public void GetConnectionValue<T>(ref T value)
+		public void GetInputValue<T>(ref T value)
 		{
 			if (connected)
 			{

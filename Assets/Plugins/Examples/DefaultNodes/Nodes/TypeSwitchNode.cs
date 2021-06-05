@@ -27,6 +27,7 @@ public class TypeSwitchNode : BaseNode
 	
 	protected override void Process()
 	{
+		TryGetInputValue(nameof(input), ref input);
 		Debug.Log("Input: " + input);
 	}
 }

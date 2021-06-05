@@ -20,6 +20,28 @@ public class VerticalNode2 : BaseNode
 
 	protected override void Process()
 	{
-	    output = input * 42;
+		TryGetInputValue(nameof(input), ref input);
+		TryGetInputValue(nameof(input2), ref input2);
+		output = input;
+		output2 = input;
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		switch (outputPort.fieldName)
+		{
+			case nameof(output):
+				if (output is T finaValue)
+				{
+					value = finaValue;
+				}
+				break;
+			case nameof(output2):
+				if (output2 is T finaValue2)
+				{
+					value = finaValue2;
+				}
+				break;
+		}
 	}
 }

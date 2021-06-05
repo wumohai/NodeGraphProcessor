@@ -4,13 +4,13 @@ using UnityEngine;
 using GraphProcessor;
 using System.Linq;
 using System;
+using Sirenix.Utilities;
 
 [System.Serializable, NodeMenuItem("Utils/Relay")]
 public class RelayNode : BaseNode
 {
 	const string packIdentifier = "_Pack";
 
-	[HideInInspector]
 	public struct PackedRelayData
 	{
 		public List<object>	values;
@@ -19,16 +19,14 @@ public class RelayNode : BaseNode
 	}
 
 	[Input(name = "In")]
-    public PackedRelayData	input;
+    public PackedRelayData	input = new PackedRelayData(){values = new List<object>(), names =new List<string>(), types = new List<Type>()};
 
 	[Output(name = "Out")]
-	public PackedRelayData	output;
+	public PackedRelayData	output = new PackedRelayData(){values = new List<object>(), names =new List<string>(), types = new List<Type>()};
 
 	public bool		unpackOutput = false;
 	public bool		packInput = false;
 	public int		inputEdgeCount = 0;
-	[System.NonSerialized]
-	int				outputIndex = 0;
 
 	public SerializableType inputType = new SerializableType(typeof(object));
 
@@ -36,61 +34,53 @@ public class RelayNode : BaseNode
 
 	protected override void Process()
 	{
-		outputIndex = 0;
-		output = input;
-	}
-
-	public override string layoutStyle => "GraphProcessorStyles/RelayNode";
-
-	[CustomPortInput(nameof(input), typeof(object), true)]
-	public void GetInputs(List< SerializableEdge > edges)
-	{
+		input.values.Clear();
+		List<SerializableEdge> edges = this.inputPorts[0].GetEdges();
 		inputEdgeCount = edges.Count;
 
 		// If the relay is only connected to another relay:
-		if (edges.Count == 1 && edges.First().outputNode.GetType() == typeof(RelayNode))
+		if (inputEdgeCount == 1 && edges.First().outputNode.GetType() == typeof(RelayNode))
 		{
-			if (edges.First().passThroughBuffer != null)
-				input = (PackedRelayData)edges.First().passThroughBuffer;
+			TryGetInputValue(nameof(input), ref input);
 		}
 		else
 		{
-			input.values = edges.Select(e => e.passThroughBuffer).ToList();
+			IEnumerable<object> inputValues = TryGetAllInputValues<object>(nameof(input));
+			inputValues.ForEach(value => input.values.Add(value));
 			input.names = edges.Select(e => e.outputPort.portData.displayName).ToList();
 			input.types = edges.Select(e => e.outputPort.portData.displayType ?? e.outputPort.fieldInfo.FieldType).ToList();
 		}
+		
+		output = input;
 	}
 
-	[CustomPortOutput(nameof(output), typeof(object), true)]
-	public void PushOutputs(List< SerializableEdge > edges, NodePort outputPort)
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
 	{
 		if (inputPorts.Count == 0)
 			return;
-
+	
 		var inputPortEdges = inputPorts[0].GetEdges();
-
-		if (outputPort.portData.identifier != packIdentifier && outputIndex >= 0 && (unpackOutput || inputPortEdges.Count == 1))
+		if (outputPort.portData.identifier != packIdentifier && (unpackOutput || inputPortEdges.Count == 1))
 		{
 			if (output.values == null)
 				return;
 
-			// When we unpack the output, there is one port per type of data in output
-			// That means that this function will be called the same number of time than the output port count
-			// Thus we use a class field to keep the index.
-			object data = output.values[outputIndex++];
-
-			foreach (var edge in edges)
+			int inputPortIndexInOutputPortEdge = outputPort.GetEdges().FindIndex(edge => edge.inputPort == inputPort);
+			if (output.values[inputPortIndexInOutputPortEdge] is T finalValue)
 			{
-				var inputRelay = edge.inputNode as RelayNode;
-				edge.passThroughBuffer = inputRelay != null && !inputRelay.packInput ? output : data;
+				value = finalValue;
 			}
 		}
 		else
 		{
-			foreach (var edge in edges)
-				edge.passThroughBuffer = output;
+			if (output is T finalValue)
+			{
+				value = finalValue;
+			}
 		}
 	}
+
+	public override string layoutStyle => "GraphProcessorStyles/RelayNode";
 
 	[CustomPortBehavior(nameof(input))]
 	IEnumerable< PortData > InputPortBehavior(List< SerializableEdge > edges)

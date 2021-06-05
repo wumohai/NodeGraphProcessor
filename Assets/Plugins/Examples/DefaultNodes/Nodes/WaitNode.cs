@@ -21,7 +21,7 @@ namespace NodeGraphProcessor.Examples
 			//	If this function is called from other than the ConditionalNode, then there will be problems, errors, unforeseen consequences, tears.
 			// var isCalledFromConditionalProcessor = new StackTrace().GetFrame(5).GetMethod().ReflectedType == typeof(ConditionalProcessor);
 			// if(!isCalledFromConditionalProcessor) return;
-			
+			TryGetInputValue(nameof(waitTime), ref waitTime);
 			if(waitMonoBehaviour == null)
 			{
 				var go = new GameObject(name: "WaitGameObject");

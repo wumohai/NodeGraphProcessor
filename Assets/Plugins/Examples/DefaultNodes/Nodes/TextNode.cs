@@ -11,4 +11,12 @@ public class TextNode : BaseNode
 	public string				output;
 
 	public override string		name => "Text";
+	
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
+	}
 }

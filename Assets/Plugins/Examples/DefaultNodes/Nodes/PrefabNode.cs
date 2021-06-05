@@ -11,4 +11,12 @@ public class PrefabNode : BaseNode
 	public GameObject			output;
 
 	public override string		name => "Prefab";
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
+	}
 }

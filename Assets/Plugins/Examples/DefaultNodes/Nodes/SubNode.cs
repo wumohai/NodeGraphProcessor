@@ -16,9 +16,19 @@ public class SubNode : BaseNode
 	public float				output;
 
 	public override string		name => "Sub";
-
+	
 	protected override void Process()
 	{
-	    output = inputA - inputB;
+		TryGetInputValue(nameof(inputA), ref inputA);
+		TryGetInputValue(nameof(inputB), ref inputB);
+		output = inputA - inputB;
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
 	}
 }

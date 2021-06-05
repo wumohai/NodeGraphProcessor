@@ -817,7 +817,7 @@ namespace GraphProcessor
 		/// <typeparam name="T"></typeparam>
 		public void TryGetInputValue<T>(string fieldName, ref T value)
 		{
-			GetInputPort(fieldName).GetConnectionValue(ref value);
+			GetInputPort(fieldName).GetInputValue(ref value);
 		}
 
 		/// <summary>

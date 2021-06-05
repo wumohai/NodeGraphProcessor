@@ -24,6 +24,8 @@ namespace NodeGraphProcessor.Examples
 		
 		protected override void Process()
 		{
+			TryGetInputValue(nameof(obj), ref obj);
+			
 			switch(logType)
 			{
 				case LogType.Error:

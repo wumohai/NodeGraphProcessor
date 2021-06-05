@@ -16,6 +16,7 @@ public class OutputNode : BaseNode
 
 	protected override void Process()
 	{
+		TryGetInputValue(nameof(input), ref input);
 		// Do stuff
 	}
 }

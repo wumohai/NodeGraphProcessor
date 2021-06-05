@@ -111,6 +111,7 @@ namespace NodeGraphProcessor.Examples
 				// TODO: maxExecutionTimeMS
 	
 				// In case the node is conditional, then we need to execute it's non-conditional dependencies first
+				// 如果一个节点是conditional的，我们需要先执行其非conditional节点来获取结果
 				if(node is IConditionalNode && !skipConditionalHandling.Contains(node))
 				{
 					// Gather non-conditional deps: TODO, move to the cache:

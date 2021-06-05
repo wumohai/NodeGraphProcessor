@@ -17,6 +17,7 @@ namespace NodeGraphProcessor.Examples
 
 		protected override void Process()
 		{
+			TryGetInputValue(nameof(frame), ref frame);
 			if(waitFrameMonoBehaviour == null)
 			{
 				var go = new GameObject(name: "WaitFrameGameObject");

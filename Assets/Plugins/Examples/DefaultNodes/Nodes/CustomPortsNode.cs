@@ -25,7 +25,22 @@ public class CustomPortsNode : BaseNode
 
 	protected override void Process()
 	{
+		foreach (var inputValue in TryGetAllInputValues<float>(nameof(inputs)))
+		{
+			outputs.Add(inputValue);
+		}
+
 		// do things with values
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		//出端口所有连线对应端口中，目标入端口所对应的index
+		int inputPortIndexInOutputPortEdge = outputPort.GetEdges().FindIndex(edge => edge.inputPort == inputPort);
+		if (outputs[inputPortIndexInOutputPortEdge] is T finalValue)
+		{
+			value = finalValue;
+		}
 	}
 
 	[CustomPortBehavior(nameof(inputs))]
@@ -41,24 +56,5 @@ public class CustomPortsNode : BaseNode
 				identifier = i.ToString(), // Must be unique
 			};
 		}
-	}
-
-	// This function will be called once per port created from the `inputs` custom port function
-	// will in parameter the list of the edges connected to this port
-	[CustomPortInput(nameof(inputs), typeof(float))]
-	void PullInputs(List< SerializableEdge > inputEdges)
-	{
-		values.AddRange(inputEdges.Select(e => e.passThroughBuffer).ToList());
-	}
-
-	[CustomPortOutput(nameof(outputs), typeof(float))]
-	void PushOutputs(List< SerializableEdge > connectedEdges)
-	{
-		// Values length is supposed to match connected edges length
-		for (int i = 0; i < connectedEdges.Count; i++)
-			connectedEdges[i].passThroughBuffer = values[Mathf.Min(i, values.Count - 1)];
-			
-		// once the outputs are pushed, we don't need the inputs data anymore
-		values.Clear();
 	}
 }

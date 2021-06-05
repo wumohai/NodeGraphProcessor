@@ -14,9 +14,18 @@ public class SwitchNode : BaseNode
 	public float				output;
 
 	public override string		name => "Switch";
-
+	
 	protected override void Process()
 	{
-	    output = input * 42;
+		TryGetInputValue(nameof(input), ref input);
+		output = input * 42;
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
 	}
 }

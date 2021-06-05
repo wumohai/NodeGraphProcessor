@@ -18,7 +18,7 @@ public class MultiAddNode : BaseNode
 	protected override void Process()
 	{
 		output = 0;
-
+		inputs = TryGetAllInputValues<float>(nameof(inputs));
 		if (inputs == null)
 			return ;
 
@@ -26,15 +26,17 @@ public class MultiAddNode : BaseNode
 			output += input;
 	}
 
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
+	}
+
 	[CustomPortBehavior(nameof(inputs))]
 	IEnumerable< PortData > GetPortsForInputs(List< SerializableEdge > edges)
 	{
 		yield return new PortData{ displayName = "In ", displayType = typeof(float), acceptMultipleEdges = true};
-	}
-
-	[CustomPortInput(nameof(inputs), typeof(float), allowCast = true)]
-	public void GetInputs(List< SerializableEdge > edges)
-	{
-		inputs = edges.Select(e => (float)e.passThroughBuffer);
 	}
 }

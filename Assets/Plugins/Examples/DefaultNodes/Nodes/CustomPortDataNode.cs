@@ -26,11 +26,21 @@ public class CustomPortData : BaseNode
 	{
 		output = 0;
 
+		inputs = TryGetAllInputValues<object>(nameof(inputs));
+		
 		if (inputs == null)
 			return ;
 
 		foreach (float input in inputs)
 			output += input;
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
 	}
 
 	[CustomPortBehavior(nameof(inputs))]
@@ -42,11 +52,5 @@ public class CustomPortData : BaseNode
 		{
             yield return portData;
 		}
-	}
-
-	[CustomPortInput(nameof(inputs), typeof(float), allowCast = true)]
-	public void GetInputs(List< SerializableEdge > edges)
-	{
-		// inputs = edges.Select(e => (float)e.passThroughBuffer);
 	}
 }

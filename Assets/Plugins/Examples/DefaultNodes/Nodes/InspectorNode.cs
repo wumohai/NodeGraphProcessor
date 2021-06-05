@@ -22,6 +22,15 @@ public class InspectorNode : BaseNode
 
 	protected override void Process()
 	{
+		TryGetInputValue(nameof(input), ref input);
 	    output = input * 42;
+	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		if (output is T finalValue)
+		{
+			value = finalValue;
+		}
 	}
 }

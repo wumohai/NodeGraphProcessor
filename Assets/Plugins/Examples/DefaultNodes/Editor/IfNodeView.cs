@@ -14,9 +14,12 @@ public class IfNodeView : BaseNodeView
 	{
 		hasSettings = true;	// or base.Enable();
 		var node = nodeTarget as IfNode;
-
-        // Create your fields using node's variables and add them to the controlsContainer
-
-		controlsContainer.Add(new Label($"Last Evaluation: {node.condition}"));
+		Label label = new Label( $"Last Evaluation: {node.condition}");
+		node.onProcessed += ()=>
+		{
+			label.text = $"Last Evaluation: {node.condition}";
+		};
+		// Create your fields using node's variables and add them to the controlsContainer
+		controlsContainer.Add(label);
 	}
 }

@@ -7,6 +7,7 @@
 using GraphProcessor;
 using UnityEditor;
 using UnityEditor.UIElements;
+using UnityEngine.UIElements;
 
 namespace Examples.Editor._05_All
 {
@@ -24,7 +25,9 @@ namespace Examples.Editor._05_All
         {
             base.AddButtons();
             bool miniMapVisible = m_MiniMapView.visible;
-            AddToggle("Show MiniMap", miniMapVisible, (v) => m_MiniMapView.visible = v);
+            AddToggle("MiniMap", miniMapVisible, (v) => m_MiniMapView.visible = v);
+            bool conditionalProcessorVisible = graphView.GetPinnedElementStatus< ConditionalProcessorView >() != DropdownMenuAction.Status.Hidden;
+            AddToggle("Conditional Processor", conditionalProcessorVisible, (v) => graphView.ToggleView< ConditionalProcessorView>());
         }
     }
 }
