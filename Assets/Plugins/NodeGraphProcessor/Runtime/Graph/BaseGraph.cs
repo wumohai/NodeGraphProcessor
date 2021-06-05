@@ -815,10 +815,6 @@ namespace GraphProcessor
 			if (TypeAdapter.AreIncompatible(t1, t2))
 				return false;
 
-			//Check if there is custom adapters for this assignation
-			if (CustomPortIO.IsAssignable(t1, t2))
-				return true;
-
 			//Check for type assignability
 			if (t2.IsReallyAssignableFrom(t1))
 				return true;

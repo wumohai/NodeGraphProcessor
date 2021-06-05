@@ -94,56 +94,6 @@ namespace GraphProcessor
 	}
 
 	/// <summary>
-	/// Allow you to customize the input function of a port
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-	public class CustomPortInputAttribute : Attribute
-	{
-		public string	fieldName;
-		public Type		inputType;
-		public bool		allowCast;
-
-		/// <summary>
-		/// Allow you to customize the input function of a port.
-		/// See CustomPortsNode example in Samples.
-		/// </summary>
-		/// <param name="fieldName">local field of the node</param>
-		/// <param name="inputType">type of input of the port</param>
-		/// <param name="allowCast">if cast is allowed when connecting an edge</param>
-		public CustomPortInputAttribute(string fieldName, Type inputType, bool allowCast = true)
-		{
-			this.fieldName = fieldName;
-			this.inputType = inputType;
-			this.allowCast = allowCast;
-		}
-	}
-
-	/// <summary>
-	/// Allow you to customize the input function of a port
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-	public class CustomPortOutputAttribute : Attribute
-	{
-		public string	fieldName;
-		public Type		outputType;
-		public bool		allowCast;
-
-		/// <summary>
-		/// Allow you to customize the output function of a port.
-		/// See CustomPortsNode example in Samples.
-		/// </summary>
-		/// <param name="fieldName">local field of the node</param>
-		/// <param name="inputType">type of input of the port</param>
-		/// <param name="allowCast">if cast is allowed when connecting an edge</param>
-		public CustomPortOutputAttribute(string fieldName, Type outputType, bool allowCast = true)
-		{
-			this.fieldName = fieldName;
-			this.outputType = outputType;
-			this.allowCast = allowCast;
-		}
-	}
-
-	/// <summary>
 	/// Allow you to modify the generated port view from a field. Can be used to generate multiple ports from one field.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
