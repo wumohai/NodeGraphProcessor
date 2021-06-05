@@ -4,6 +4,7 @@ using UnityEngine;
 using GraphProcessor;
 using System.Linq;
 using System;
+using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 
 [System.Serializable, NodeMenuItem("Utils/Relay")]
@@ -24,6 +25,7 @@ public class RelayNode : BaseNode
 	[Output(name = "Out")]
 	public PackedRelayData	output = new PackedRelayData(){values = new List<object>(), names =new List<string>(), types = new List<Type>()};
 
+	[InfoBox("是否对输出值进行展开处理，如果为True则返回实际的值，否则返回PackedRelayData", InfoMessageType.Warning)]
 	public bool		unpackOutput = false;
 	public bool		packInput = false;
 	public int		inputEdgeCount = 0;

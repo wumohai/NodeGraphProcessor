@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 36
+      Data: 40
     - Name: 
       Entry: 7
       Data: 1|FloatNode, NodeGraphProcessor.Examples
@@ -45,10 +45,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -9
+      Data: -2035.91284
     - Name: 
       Entry: 4
-      Data: 261
+      Data: 223.751266
     - Name: 
       Entry: 4
       Data: 102
@@ -93,10 +93,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 53
+      Data: -1973.91284
     - Name: 
       Entry: 4
-      Data: 432
+      Data: 394.751282
     - Name: 
       Entry: 4
       Data: 102
@@ -141,10 +141,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 328
+      Data: -1698.91284
     - Name: 
       Entry: 4
-      Data: 261
+      Data: 223.751266
     - Name: 
       Entry: 4
       Data: 121
@@ -269,10 +269,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 605
+      Data: -1421.91284
     - Name: 
       Entry: 4
-      Data: 237
+      Data: 199.751266
     - Name: 
       Entry: 4
       Data: 170
@@ -358,13 +358,13 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 292
+      Data: -1734.91284
     - Name: 
       Entry: 4
-      Data: 411
+      Data: 373.751282
     - Name: 
       Entry: 4
-      Data: 241
+      Data: 223
     - Name: 
       Entry: 4
       Data: 120
@@ -412,10 +412,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1160.45581
+      Data: -866.912842
     - Name: 
       Entry: 4
-      Data: 393
+      Data: 355.751282
     - Name: 
       Entry: 4
       Data: 170
@@ -495,10 +495,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 123
+      Data: -1903.91284
     - Name: 
       Entry: 4
-      Data: 261
+      Data: 223.751266
     - Name: 
       Entry: 4
       Data: 120
@@ -543,10 +543,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -484.999969
+      Data: -1324.98926
     - Name: 
       Entry: 4
-      Data: 1190.7
+      Data: 1442.46167
     - Name: 
       Entry: 4
       Data: 170
@@ -632,10 +632,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -755.749
+      Data: -1595.98926
     - Name: 
       Entry: 4
-      Data: 1336.251
+      Data: 1587.46167
     - Name: 
       Entry: 4
       Data: 121
@@ -695,10 +695,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -484.9
+      Data: -1324.98926
     - Name: 
       Entry: 4
-      Data: 1333.00012
+      Data: 1584.46167
     - Name: 
       Entry: 4
       Data: 170
@@ -784,10 +784,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -484.999969
+      Data: -1324.98926
     - Name: 
       Entry: 4
-      Data: 1478.90027
+      Data: 1730.46167
     - Name: 
       Entry: 4
       Data: 170
@@ -869,10 +869,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 819.600037
+      Data: -1206.91284
     - Name: 
       Entry: 4
-      Data: 393.000061
+      Data: 355.751282
     - Name: 
       Entry: 4
       Data: 211
@@ -917,7 +917,7 @@ MonoBehaviour:
       Data: 3
     - Name: index
       Entry: 3
-      Data: 15
+      Data: 25
     - Name: 
       Entry: 8
       Data: 
@@ -938,10 +938,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 284.000061
+      Data: -1742.91284
     - Name: 
       Entry: 4
-      Data: 39.6390839
+      Data: 2.75126648
     - Name: 
       Entry: 4
       Data: 88
@@ -986,10 +986,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 605
+      Data: -1421.91284
     - Name: 
       Entry: 4
-      Data: 385.6522
+      Data: 348.751282
     - Name: 
       Entry: 4
       Data: 153
@@ -1873,10 +1873,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 209.782608
+      Data: -1596
     - Name: 
       Entry: 4
-      Data: 1363.52173
+      Data: 2668.92432
     - Name: 
       Entry: 4
       Data: 111
@@ -1918,10 +1918,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -26.80503
+      Data: -1627
     - Name: 
       Entry: 4
-      Data: 1176.37756
+      Data: 2500.92432
     - Name: 
       Entry: 4
       Data: 102
@@ -1996,10 +1996,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 347.194977
+      Data: -1459
     - Name: 
       Entry: 4
-      Data: 1176.37756
+      Data: 2480.92432
     - Name: 
       Entry: 4
       Data: 170
@@ -2094,16 +2094,16 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 9.125267
+      Data: -1340
     - Name: 
       Entry: 4
-      Data: 1729.23474
+      Data: 2644.92432
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 102
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 99
     - Name: 
       Entry: 8
       Data: 
@@ -2142,10 +2142,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 8.999976
+      Data: -1340
     - Name: 
       Entry: 4
-      Data: 1850.39136
+      Data: 2765.92432
     - Name: 
       Entry: 4
       Data: 102
@@ -2190,10 +2190,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 174.086975
+      Data: -1175
     - Name: 
       Entry: 4
-      Data: 1786.08691
+      Data: 2701.92432
     - Name: 
       Entry: 4
       Data: 121
@@ -2303,16 +2303,16 @@ MonoBehaviour:
       Data: de99f57c-5058-4ca1-a2e6-05afdb0e37a0
     - Name: computeOrder
       Entry: 3
-      Data: 33
+      Data: 35
     - Name: position
       Entry: 7
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 60.00003
+      Data: -1467.65
     - Name: 
       Entry: 4
-      Data: 2039
+      Data: 2070.00049
     - Name: 
       Entry: 4
       Data: 102
@@ -2357,10 +2357,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -144.049988
+      Data: -1774
     - Name: 
       Entry: 4
-      Data: 2122
+      Data: 2061
     - Name: 
       Entry: 4
       Data: 102
@@ -2381,10 +2381,10 @@ MonoBehaviour:
       Data: false
     - Name: output
       Entry: 4
-      Data: 100
+      Data: 1000
     - Name: input
       Entry: 4
-      Data: 10000
+      Data: 1000
     - Name: 
       Entry: 8
       Data: 
@@ -2399,16 +2399,16 @@ MonoBehaviour:
       Data: 86cf31a9-ffbb-499e-a6dc-8333ead61bec
     - Name: computeOrder
       Entry: 3
-      Data: 35
+      Data: 39
     - Name: position
       Entry: 7
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 381.850159
+      Data: -1093.58325
     - Name: 
       Entry: 4
-      Data: 2098
+      Data: 2134.36572
     - Name: 
       Entry: 4
       Data: 170
@@ -2444,7 +2444,7 @@ MonoBehaviour:
       Data: 73|System.Single, mscorlib
     - Name: 
       Entry: 4
-      Data: 42100
+      Data: 84000
     - Name: 
       Entry: 8
       Data: 
@@ -2488,16 +2488,16 @@ MonoBehaviour:
       Data: cf8db089-e9ce-4f46-8fa5-5c066a0ca210
     - Name: computeOrder
       Entry: 3
-      Data: 34
+      Data: 38
     - Name: position
       Entry: 7
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 199.9
+      Data: -1331.58325
     - Name: 
       Entry: 4
-      Data: 2121.5
+      Data: 2151.36572
     - Name: 
       Entry: 4
       Data: 121
@@ -2525,7 +2525,7 @@ MonoBehaviour:
       Data: -1
     - Name: <>2__current
       Entry: 4
-      Data: 100
+      Data: 42000
     - Name: <>l__initialThreadId
       Entry: 3
       Data: 1
@@ -2592,7 +2592,7 @@ MonoBehaviour:
       Data: 
     - Name: output
       Entry: 4
-      Data: 42100
+      Data: 84000
     - Name: 
       Entry: 8
       Data: 
@@ -2607,16 +2607,16 @@ MonoBehaviour:
       Data: 0ff6fd6e-735c-4cc7-ba87-d46c57ccfc8f
     - Name: computeOrder
       Entry: 3
-      Data: 32
+      Data: 33
     - Name: position
       Entry: 7
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1.859665E-05
+      Data: -1647.68433
     - Name: 
       Entry: 4
-      Data: 2125.2002
+      Data: 2160
     - Name: 
       Entry: 4
       Data: 200
@@ -2658,7 +2658,7 @@ MonoBehaviour:
       Data: 83|System.Single, mscorlib
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 10000
     - Name: 
       Entry: 8
       Data: 
@@ -2673,7 +2673,10 @@ MonoBehaviour:
       Data: 84|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
+    - Name: 
+      Entry: 1
+      Data: Out
     - Name: 
       Entry: 1
       Data: Out
@@ -2688,7 +2691,10 @@ MonoBehaviour:
       Data: 85|System.Collections.Generic.List`1[[System.Type, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
+    - Name: 
+      Entry: 9
+      Data: 8
     - Name: 
       Entry: 9
       Data: 8
@@ -2724,13 +2730,289 @@ MonoBehaviour:
       Data: false
     - Name: inputEdgeCount
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: inputType
       Entry: 7
       Data: 86|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
     - Name: serializedType
       Entry: 1
-      Data: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 87|SwitchNode, NodeGraphProcessor.Examples
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 8523ae8f-1382-4e3d-86f5-b916844fa049
+    - Name: computeOrder
+      Entry: 3
+      Data: 37
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -1481
+    - Name: 
+      Entry: 4
+      Data: 2212.00049
+    - Name: 
+      Entry: 4
+      Data: 102
+    - Name: 
+      Entry: 4
+      Data: 90
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: input
+      Entry: 4
+      Data: 1000
+    - Name: output
+      Entry: 4
+      Data: 42000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 88|FloatNode, NodeGraphProcessor.Examples
+    - Name: nodeCustomName
+      Entry: 1
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 22c15e76-abe8-4783-92ab-7604b01ece83
+    - Name: computeOrder
+      Entry: 3
+      Data: 32
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -1774
+    - Name: 
+      Entry: 4
+      Data: 2187.5
+    - Name: 
+      Entry: 4
+      Data: 102
+    - Name: 
+      Entry: 4
+      Data: 99
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: output
+      Entry: 4
+      Data: 10000
+    - Name: input
+      Entry: 4
+      Data: 10000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 89|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 34588d34-4491-4dd7-b424-df9578442ffd
+    - Name: computeOrder
+      Entry: 3
+      Data: 36
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -1553.65
+    - Name: 
+      Entry: 4
+      Data: 2202.25024
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: input
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 9
+      Data: 81
+    - Name: names
+      Entry: 9
+      Data: 84
+    - Name: types
+      Entry: 9
+      Data: 85
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: output
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 9
+      Data: 81
+    - Name: names
+      Entry: 9
+      Data: 84
+    - Name: types
+      Entry: 9
+      Data: 85
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: unpackOutput
+      Entry: 5
+      Data: false
+    - Name: packInput
+      Entry: 5
+      Data: false
+    - Name: inputEdgeCount
+      Entry: 3
+      Data: 1
+    - Name: inputType
+      Entry: 7
+      Data: 90|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: serializedType
+      Entry: 1
+      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 91|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 8153566e-73c3-41f7-a6c0-465c6c9ca2cb
+    - Name: computeOrder
+      Entry: 3
+      Data: 34
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -1554
+    - Name: 
+      Entry: 4
+      Data: 2140
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: input
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 9
+      Data: 81
+    - Name: names
+      Entry: 9
+      Data: 84
+    - Name: types
+      Entry: 9
+      Data: 85
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: output
+      Entry: 7
+      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: values
+      Entry: 9
+      Data: 81
+    - Name: names
+      Entry: 9
+      Data: 84
+    - Name: types
+      Entry: 9
+      Data: 85
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: unpackOutput
+      Entry: 5
+      Data: false
+    - Name: packInput
+      Entry: 5
+      Data: false
+    - Name: inputEdgeCount
+      Entry: 3
+      Data: 1
+    - Name: inputType
+      Entry: 7
+      Data: 92|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: serializedType
+      Entry: 1
+      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
     - Name: 
       Entry: 8
       Data: 
@@ -2993,22 +3275,6 @@ MonoBehaviour:
     outputFieldName: output
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: ef259b9e-e4ae-474a-9e5f-83a532e14f34
-    owner: {fileID: 11400000}
-    inputNodeGUID: de99f57c-5058-4ca1-a2e6-05afdb0e37a0
-    outputNodeGUID: 3659b998-f42e-461d-8dc1-4583b2e9cbd5
-    inputFieldName: input
-    outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: 0
-  - GUID: d1d2d26a-4b32-4089-a6cb-8c69cc7c4b0a
-    owner: {fileID: 11400000}
-    inputNodeGUID: cf8db089-e9ce-4f46-8fa5-5c066a0ca210
-    outputNodeGUID: 5c48a958-e3a2-4c2e-a7df-affd7e24bec7
-    inputFieldName: inputs
-    outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: 
   - GUID: 21818d0c-2b63-4e64-92eb-8a9a7bc30bc3
     owner: {fileID: 11400000}
     inputNodeGUID: 86cf31a9-ffbb-499e-a6dc-8333ead61bec
@@ -3025,10 +3291,58 @@ MonoBehaviour:
     outputFieldName: output
     inputPortIdentifier: 0
     outputPortIdentifier: 
-  - GUID: 43d9483e-e912-4242-86c4-96cbb1edcf53
+  - GUID: b7542d2e-0e4f-437f-b036-cb7e21dc7386
+    owner: {fileID: 11400000}
+    inputNodeGUID: cf8db089-e9ce-4f46-8fa5-5c066a0ca210
+    outputNodeGUID: de99f57c-5058-4ca1-a2e6-05afdb0e37a0
+    inputFieldName: inputs
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 5af28707-715b-4008-a3b4-34523cda6d43
+    owner: {fileID: 11400000}
+    inputNodeGUID: cf8db089-e9ce-4f46-8fa5-5c066a0ca210
+    outputNodeGUID: 8523ae8f-1382-4e3d-86f5-b916844fa049
+    inputFieldName: inputs
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 0795a6f4-fbdb-44d4-b3c0-c12057988ce3
+    owner: {fileID: 11400000}
+    inputNodeGUID: 0ff6fd6e-735c-4cc7-ba87-d46c57ccfc8f
+    outputNodeGUID: 22c15e76-abe8-4783-92ab-7604b01ece83
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 0
+    outputPortIdentifier: 
+  - GUID: b3e811c8-5773-4514-aa68-f5e060eb16dd
+    owner: {fileID: 11400000}
+    inputNodeGUID: 34588d34-4491-4dd7-b424-df9578442ffd
+    outputNodeGUID: 0ff6fd6e-735c-4cc7-ba87-d46c57ccfc8f
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 0
+    outputPortIdentifier: 0
+  - GUID: 2940c289-27e2-45eb-b5b2-f1c3fafec781
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8523ae8f-1382-4e3d-86f5-b916844fa049
+    outputNodeGUID: 34588d34-4491-4dd7-b424-df9578442ffd
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 0
+  - GUID: 35a2b2d4-9799-4717-9161-afe0336a03da
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8153566e-73c3-41f7-a6c0-465c6c9ca2cb
+    outputNodeGUID: 0ff6fd6e-735c-4cc7-ba87-d46c57ccfc8f
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 0
+    outputPortIdentifier: 0
+  - GUID: 27806aed-0b3d-44e2-bdf5-9871b9ca65d8
     owner: {fileID: 11400000}
     inputNodeGUID: de99f57c-5058-4ca1-a2e6-05afdb0e37a0
-    outputNodeGUID: 0ff6fd6e-735c-4cc7-ba87-d46c57ccfc8f
+    outputNodeGUID: 8153566e-73c3-41f7-a6c0-465c6c9ca2cb
     inputFieldName: input
     outputFieldName: output
     inputPortIdentifier: 
@@ -3038,10 +3352,10 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0.3}
     position:
       serializedVersion: 2
-      x: -780.749
-      y: 1180.251
-      width: 702
-      height: 363
+      x: -1620.9893
+      y: 1383.4618
+      width: 491
+      height: 495
     size: {x: 400, y: 200}
     innerNodeGUIDs:
     - b44b7b9c-047e-422a-bfc9-fab5fa986e2d
@@ -3069,6 +3383,60 @@ MonoBehaviour:
     - a2b90c72-0846-4b78-8295-49a25719b5b2
     - 2dda4328-0353-4e8e-9b3b-a206d961b5e0
     - a8ca7c80-e071-4392-abd8-ae25b13547f4
+  - title: "Relay Node\u6D4B\u8BD5"
+    color: {r: 0, g: 0, b: 0, a: 0.3}
+    position:
+      serializedVersion: 2
+      x: -1798.583
+      y: 2002.3651
+      width: 900
+      height: 318
+    size: {x: 400, y: 200}
+    innerNodeGUIDs:
+    - cf8db089-e9ce-4f46-8fa5-5c066a0ca210
+    - 86cf31a9-ffbb-499e-a6dc-8333ead61bec
+    - 22c15e76-abe8-4783-92ab-7604b01ece83
+    - 5c48a958-e3a2-4c2e-a7df-affd7e24bec7
+    - de99f57c-5058-4ca1-a2e6-05afdb0e37a0
+    - 8523ae8f-1382-4e3d-86f5-b916844fa049
+    - 0ff6fd6e-735c-4cc7-ba87-d46c57ccfc8f
+    - 8153566e-73c3-41f7-a6c0-465c6c9ca2cb
+  - title: "ConditionalProcessor\u6D4B\u8BD5"
+    color: {r: 0, g: 0, b: 0, a: 0.3}
+    position:
+      serializedVersion: 2
+      x: -2060.9128
+      y: -56.248734
+      width: 1389
+      height: 602
+    size: {x: 400, y: 200}
+    innerNodeGUIDs:
+    - 35a0db73-feca-46e3-b3a3-d9f0a64ae67c
+    - d7c44034-697f-425f-80bd-985a380f291e
+    - 8fc44357-ebc6-40c6-9c71-d6aa1c7307b6
+    - e581b36c-2bed-4247-bb40-e5f3d72eddd4
+    - fd1ec17b-4637-4657-814b-2e00958095e5
+    - 4c1023c0-2165-481e-bce5-2e9709ad4169
+    - ec589759-7048-4bfa-8083-434b547a8155
+    - 153c42ad-6788-40b5-9935-58d3bb37c66f
+    - 776abd1a-ed6f-4ed6-863c-098c258bc53e
+    - 259a7853-8742-4066-abea-6032dc779d05
+  - title: "\u5176\u4ED6\u6D4B\u8BD5"
+    color: {r: 0, g: 0, b: 0, a: 0.3}
+    position:
+      serializedVersion: 2
+      x: -1652.2452
+      y: 2422.2295
+      width: 623
+      height: 468
+    size: {x: 400, y: 200}
+    innerNodeGUIDs:
+    - 1a9c25d2-1cc2-4811-b37d-16dced469a3f
+    - 006ae952-0b41-4c83-89f8-bbde166f079e
+    - f2455843-ca7b-42f9-bd99-f6976e90f39a
+    - 7ee7403f-340a-4b47-828a-eee377b271d3
+    - ccfa86ef-1bec-4303-b97a-97f96fac23ce
+    - 523ca379-810d-4001-984b-d48a90d3cba9
   stackNodes: []
   pinnedElements:
   - position:
@@ -3094,7 +3462,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 451, y: -1501, z: 0}
-  scale: {x: 0.8695652, y: 0.8695652, z: 1}
+  position: {x: 819, y: 43, z: 0}
+  scale: {x: 0.16252795, y: 0.16252795, z: 1}
   references:
     version: 1
