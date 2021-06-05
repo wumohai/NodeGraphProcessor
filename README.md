@@ -35,7 +35,7 @@ Odin插件官网地址：https://odininspector.com/
 public class SwitchNode : BaseNode
 {
 	[Input(name = "In")]
-    public float                input;
+    	public float                input;
 
 	[Output(name = "Out")]
 	public float				output;
@@ -44,13 +44,13 @@ public class SwitchNode : BaseNode
 	
 	protected override void Process()
 	{
-        //获取入端口的值，第一个参数为要获取值的字段名称，推荐使用nameof
-        //第二个参数是要获取值的字段，使用ref传递方便进行修改
+        	//获取入端口的值，第一个参数为要获取值的字段名称，推荐使用nameof
+        	//第二个参数是要获取值的字段，使用ref传递方便进行修改
 		TryGetInputValue(nameof(input), ref input);
 		output = output = input * 42;
 	}
 	
-    /// <summary>
+    	/// <summary>
 	/// 获取出端口的值
 	/// </summary>
 	/// <param name="outputPort">output端口</param>
@@ -120,13 +120,13 @@ public class MultiAddNode : BaseNode
 public class CircleRadians : BaseNode
 {
 	[Output(name = "In")]
-    public List< float >		outputRadians;
+	public List< float >		outputRadians;
 
 	public override string		name => "CircleRadians";
 
 	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
 	{
-        //因为此节点会根据出端口所连接的多个入端口顺序为入端口分配值，所以需要判断传进来的inputPort的Index
+        	//因为此节点会根据出端口所连接的多个入端口顺序为入端口分配值，所以需要判断传进来的inputPort的Index
 		int inputPortIndexInOutputPortEdge = outputPort.GetEdges().FindIndex(edge => edge.inputPort == inputPort);
 		if (outputRadians[inputPortIndexInOutputPortEdge] is T finalValue)
 		{
