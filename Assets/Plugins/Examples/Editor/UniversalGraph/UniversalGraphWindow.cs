@@ -34,7 +34,7 @@ public class UniversalGraphWindow : BaseGraphWindow
 
     protected override void InitializeWindow(BaseGraph graph)
     {
-        titleContent = new GUIContent("Universal Graph");
+        titleContent = new GUIContent("Universal Graph", AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Plugins/NodeGraphProcessor/Editor/Icon_Dark.png"));
 
         if (graphView == null)
         {
