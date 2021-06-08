@@ -1873,10 +1873,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -1596
+      Data: -1592
     - Name: 
       Entry: 4
-      Data: 2668.92432
+      Data: 2667.67749
     - Name: 
       Entry: 4
       Data: 111
@@ -1921,7 +1921,7 @@ MonoBehaviour:
       Data: -1627
     - Name: 
       Entry: 4
-      Data: 2500.92432
+      Data: 2499.67749
     - Name: 
       Entry: 4
       Data: 102
@@ -1999,7 +1999,7 @@ MonoBehaviour:
       Data: -1459
     - Name: 
       Entry: 4
-      Data: 2480.92432
+      Data: 2479.67749
     - Name: 
       Entry: 4
       Data: 170
@@ -2097,7 +2097,7 @@ MonoBehaviour:
       Data: -1340
     - Name: 
       Entry: 4
-      Data: 2644.92432
+      Data: 2643.67749
     - Name: 
       Entry: 4
       Data: 102
@@ -2145,7 +2145,7 @@ MonoBehaviour:
       Data: -1340
     - Name: 
       Entry: 4
-      Data: 2765.92432
+      Data: 2764.67749
     - Name: 
       Entry: 4
       Data: 102
@@ -2193,7 +2193,7 @@ MonoBehaviour:
       Data: -1175
     - Name: 
       Entry: 4
-      Data: 2701.92432
+      Data: 2700.67749
     - Name: 
       Entry: 4
       Data: 121
@@ -3425,8 +3425,8 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0.3}
     position:
       serializedVersion: 2
-      x: -1652.2452
-      y: 2422.2295
+      x: -1652.0001
+      y: 2420.6775
       width: 623
       height: 468
     size: {x: 400, y: 200}
@@ -3462,7 +3462,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 819, y: 43, z: 0}
-  scale: {x: 0.16252795, y: 0.16252795, z: 1}
+  position: {x: 1596, y: -1633, z: 0}
+  scale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
     version: 1

@@ -87,8 +87,7 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="Group"></typeparam>
 		/// <returns></returns>
-        [SerializeField, FormerlySerializedAs("commentBlocks")]
-        public List< Group >                     		groups = new List< Group >();
+		public List< Group >                     		groups = new List< Group >();
 
 		/// <summary>
 		/// All Stack Nodes in the graph
