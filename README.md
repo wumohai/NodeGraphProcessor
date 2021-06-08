@@ -6,7 +6,7 @@ Node graph editor framework focused on data processing using Unity UIElements, G
 
 NodeGraphProcessor版本：https://github.com/alelievr/NodeGraphProcessor/
 
-Odin插件官网地址：https://odininspector.com/
+Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自行购买Odin然后导入至Plugins文件夹下）
 
 相关博客：https://www.lfzxb.top/nodegraphprocesssor-and-odin/
 
