@@ -15,21 +15,21 @@ namespace Examples.Editor._05_All
 {
     public class UniversalToolbarView : ToolbarView
     {
-        private MiniMap m_MiniMap;
+        private readonly MiniMap m_MiniMap;
 
-        private Texture2D m_CreateNewToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+        private readonly Texture2D m_CreateNewToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/CreateNew.png");
         
-        private Texture2D m_MiniMapToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+        private readonly Texture2D m_MiniMapToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/MiniMap.png");
 
-        private Texture2D m_ConditionalToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+        private readonly Texture2D m_ConditionalToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/Run.png");
 
-        private Texture2D m_ExposedParamsToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+        private readonly Texture2D m_ExposedParamsToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/Blackboard.png");
 
-        private Texture2D m_GotoFileButtonIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
+        private readonly Texture2D m_GotoFileButtonIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/GotoFile.png");
 
         public UniversalToolbarView(BaseGraphView graphView, MiniMap miniMap) : base(graphView)

@@ -45,8 +45,6 @@ public class UniversalGraphWindow : BaseGraphWindow
 
         m_ToolbarView = new UniversalToolbarView(graphView, m_MiniMap);
         graphView.Add(m_ToolbarView);
-
-        rootView.Add(graphView);
     }
 
     /// <summary>

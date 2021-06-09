@@ -80,6 +80,12 @@ namespace GraphProcessor
 			rootView.styleSheets.Add(Resources.Load<StyleSheet>(graphWindowStyle));
 		}
 
+		/// <summary>
+		/// 只有两种情况会调用到这个函数
+		/// 1.打开GraphEditorWindow（初次打开或者在已经打开的基础上更换GraphAsset）
+		/// 2.编译/进入PlayMode而导致的GraphEditorWindow重载
+		/// </summary>
+		/// <param name="graph"></param>
 		public void InitializeGraph(BaseGraph graph)
 		{
 			if (this.graph != null && graph != this.graph)
@@ -94,10 +100,10 @@ namespace GraphProcessor
 			graphLoaded?.Invoke(graph);
 			this.graph = graph;
 
-			//Initialize will provide the BaseGraphView
-			if (this.graphView == null)
+			if (graphView == null)
 			{
 				InitializeWindow(graph);
+				rootView.Add(graphView);
 			}
 
 			graphView = rootView.Children().FirstOrDefault(e => e is BaseGraphView) as BaseGraphView;
@@ -144,7 +150,6 @@ namespace GraphProcessor
 
 		/// <summary>
 		/// 可根据BaseGraph初始化EditorWindow，以及根据BaseGraph自定义BaseGraphView
-		/// 但一定不要忘记实例化一个BaseGraphView，并将其rootView.Add(graphView);
 		/// </summary>
 		/// <param name="graph"></param>
 		protected abstract void	InitializeWindow(BaseGraph graph);
