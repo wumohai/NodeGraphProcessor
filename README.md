@@ -2,7 +2,7 @@
 
 Node graph editor framework focused on data processing using Unity UIElements, GraphView and C# 4.7
 
-这个项目是本人NodeGraphProcessor接入Odin序列化的示例。**本仓库将持续跟进更新。 目前已同步更新至 https://github.com/alelievr/NodeGraphProcessor/commit/ba0468c2edc067ab7376d3f67daef80eeefa380f**
+这个项目是本人NodeGraphProcessor接入Odin序列化的示例。**本仓库将持续跟进更新。 目前已同步更新至 https://github.com/alelievr/NodeGraphProcessor/commit/644efea869124e70d0ccf29fd98594fd794cccfc**
 
 NodeGraphProcessor版本：https://github.com/alelievr/NodeGraphProcessor/
 
