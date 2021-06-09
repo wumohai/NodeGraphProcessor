@@ -38,8 +38,7 @@ namespace GraphProcessor
 			InitializeRootView();
 			
 			graphLoaded = baseGraph => { baseGraph?.OnGraphEnable(); }; 
-			graphUnloaded = baseGraph => { baseGraph?.OnGraphDisable(); }; 
-			
+			graphUnloaded = baseGraph => { baseGraph?.OnGraphDisable(); };
 			if (graph != null)
 				InitializeGraph(graph);
 			else
@@ -95,11 +94,11 @@ namespace GraphProcessor
 			graphLoaded?.Invoke(graph);
 			this.graph = graph;
 
-			if (graphView != null)
-				rootView.Remove(graphView);
-
 			//Initialize will provide the BaseGraphView
-			InitializeWindow(graph);
+			if (this.graphView == null)
+			{
+				InitializeWindow(graph);
+			}
 
 			graphView = rootView.Children().FirstOrDefault(e => e is BaseGraphView) as BaseGraphView;
 
@@ -143,7 +142,17 @@ namespace GraphProcessor
 			graphView = null;
 		}
 
+		/// <summary>
+		/// 可根据BaseGraph初始化EditorWindow，以及根据BaseGraph自定义BaseGraphView
+		/// 但一定不要忘记实例化一个BaseGraphView，并将其rootView.Add(graphView);
+		/// </summary>
+		/// <param name="graph"></param>
 		protected abstract void	InitializeWindow(BaseGraph graph);
+		
+		/// <summary>
+		/// BaseGraphView已初始化完毕，重写此函数可以进行后续的自定义操作
+		/// </summary>
+		/// <param name="view"></param>
 		protected virtual void InitializeGraphView(BaseGraphView view) {}
 	}
 }
