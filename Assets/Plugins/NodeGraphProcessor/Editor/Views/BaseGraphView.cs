@@ -729,7 +729,6 @@ namespace GraphProcessor
 		{
 			if (this.graph != null)
 			{
-				SaveGraphToDisk();
 				// Close pinned windows from old graph:
 				ClearGraphElements();
 				NodeProvider.UnloadGraph(graph);
@@ -1265,7 +1264,7 @@ namespace GraphProcessor
 			if (graph == null)
 				return ;
 
-			EditorUtility.SetDirty(graph);
+			GraphSaveHelper.SaveGraphToDisk(graph);
 		}
 
 		public void ToggleView< T >() where T : PinnedElementView

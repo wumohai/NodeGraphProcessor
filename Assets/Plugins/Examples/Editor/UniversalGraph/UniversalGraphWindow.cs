@@ -15,7 +15,6 @@ public class UniversalGraphWindow : BaseGraphWindow
     /// </summary>
     public const string NodeGraphProcessorPathPrefix = "Assets/Plugins/NodeGraphProcessor";
 
-    BaseGraph tmpGraph;
     private UniversalToolbarView m_ToolbarView;
     private MiniMap m_MiniMap;
 
@@ -33,7 +32,6 @@ public class UniversalGraphWindow : BaseGraphWindow
     protected override void OnDestroy()
     {
         graphView?.Dispose();
-        DestroyImmediate(tmpGraph);
     }
 
     protected override void InitializeWindow(BaseGraph graph)
