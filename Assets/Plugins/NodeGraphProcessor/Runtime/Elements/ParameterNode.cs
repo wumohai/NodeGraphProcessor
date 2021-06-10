@@ -102,6 +102,14 @@ namespace GraphProcessor
 			else
 				graph.UpdateExposedParameter(parameter.guid, input);
 		}
+
+		public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+		{
+			if (output is T finalValue)
+			{
+				value = finalValue;
+			}
+		}
 	}
 
 	public enum ParameterAccessor
