@@ -176,25 +176,31 @@ MonoBehaviour:
     - Name: <>l__initialThreadId
       Entry: 3
       Data: 1
-    - Name: <>4__this
-      Entry: 9
-      Data: 3
     - Name: fieldName
       Entry: 1
       Data: inputs
     - Name: <>3__fieldName
       Entry: 1
       Data: inputs
-    - Name: <inputPort>5__2
+    - Name: <>4__this
+      Entry: 9
+      Data: 3
+    - Name: <inputPort>5__1
       Entry: 6
       Data: 
-    - Name: <>7__wrap2
+    - Name: <>s__2
       Entry: 7
       Data: System.Collections.Generic.List`1+Enumerator[[GraphProcessor.SerializableEdge,
         com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
     - Name: 
       Entry: 8
       Data: 
+    - Name: <connectedEdge>5__3
+      Entry: 6
+      Data: 
+    - Name: <t>5__4
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -1622,25 +1628,31 @@ MonoBehaviour:
     - Name: <>l__initialThreadId
       Entry: 3
       Data: 1
-    - Name: <>4__this
-      Entry: 9
-      Data: 46
     - Name: fieldName
       Entry: 1
       Data: inputs
     - Name: <>3__fieldName
       Entry: 1
       Data: inputs
-    - Name: <inputPort>5__2
+    - Name: <>4__this
+      Entry: 9
+      Data: 46
+    - Name: <inputPort>5__1
       Entry: 6
       Data: 
-    - Name: <>7__wrap2
+    - Name: <>s__2
       Entry: 7
       Data: System.Collections.Generic.List`1+Enumerator[[GraphProcessor.SerializableEdge,
         com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
     - Name: 
       Entry: 8
       Data: 
+    - Name: <connectedEdge>5__3
+      Entry: 6
+      Data: 
+    - Name: <t>5__4
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -1702,25 +1714,31 @@ MonoBehaviour:
     - Name: <>l__initialThreadId
       Entry: 3
       Data: 1
-    - Name: <>4__this
-      Entry: 9
-      Data: 48
     - Name: fieldName
       Entry: 1
       Data: inputs
     - Name: <>3__fieldName
       Entry: 1
       Data: inputs
-    - Name: <inputPort>5__2
+    - Name: <>4__this
+      Entry: 9
+      Data: 48
+    - Name: <inputPort>5__1
       Entry: 6
       Data: 
-    - Name: <>7__wrap2
+    - Name: <>s__2
       Entry: 7
       Data: System.Collections.Generic.List`1+Enumerator[[GraphProcessor.SerializableEdge,
         com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
     - Name: 
       Entry: 8
       Data: 
+    - Name: <connectedEdge>5__3
+      Entry: 6
+      Data: 
+    - Name: <t>5__4
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -2099,25 +2117,31 @@ MonoBehaviour:
     - Name: <>l__initialThreadId
       Entry: 3
       Data: 1
-    - Name: <>4__this
-      Entry: 9
-      Data: 58
     - Name: fieldName
       Entry: 1
       Data: inputs
     - Name: <>3__fieldName
       Entry: 1
       Data: inputs
-    - Name: <inputPort>5__2
+    - Name: <>4__this
+      Entry: 9
+      Data: 58
+    - Name: <inputPort>5__1
       Entry: 6
       Data: 
-    - Name: <>7__wrap2
+    - Name: <>s__2
       Entry: 7
       Data: System.Collections.Generic.List`1+Enumerator[[GraphProcessor.SerializableEdge,
         com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
     - Name: 
       Entry: 8
       Data: 
+    - Name: <connectedEdge>5__3
+      Entry: 6
+      Data: 
+    - Name: <t>5__4
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -2364,25 +2388,31 @@ MonoBehaviour:
     - Name: <>l__initialThreadId
       Entry: 3
       Data: 1
-    - Name: <>4__this
-      Entry: 9
-      Data: 66
     - Name: fieldName
       Entry: 1
       Data: inputs
     - Name: <>3__fieldName
       Entry: 1
       Data: inputs
-    - Name: <inputPort>5__2
+    - Name: <>4__this
+      Entry: 9
+      Data: 66
+    - Name: <inputPort>5__1
       Entry: 6
       Data: 
-    - Name: <>7__wrap2
+    - Name: <>s__2
       Entry: 7
       Data: System.Collections.Generic.List`1+Enumerator[[GraphProcessor.SerializableEdge,
         com.alelievr.NodeGraphProcessor.Runtime]], mscorlib
     - Name: 
       Entry: 8
       Data: 
+    - Name: <connectedEdge>5__3
+      Entry: 6
+      Data: 
+    - Name: <t>5__4
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -3386,7 +3416,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 859, y: 104, z: 0}
-  scale: {x: 0.18690714, y: 0.18690714, z: 1}
+  position: {x: 1191, y: -523, z: 0}
+  scale: {x: 0.375937, y: 0.375937, z: 1}
   references:
     version: 1
