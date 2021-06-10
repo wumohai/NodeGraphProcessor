@@ -63,7 +63,11 @@ namespace GraphProcessor
 		protected virtual void OnDisable()
 		{
 			if (graph != null && graphView != null)
+			{
 				graphView.SaveGraphToDisk();
+				// Unload the graph
+				graphUnloaded?.Invoke(this.graph);
+			}
 		}
 		
 		/// <summary>

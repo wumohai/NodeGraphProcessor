@@ -271,6 +271,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: groups
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   serializedNodes: []
   edges:
   - GUID: 304c67be-15dd-48d6-b352-2dcda5289aaf
@@ -297,7 +310,6 @@ MonoBehaviour:
     outputFieldName: output
     inputPortIdentifier: 
     outputPortIdentifier: 
-  groups: []
   stackNodes: []
   pinnedElements:
   - position:

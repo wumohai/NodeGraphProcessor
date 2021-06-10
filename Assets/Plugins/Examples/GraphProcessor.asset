@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 42
+      Data: 43
     - Name: 
       Entry: 7
       Data: 1|FloatNode, NodeGraphProcessor.Examples
@@ -2948,6 +2948,66 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 84|ColorNode, NodeGraphProcessor.Examples
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 74f28434-8438-4bb5-b5ab-630b66b52ef3
+    - Name: computeOrder
+      Entry: 3
+      Data: 42
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -1913.60864
+    - Name: 
+      Entry: 4
+      Data: 2656.00024
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 4
+      Data: 95
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: color
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -2955,14 +3015,14 @@ MonoBehaviour:
       Data: 
     - Name: groups
       Entry: 7
-      Data: 84|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+      Data: 85|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 85|GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 86|GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime
     - Name: title
       Entry: 1
       Data: Create Group
@@ -3016,7 +3076,7 @@ MonoBehaviour:
       Data: 
     - Name: innerNodeGUIDs
       Entry: 7
-      Data: 86|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 87|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 8
@@ -3416,7 +3476,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 1191, y: -523, z: 0}
-  scale: {x: 0.375937, y: 0.375937, z: 1}
+  position: {x: 2316, y: -2638, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 1
