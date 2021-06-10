@@ -29,11 +29,6 @@ public class UniversalGraphWindow : BaseGraphWindow
         m_HasInitGUIStyles = false;
     }
 
-    protected override void OnDestroy()
-    {
-        graphView?.Dispose();
-    }
-
     protected override void InitializeWindow(BaseGraph graph)
     {
         graphView = new AllGraphView(this);

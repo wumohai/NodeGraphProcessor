@@ -69,11 +69,14 @@ namespace GraphProcessor
 				graphUnloaded?.Invoke(this.graph);
 			}
 		}
-		
+
 		/// <summary>
 		/// Called by Unity when the window is closed
 		/// </summary>
-		protected virtual void OnDestroy() { }
+		protected virtual void OnDestroy()
+		{
+			graphView?.Dispose();
+		}
 
 		void InitializeRootView()
 		{
