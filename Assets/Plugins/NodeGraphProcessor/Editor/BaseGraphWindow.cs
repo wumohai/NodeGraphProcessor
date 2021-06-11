@@ -39,10 +39,9 @@ namespace GraphProcessor
 			
 			graphLoaded = baseGraph => { baseGraph?.OnGraphEnable(); }; 
 			graphUnloaded = baseGraph => { baseGraph?.OnGraphDisable(); };
-			if (graph != null)
-				InitializeGraph(graph);
-			else
-				reloadWorkaround = true;
+			//注意，一定不能在EditorWindow的OnEnable中进行一些序列化相关的操作，因为执行完OnEnable后Unity内部就会进行GC（依照Unity的规则）
+			//所以这里GraphView相关数据的操作就统一放到下一帧去执行，防止一些数据刚组装好，就直接GC了
+			reloadWorkaround = true;
 		}
 
 		protected virtual void Update()
