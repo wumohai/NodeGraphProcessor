@@ -158,8 +158,11 @@ namespace GraphProcessor
 			public string						tooltip;
 			public CustomPortBehaviorDelegate	behavior;
 			public bool							vertical;
+			public bool                         showPortIcon;
+			public string                       portIconName;
 
-			public NodeFieldInformation(FieldInfo info, string name, bool input, bool isMultiple, string tooltip, bool vertical, CustomPortBehaviorDelegate behavior)
+			public NodeFieldInformation(FieldInfo info, string name, bool input, bool isMultiple, string tooltip,
+				bool vertical, CustomPortBehaviorDelegate behavior, bool showPortIcon, string portIconName)
 			{
 				this.input = input;
 				this.isMultiple = isMultiple;
@@ -169,6 +172,8 @@ namespace GraphProcessor
 				this.behavior = behavior;
 				this.tooltip = tooltip;
 				this.vertical = vertical;
+				this.showPortIcon = showPortIcon;
+				this.portIconName = portIconName;
 			}
 		}
 
@@ -290,7 +295,7 @@ namespace GraphProcessor
 				else
 				{
 					// If we don't have a custom behavior on the node, we just have to create a simple port
-					AddPort(nodeField.input, nodeField.fieldName, new PortData { acceptMultipleEdges = nodeField.isMultiple, displayName = nodeField.name, tooltip = nodeField.tooltip, vertical = nodeField.vertical });
+					AddPort(nodeField.input, nodeField.fieldName, new PortData { acceptMultipleEdges = nodeField.isMultiple, displayName = nodeField.name, tooltip = nodeField.tooltip, vertical = nodeField.vertical, showPortIcon = nodeField.showPortIcon, portIconName = nodeField.portIconName});
 				}
 			}
 		}
@@ -555,6 +560,7 @@ namespace GraphProcessor
 				var tooltipAttribute = field.GetCustomAttribute< TooltipAttribute >();
 				var showInInspector = field.GetCustomAttribute< ShowInInspector >();
 				var vertical = field.GetCustomAttribute< VerticalAttribute >();
+				var showPortIconAttribute = field.GetCustomAttribute< ShowPortIconAttribute >();
 				bool isMultiple = false;
 				bool input = false;
 				string name = field.Name;
@@ -576,8 +582,15 @@ namespace GraphProcessor
 				if (!String.IsNullOrEmpty(outputAttribute?.name))
 					name = outputAttribute.name;
 
+				bool _showPortIcon = true;
+				string _portIconName = null;
+				if (showPortIconAttribute != null)
+				{
+					_showPortIcon = showPortIconAttribute.ShowIcon;
+					_portIconName = showPortIconAttribute.IconNameMatchedInUSSFile;
+				}
 				// By default we set the behavior to null, if the field have a custom behavior, it will be set in the loop just below
-				nodeFields[field.Name] = new NodeFieldInformation(field, name, input, isMultiple, tooltip, vertical != null, null);
+				nodeFields[field.Name] = new NodeFieldInformation(field, name, input, isMultiple, tooltip, vertical != null, null, _showPortIcon, _portIconName);
 			}
 
 			foreach (var method in methods)

@@ -19,10 +19,10 @@ public class RelayNode : BaseNode
 		public List<Type>	types;
 	}
 
-	[Input(name = "In")]
+	[Input(name = "In"), ShowPortIcon(ShowIcon = false)]
     public PackedRelayData	input = new PackedRelayData(){values = new List<object>(), names =new List<string>(), types = new List<Type>()};
 
-	[Output(name = "Out")]
+	[Output(name = "Out"), ShowPortIcon(ShowIcon = false)]
 	public PackedRelayData	output = new PackedRelayData(){values = new List<object>(), names =new List<string>(), types = new List<Type>()};
 
 	[InfoBox("是否对输出值进行展开处理，如果为True则返回实际的值，否则返回PackedRelayData", InfoMessageType.Warning)]
@@ -107,6 +107,7 @@ public class RelayNode : BaseNode
 			identifier = "0",
 			acceptMultipleEdges = true,
 			sizeInPixel = Mathf.Min(k_MaxPortSize, sizeInPixel + 8),
+			showPortIcon = false
 		};
 	}
 
@@ -121,6 +122,7 @@ public class RelayNode : BaseNode
 				displayType = typeof(object),
 				identifier = "0",
 				acceptMultipleEdges = true,
+				showPortIcon = false
 			};
 			yield break;
 		}
@@ -136,6 +138,7 @@ public class RelayNode : BaseNode
 				displayType = inputType.type,
 				acceptMultipleEdges = true,
 				sizeInPixel = Mathf.Min(k_MaxPortSize, Mathf.Max(underlyingPortData.Count, 1) + 7), // TODO: function
+				showPortIcon = false
 			};
 
 			// We still keep the packed data as output when unpacking just in case we want to continue the relay after unpacking
@@ -147,6 +150,7 @@ public class RelayNode : BaseNode
 					identifier = i.ToString(),
 					acceptMultipleEdges = true,
 					sizeInPixel = 0,
+					showPortIcon = false
 				};
 			}
 		}
@@ -158,6 +162,7 @@ public class RelayNode : BaseNode
 				identifier = "0",
 				acceptMultipleEdges = true,
 				sizeInPixel = Mathf.Min(k_MaxPortSize, Mathf.Max(underlyingPortData.Count, 1) + 7),
+				showPortIcon = false
 			};
 		}
 	}

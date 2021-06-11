@@ -78,7 +78,8 @@ namespace GraphProcessor
 
 			if (drawerType == null)
 			{
-				Debug.LogWarning("Can't find field drawer for type: " + t);
+				//TODO 不需要这个LogWarning
+				//Debug.LogWarning("Can't find field drawer for type: " + t);
 				return null;
 			}
 

@@ -32,14 +32,29 @@ namespace GraphProcessor
 
         protected PortView(Direction direction, FieldInfo fieldInfo, PortData portData, BaseEdgeConnectorListener edgeConnectorListener)
             : base(portData.vertical ? Orientation.Vertical : Orientation.Horizontal, direction, Capacity.Multi, portData.displayType ?? fieldInfo.FieldType)
-		{
-			this.fieldInfo = fieldInfo;
+        {
+	        this.fieldInfo = fieldInfo;
 			this.listener = edgeConnectorListener;
 			this.portType = portData.displayType ?? fieldInfo.FieldType;
 			this.portData = portData;
 			this.portName = fieldName;
 
 			styleSheets.Add(Resources.Load<StyleSheet>(portStyle));
+
+			//绘制端口Icon
+			if (portData.showPortIcon)
+			{
+				VisualElement portIcon;
+				if (string.IsNullOrEmpty(portData.portIconName))
+				{
+					portIcon = new VisualElement() {name = $"PortViewIcon_{this.portType.Name}"};
+				}
+				else
+				{
+					portIcon = new VisualElement() {name = $"PortViewIcon_{portData.portIconName}"};
+				}
+				this.Insert(1, portIcon);
+			}
 
 			UpdatePortSize();
 
