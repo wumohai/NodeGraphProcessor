@@ -178,8 +178,74 @@ PortView > #connector > #cap:hover
     background-image: resource("Icons/Color@x3");
 }
 
-#PortViewIcon_Color {
+#PortViewIcon_Component {
     width: 12px;
     height: 12px;
-    background-image: resource("Icons/Color@x3");
+    background-image: resource("Icons/Component@x3");
+}
+
+#PortViewIcon_Condition {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/Condition@x3");
+}
+
+#PortViewIcon_ForEachLoop {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/ForEachLoop@x3");
+}
+
+#PortViewIcon_Action {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/Function@x3");
+}
+
+#PortViewIcon_IfCondition {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/IfCondition@x3");
+}
+
+#PortViewIcon_KeyCode {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/KeyCode@x3");
+}
+
+#PortViewIcon_RaycastHit {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/RaycastHit@x3");
+}
+
+#PortViewIcon_Text {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/Text@x3");
+}
+
+#PortViewIcon_Transform {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/Transform@x3");
+}
+
+#PortViewIcon_WhileLoop {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/WhileLoop@x3");
+}
+
+#PortViewIcon_Material {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/Material@x3");
+}
+
+#PortViewIcon_Rigidbody {
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/RigidBody@x3");
 }
