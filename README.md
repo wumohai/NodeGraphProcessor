@@ -15,6 +15,7 @@ Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自�
  - 接入Odin序列化
  - 支持List，Dictionary，HashSet，Stack等泛型集合序列化与可视化
  - 节点之间值传递通过泛型优化为0GC
+ - 支持端口图标自定义
 
 ## 使用
 
@@ -199,6 +200,10 @@ public class Inheritance2 : Inheritance1
 ### 在GraphView选中节点后，由Odin在Inspector面板显示节点信息
 
 ![](./Pngs/QQ截图20210404172629.png)
+
+### 端口自定义图标演示
+
+![](./Pngs/QQ截图20210611221735.png)
 
 ### 选中Graph Asset文件后，由Odin在Inspector面板显示整个Graph信息
 
