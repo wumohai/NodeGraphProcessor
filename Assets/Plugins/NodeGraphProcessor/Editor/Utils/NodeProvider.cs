@@ -45,6 +45,7 @@ namespace GraphProcessor
 
 		static NodeProvider()
 		{
+			BuildNodeViewCache();
 			BuildGenericNodeCache();
 		}
 
@@ -76,6 +77,20 @@ namespace GraphProcessor
 			specificNodeDescriptions.Remove(graph);
 		}
 
+		static void BuildNodeViewCache()
+		{
+			foreach (var nodeViewType in TypeCache.GetTypesDerivedFrom<BaseNodeView>())
+			{
+				if(nodeViewType.IsAbstract)
+					continue;
+				UtilityAttribute.TryGetTypeAttribute<NodeCustomEditor>(nodeViewType, out var nodeCustomEditor);
+				if (nodeCustomEditor != null)
+				{
+					nodeViewPerType[nodeCustomEditor.nodeType] = nodeViewType;
+				}
+			}
+		}
+		
 		static void BuildGenericNodeCache()
 		{
 			foreach (var nodeType in TypeCache.GetTypesDerivedFrom<BaseNode>())
@@ -181,25 +196,6 @@ namespace GraphProcessor
 					portIdentifier = p.portData.identifier,
 				});
 			}
-		}
-
-		static MonoScript FindScriptFromClassName(string className)
-		{
-			var scriptGUIDs = AssetDatabase.FindAssets($"t:script {className}");
-
-			if (scriptGUIDs.Length == 0)
-				return null;
-
-			foreach (var scriptGUID in scriptGUIDs)
-			{
-				var assetPath = AssetDatabase.GUIDToAssetPath(scriptGUID);
-				var script = AssetDatabase.LoadAssetAtPath<MonoScript>(assetPath);
-
-				if (script != null && String.Equals(className, Path.GetFileNameWithoutExtension(assetPath), StringComparison.OrdinalIgnoreCase))
-					return script;
-			}
-
-			return null;
 		}
 
 		public static Type GetNodeViewTypeFromType(Type nodeType)
