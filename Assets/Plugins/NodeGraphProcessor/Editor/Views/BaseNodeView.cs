@@ -545,23 +545,7 @@ namespace GraphProcessor
 				selectedNode.SetPosition(GetNodeRect(selectedNode, top: selectedNodesFarBottom - selectedNode.localBound.size.y));
 			}
 		}
-
-		public void OpenNodeViewScript()
-		{
-			var script = NodeProvider.GetNodeViewScript(GetType());
-
-			if (script != null)
-				AssetDatabase.OpenAsset(script.GetInstanceID(), 0, 0);
-		}
-
-		public void OpenNodeScript()
-		{
-			var script = NodeProvider.GetNodeScript(nodeTarget.GetType());
-
-			if (script != null)
-				AssetDatabase.OpenAsset(script.GetInstanceID(), 0, 0);
-		}
-
+		
 		public void ToggleDebug()
 		{
 			nodeTarget.debug = !nodeTarget.debug;
@@ -977,8 +961,6 @@ namespace GraphProcessor
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
 		{
 			BuildAlignMenu(evt);
-			evt.menu.AppendAction("Open Node Script", (e) => OpenNodeScript(), OpenNodeScriptStatus);
-			evt.menu.AppendAction("Open Node View Script", (e) => OpenNodeViewScript(), OpenNodeViewScriptStatus);
 			evt.menu.AppendAction("Debug", (e) => ToggleDebug(), DebugStatus);
             if (nodeTarget.unlockable)
                 evt.menu.AppendAction((nodeTarget.isLocked ? "Unlock" : "Lock"), (e) => ChangeLockStatus(), LockStatus);
@@ -1008,21 +990,7 @@ namespace GraphProcessor
 			return Status.Normal;
 		}
 
-		Status OpenNodeScriptStatus(DropdownMenuAction action)
-		{
-			if (NodeProvider.GetNodeScript(nodeTarget.GetType()) != null)
-				return Status.Normal;
-			return Status.Disabled;
-		}
-
-		Status OpenNodeViewScriptStatus(DropdownMenuAction action)
-		{
-			if (NodeProvider.GetNodeViewScript(GetType()) != null)
-				return Status.Normal;
-			return Status.Disabled;
-		}
-
-		IEnumerable< PortView > SyncPortCounts(IEnumerable< NodePort > ports, IEnumerable< PortView > portViews)
+        IEnumerable< PortView > SyncPortCounts(IEnumerable< NodePort > ports, IEnumerable< PortView > portViews)
 		{
 			var listener = owner.connectorListener;
 			var portViewList = portViews.ToList();
