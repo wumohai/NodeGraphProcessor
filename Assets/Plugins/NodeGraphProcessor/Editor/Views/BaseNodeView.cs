@@ -141,6 +141,7 @@ namespace GraphProcessor
 
 			rightTitleContainer = new VisualElement{ name = "RightTitleContainer" };
 			titleContainer.Add(rightTitleContainer);
+			titleContainer.Insert(0, new VisualElement(){ name = "NodeIcon_Action" });
 
 			topPortContainer = new VisualElement { name = "TopPortContainer" };
 			this.Insert(0, topPortContainer);

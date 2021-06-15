@@ -4,13 +4,13 @@ using GraphProcessor;
 [System.Serializable, NodeMenuItem("Custom/Vertical 2")]
 public class VerticalNode2 : BaseNode
 {
-	[Input, Vertical]
+	[Input, Vertical, ShowPortIcon(ShowIcon = false)]
     public float                input;
 
 	[Input]
     public float                input2;
 
-	[Output, Vertical]
+	[Output, Vertical, ShowPortIcon(ShowIcon = false)]
 	public float				output;
 
 	[Output]

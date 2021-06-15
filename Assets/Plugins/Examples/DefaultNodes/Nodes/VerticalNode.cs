@@ -4,14 +4,14 @@ using GraphProcessor;
 [System.Serializable, NodeMenuItem("Custom/Vertical")]
 public class VerticalNode : BaseNode
 {
-	[Input, Vertical]
+	[Input, Vertical, ShowPortIcon(ShowIcon = false)]
     public float                input;
 
-	[Output, Vertical]
+	[Output, Vertical, ShowPortIcon(ShowIcon = false)]
 	public float				output;
-	[Output, Vertical]
+	[Output, Vertical, ShowPortIcon(ShowIcon = false)]
 	public float				output2;
-	[Output, Vertical]
+	[Output, Vertical, ShowPortIcon(ShowIcon = false)]
 	public float				output3;
 
 	public override string		name => "Vertical";
