@@ -5,10 +5,10 @@ using GraphProcessor;
 using System;
 using UnityEditor;
 
-public class AllGraphView : BaseGraphView
+public class UniversalGraphView : BaseGraphView
 {
     // Nothing special to add for now
-    public AllGraphView(EditorWindow window) : base(window)
+    public UniversalGraphView(EditorWindow window) : base(window)
     {
     }
 

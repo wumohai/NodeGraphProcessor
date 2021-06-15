@@ -15,7 +15,8 @@ namespace Examples.Editor._05_All
 {
     public class UniversalToolbarView : ToolbarView
     {
-        private readonly MiniMap m_MiniMap;
+        protected readonly MiniMap m_MiniMap;
+        protected readonly BaseGraph m_BaseGraph;
 
         private readonly Texture2D m_CreateNewToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/CreateNew.png");
@@ -32,11 +33,13 @@ namespace Examples.Editor._05_All
         private readonly Texture2D m_GotoFileButtonIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/GotoFile.png");
 
-        public UniversalToolbarView(BaseGraphView graphView, MiniMap miniMap) : base(graphView)
+        public UniversalToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph) : base(graphView)
         {
             m_MiniMap = miniMap;
             //默认隐藏小地图，防止Graph内容过多而卡顿
             m_MiniMap.visible = false;
+
+            m_BaseGraph = baseGraph;
         }
 
         protected override void AddButtons()
@@ -61,6 +64,15 @@ namespace Examples.Editor._05_All
             AddToggle(new GUIContent(m_ConditionalToggleIcon, "开/关运行的面板"),
                 graphView.GetPinnedElementStatus<ConditionalProcessorView>() !=
                 DropdownMenuAction.Status.Hidden, (v) => graphView.ToggleView<ConditionalProcessorView>());
+            
+            AddSeparator(5); 
+            
+            AddCustom(() =>
+            {
+                GUI.color = new Color(128/255f,128/255f,128/255f);
+                GUILayout.Label(m_BaseGraph.GetType().Name, EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
+                GUI.color = Color.white;
+            });
 
             AddButton(new GUIContent("", m_GotoFileButtonIcon, "定位至资产文件"),
                 () =>

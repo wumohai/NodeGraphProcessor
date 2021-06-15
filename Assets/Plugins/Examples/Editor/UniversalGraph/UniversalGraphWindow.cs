@@ -8,15 +8,15 @@ using GraphProcessor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 
-public class UniversalGraphWindow : BaseGraphWindow
+public abstract class UniversalGraphWindow : BaseGraphWindow
 {
     /// <summary>
     /// NodeGraphProcessor路径前缀
     /// </summary>
     public const string NodeGraphProcessorPathPrefix = "Assets/Plugins/NodeGraphProcessor";
 
-    private UniversalToolbarView m_ToolbarView;
-    private MiniMap m_MiniMap;
+    protected UniversalToolbarView m_ToolbarView;
+    protected MiniMap m_MiniMap;
 
     private bool m_HasInitGUIStyles;
 
@@ -31,12 +31,12 @@ public class UniversalGraphWindow : BaseGraphWindow
 
     protected override void InitializeWindow(BaseGraph graph)
     {
-        graphView = new AllGraphView(this);
+        graphView = new UniversalGraphView(this);
 
         m_MiniMap = new MiniMap() {anchored = true};
         graphView.Add(m_MiniMap);
-
-        m_ToolbarView = new UniversalToolbarView(graphView, m_MiniMap);
+        
+        m_ToolbarView = new UniversalToolbarView(graphView, m_MiniMap, graph);
         graphView.Add(m_ToolbarView);
     }
 
@@ -47,7 +47,7 @@ public class UniversalGraphWindow : BaseGraphWindow
     {
         if (!result)
         {
-            EditorGUIStyleHelper.SetGUIStylePadding(nameof(EditorStyles.toolbarButton), new RectOffset(20, 20, 0, 0));
+            EditorGUIStyleHelper.SetGUIStylePadding(nameof(EditorStyles.toolbarButton), new RectOffset(15, 15, 0, 0));
             result = true;
         }
     }

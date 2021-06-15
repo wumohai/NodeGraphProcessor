@@ -30,7 +30,7 @@ MonoBehaviour:
       Data: 7
     - Name: 
       Entry: 7
-      Data: 1|PrintNode, Assembly-CSharp
+      Data: 1|PrintNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -75,7 +75,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|SubNode, Assembly-CSharp
+      Data: 2|SubNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -126,7 +126,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|FloatNode, Assembly-CSharp
+      Data: 3|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -174,7 +174,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|FloatNode, Assembly-CSharp
+      Data: 4|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -222,7 +222,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|TextNode, Assembly-CSharp
+      Data: 5|TextNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -267,7 +267,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|PrintNode, Assembly-CSharp
+      Data: 6|PrintNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -312,7 +312,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|PrintNode, Assembly-CSharp
+      Data: 7|PrintNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -361,6 +361,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: groups
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   serializedNodes: []
   edges:
   - GUID: e945eba0-fecc-47ab-9cb2-3d7218beb383
@@ -379,7 +392,6 @@ MonoBehaviour:
     outputFieldName: output
     inputPortIdentifier: 
     outputPortIdentifier: 
-  groups: []
   stackNodes: []
   pinnedElements:
   - position:
@@ -408,7 +420,7 @@ MonoBehaviour:
       y: 338
       width: 193
       height: 322
-    opened: 1
+    opened: 0
     editorType:
       serializedType: GraphProcessor.ExposedParameterView, com.alelievr.NodeGraphProcessor.Editor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -452,8 +464,8 @@ MonoBehaviour:
     settings:
       id: 3
   stickyNotes: []
-  position: {x: 62, y: -119, z: 0}
-  scale: {x: 0.8695652, y: 0.8695652, z: 1}
+  position: {x: 121, y: -22, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
     version: 1
     00000000:
