@@ -186,7 +186,61 @@ MonoBehaviour:
       Entry: 1
       Data: inputs
     - Name: <inputPort>5__2
+      Entry: 7
+      Data: 5|GraphProcessor.NodePort, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: fieldName
+      Entry: 1
+      Data: inputs
+    - Name: owner
+      Entry: 9
+      Data: 3
+    - Name: fieldInfo
+      Entry: 7
+      Data: 6|System.Reflection.MonoField, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: portData
+      Entry: 7
+      Data: 7|GraphProcessor.PortData, com.alelievr.NodeGraphProcessor.Runtime
+    - Name: identifier
       Entry: 6
+      Data: 
+    - Name: displayName
+      Entry: 1
+      Data: 'In '
+    - Name: displayType
+      Entry: 7
+      Data: 8|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: acceptMultipleEdges
+      Entry: 5
+      Data: true
+    - Name: sizeInPixel
+      Entry: 3
+      Data: 0
+    - Name: tooltip
+      Entry: 6
+      Data: 
+    - Name: vertical
+      Entry: 5
+      Data: false
+    - Name: showPortIcon
+      Entry: 5
+      Data: true
+    - Name: portIconName
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: <>7__wrap2
       Entry: 7
@@ -206,7 +260,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 9|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -257,7 +311,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 6|System.Single, mscorlib
+      Data: 10|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 44
@@ -272,11 +326,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 7|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 11|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 8|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 12|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -295,7 +349,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
+      Data: 13|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -349,7 +403,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 14|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -409,11 +463,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 11|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 15|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 12|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 16|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -432,7 +486,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|AbstractNodeChild1, NodeGraphProcessor.Examples
+      Data: 17|AbstractNodeChild1, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -480,7 +534,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 14|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 18|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -531,7 +585,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 15|System.Single, mscorlib
+      Data: 19|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 0
@@ -546,11 +600,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 16|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 20|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 17|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 21|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -569,7 +623,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|CircleRadians, NodeGraphProcessor.Examples
+      Data: 22|CircleRadians, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -608,7 +662,7 @@ MonoBehaviour:
       Data: false
     - Name: outputRadians
       Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[System.Single, mscorlib]], mscorlib
+      Data: 23|System.Collections.Generic.List`1[[System.Single, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
@@ -632,7 +686,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 24|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -683,7 +737,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 21|System.Single, mscorlib
+      Data: 25|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 2.09439516
@@ -698,11 +752,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 22|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 26|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 23|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 27|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -721,7 +775,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 24|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 28|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -772,7 +826,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 25|System.Single, mscorlib
+      Data: 29|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 4.18879032
@@ -787,11 +841,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 26|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 30|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 23
+      Data: 27
     - Name: 
       Entry: 12
       Data: 0
@@ -806,7 +860,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 27|ForLoopNode, NodeGraphProcessor.Examples
+      Data: 31|ForLoopNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -875,7 +929,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 28|NodeGraphProcessor.Examples.StartNode, NodeGraphProcessor.Examples
+      Data: 32|NodeGraphProcessor.Examples.StartNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -923,7 +977,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 29|IfNode, NodeGraphProcessor.Examples
+      Data: 33|IfNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -989,7 +1043,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 30|Inheritance1, NodeGraphProcessor.Examples
+      Data: 34|Inheritance1, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1049,7 +1103,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 31|Inheritance2, NodeGraphProcessor.Examples
+      Data: 35|Inheritance2, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1118,7 +1172,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 32|InheritanceBase, NodeGraphProcessor.Examples
+      Data: 36|InheritanceBase, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1169,7 +1223,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 33|FloatNode, NodeGraphProcessor.Examples
+      Data: 37|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1217,7 +1271,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 34|FloatNode, NodeGraphProcessor.Examples
+      Data: 38|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -1265,7 +1319,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 35|FloatNode, NodeGraphProcessor.Examples
+      Data: 39|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -1313,7 +1367,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 40|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1364,7 +1418,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 37|System.Single, mscorlib
+      Data: 41|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 42
@@ -1379,11 +1433,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 38|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 42|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 39|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 43|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -1402,7 +1456,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 44|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1453,7 +1507,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 41|System.Single, mscorlib
+      Data: 45|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 128
@@ -1468,11 +1522,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 42|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 46|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 39
+      Data: 43
     - Name: 
       Entry: 12
       Data: 0
@@ -1487,7 +1541,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 43|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 47|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1538,7 +1592,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 44|System.Single, mscorlib
+      Data: 48|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 260
@@ -1553,11 +1607,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 45|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 49|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 39
+      Data: 43
     - Name: 
       Entry: 12
       Data: 0
@@ -1572,7 +1626,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 46|MultiAddNode, NodeGraphProcessor.Examples
+      Data: 50|MultiAddNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1611,7 +1665,7 @@ MonoBehaviour:
       Data: false
     - Name: inputs
       Entry: 7
-      Data: 47|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
+      Data: 51|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
         mscorlib]], com.alelievr.NodeGraphProcessor.Runtime
     - Name: <>1__state
       Entry: 3
@@ -1624,7 +1678,7 @@ MonoBehaviour:
       Data: 1
     - Name: <>4__this
       Entry: 9
-      Data: 46
+      Data: 50
     - Name: fieldName
       Entry: 1
       Data: inputs
@@ -1652,7 +1706,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 48|MultiAddNode, NodeGraphProcessor.Examples
+      Data: 52|MultiAddNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1691,7 +1745,7 @@ MonoBehaviour:
       Data: false
     - Name: inputs
       Entry: 7
-      Data: 49|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
+      Data: 53|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
         mscorlib]], com.alelievr.NodeGraphProcessor.Runtime
     - Name: <>1__state
       Entry: 3
@@ -1704,7 +1758,7 @@ MonoBehaviour:
       Data: 1
     - Name: <>4__this
       Entry: 9
-      Data: 48
+      Data: 52
     - Name: fieldName
       Entry: 1
       Data: inputs
@@ -1732,7 +1786,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 50|OutputNode, NodeGraphProcessor.Examples
+      Data: 54|OutputNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1777,7 +1831,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|VectorNode, NodeGraphProcessor.Examples
+      Data: 55|VectorNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1855,7 +1909,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 56|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -1906,7 +1960,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 53|UnityEngine.Vector4, UnityEngine.CoreModule
+      Data: 57|UnityEngine.Vector4, UnityEngine.CoreModule
     - Name: 
       Entry: 4
       Data: 1
@@ -1930,11 +1984,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 54|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 58|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 55|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 59|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -1953,7 +2007,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 56|FloatNode, NodeGraphProcessor.Examples
+      Data: 60|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2001,7 +2055,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 57|FloatNode, NodeGraphProcessor.Examples
+      Data: 61|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -2049,7 +2103,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 58|MultiAddNode, NodeGraphProcessor.Examples
+      Data: 62|MultiAddNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2088,7 +2142,7 @@ MonoBehaviour:
       Data: false
     - Name: inputs
       Entry: 7
-      Data: 59|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
+      Data: 63|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
         mscorlib]], com.alelievr.NodeGraphProcessor.Runtime
     - Name: <>1__state
       Entry: 3
@@ -2101,7 +2155,7 @@ MonoBehaviour:
       Data: 1
     - Name: <>4__this
       Entry: 9
-      Data: 58
+      Data: 62
     - Name: fieldName
       Entry: 1
       Data: inputs
@@ -2129,7 +2183,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 60|SwitchNode, NodeGraphProcessor.Examples
+      Data: 64|SwitchNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2177,7 +2231,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 61|FloatNode, NodeGraphProcessor.Examples
+      Data: 65|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2225,7 +2279,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 62|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+      Data: 66|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2276,7 +2330,7 @@ MonoBehaviour:
       Data: 
     - Name: obj
       Entry: 7
-      Data: 63|System.Single, mscorlib
+      Data: 67|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 84000
@@ -2291,11 +2345,11 @@ MonoBehaviour:
       Data: 3
     - Name: TestDic
       Entry: 7
-      Data: 64|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 68|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 65|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 69|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -2314,7 +2368,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 66|MultiAddNode, NodeGraphProcessor.Examples
+      Data: 70|MultiAddNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2353,7 +2407,7 @@ MonoBehaviour:
       Data: false
     - Name: inputs
       Entry: 7
-      Data: 67|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
+      Data: 71|GraphProcessor.BaseNode+<TryGetAllInputValues>d__101`1[[System.Single,
         mscorlib]], com.alelievr.NodeGraphProcessor.Runtime
     - Name: <>1__state
       Entry: 3
@@ -2366,7 +2420,7 @@ MonoBehaviour:
       Data: 1
     - Name: <>4__this
       Entry: 9
-      Data: 66
+      Data: 70
     - Name: fieldName
       Entry: 1
       Data: inputs
@@ -2394,7 +2448,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 68|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 72|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2436,13 +2490,13 @@ MonoBehaviour:
       Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
     - Name: values
       Entry: 7
-      Data: 69|System.Collections.Generic.List`1[[System.Object, mscorlib]], mscorlib
+      Data: 73|System.Collections.Generic.List`1[[System.Object, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 70|System.Single, mscorlib
+      Data: 74|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 1000
@@ -2451,7 +2505,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 71|System.Single, mscorlib
+      Data: 75|System.Single, mscorlib
     - Name: 
       Entry: 4
       Data: 10000
@@ -2466,7 +2520,7 @@ MonoBehaviour:
       Data: 
     - Name: names
       Entry: 7
-      Data: 72|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 76|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -2484,22 +2538,16 @@ MonoBehaviour:
       Data: 
     - Name: types
       Entry: 7
-      Data: 73|System.Collections.Generic.List`1[[System.Type, mscorlib]], mscorlib
+      Data: 77|System.Collections.Generic.List`1[[System.Type, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
-      Entry: 7
-      Data: 74|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Single, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 9
+      Data: 8
     - Name: 
       Entry: 9
-      Data: 74
+      Data: 8
     - Name: 
       Entry: 13
       Data: 
@@ -2514,13 +2562,13 @@ MonoBehaviour:
       Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
     - Name: values
       Entry: 9
-      Data: 69
+      Data: 73
     - Name: names
       Entry: 9
-      Data: 72
+      Data: 76
     - Name: types
       Entry: 9
-      Data: 73
+      Data: 77
     - Name: 
       Entry: 8
       Data: 
@@ -2535,7 +2583,7 @@ MonoBehaviour:
       Data: 2
     - Name: inputType
       Entry: 7
-      Data: 75|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 78|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
     - Name: serializedType
       Entry: 1
       Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -2547,7 +2595,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 76|SwitchNode, NodeGraphProcessor.Examples
+      Data: 79|SwitchNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2595,7 +2643,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 77|FloatNode, NodeGraphProcessor.Examples
+      Data: 80|FloatNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -2643,7 +2691,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 78|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 81|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2685,13 +2733,13 @@ MonoBehaviour:
       Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
     - Name: values
       Entry: 9
-      Data: 69
+      Data: 73
     - Name: names
       Entry: 9
-      Data: 72
+      Data: 76
     - Name: types
       Entry: 9
-      Data: 73
+      Data: 77
     - Name: 
       Entry: 8
       Data: 
@@ -2700,13 +2748,13 @@ MonoBehaviour:
       Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
     - Name: values
       Entry: 9
-      Data: 69
+      Data: 73
     - Name: names
       Entry: 9
-      Data: 72
+      Data: 76
     - Name: types
       Entry: 9
-      Data: 73
+      Data: 77
     - Name: 
       Entry: 8
       Data: 
@@ -2721,7 +2769,7 @@ MonoBehaviour:
       Data: 1
     - Name: inputType
       Entry: 7
-      Data: 79|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 82|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
     - Name: serializedType
       Entry: 1
       Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -2733,7 +2781,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 80|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 83|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2775,13 +2823,13 @@ MonoBehaviour:
       Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
     - Name: values
       Entry: 9
-      Data: 69
+      Data: 73
     - Name: names
       Entry: 9
-      Data: 72
+      Data: 76
     - Name: types
       Entry: 9
-      Data: 73
+      Data: 77
     - Name: 
       Entry: 8
       Data: 
@@ -2790,13 +2838,13 @@ MonoBehaviour:
       Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
     - Name: values
       Entry: 9
-      Data: 69
+      Data: 73
     - Name: names
       Entry: 9
-      Data: 72
+      Data: 76
     - Name: types
       Entry: 9
-      Data: 73
+      Data: 77
     - Name: 
       Entry: 8
       Data: 
@@ -2811,7 +2859,7 @@ MonoBehaviour:
       Data: 1
     - Name: inputType
       Entry: 7
-      Data: 81|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 84|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
     - Name: serializedType
       Entry: 1
       Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -2823,7 +2871,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 82|AbstractNodeChild2, NodeGraphProcessor.Examples
+      Data: 85|AbstractNodeChild2, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2871,7 +2919,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 83|AbstractNodeChild2, NodeGraphProcessor.Examples
+      Data: 86|AbstractNodeChild2, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 1
       Data: 
@@ -2919,7 +2967,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 84|ColorNode, NodeGraphProcessor.Examples
+      Data: 87|ColorNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -2979,7 +3027,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 85|DrawerFieldTestNode, NodeGraphProcessor.Examples
+      Data: 88|DrawerFieldTestNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3114,7 +3162,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 86|AllPortTestNode, NodeGraphProcessor.Examples
+      Data: 89|AllPortTestNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3174,7 +3222,7 @@ MonoBehaviour:
       Data: 
     - Name: input_Array
       Entry: 7
-      Data: 87|System.Int32[,], mscorlib
+      Data: 90|System.Int32[,], mscorlib
     - Name: 
       Entry: 12
       Data: 9
@@ -3297,7 +3345,7 @@ MonoBehaviour:
       Data: 
     - Name: output_HashSet
       Entry: 7
-      Data: 88|System.Collections.Generic.HashSet`1[[System.String, mscorlib]], System.Core
+      Data: 91|System.Collections.Generic.HashSet`1[[System.String, mscorlib]], System.Core
     - Name: 
       Entry: 12
       Data: 1
@@ -3312,7 +3360,7 @@ MonoBehaviour:
       Data: 
     - Name: output_List
       Entry: 7
-      Data: 89|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 92|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
@@ -3327,11 +3375,11 @@ MonoBehaviour:
       Data: 
     - Name: output_Dictionary
       Entry: 7
-      Data: 90|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+      Data: 93|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 91|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 94|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -3452,7 +3500,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 92|VerticalNode, NodeGraphProcessor.Examples
+      Data: 95|VerticalNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3506,7 +3554,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 93|VerticalNode2, NodeGraphProcessor.Examples
+      Data: 96|VerticalNode2, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3560,7 +3608,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 94|NodeGraphProcessor.Examples.WaitFrameNode, NodeGraphProcessor.Examples
+      Data: 97|NodeGraphProcessor.Examples.WaitFrameNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3626,7 +3674,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 95|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
+      Data: 98|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3680,7 +3728,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 96|AllPortTestNode, NodeGraphProcessor.Examples
+      Data: 99|AllPortTestNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -3740,7 +3788,7 @@ MonoBehaviour:
       Data: 
     - Name: input_Array
       Entry: 7
-      Data: 97|System.Int32[,], mscorlib
+      Data: 100|System.Int32[,], mscorlib
     - Name: 
       Entry: 12
       Data: 9
@@ -3965,7 +4013,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 98|AllPortTestNode, NodeGraphProcessor.Examples
+      Data: 101|AllPortTestNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -4025,7 +4073,7 @@ MonoBehaviour:
       Data: 
     - Name: input_Array
       Entry: 7
-      Data: 99|System.Int32[,], mscorlib
+      Data: 102|System.Int32[,], mscorlib
     - Name: 
       Entry: 12
       Data: 9
@@ -4256,14 +4304,14 @@ MonoBehaviour:
       Data: 
     - Name: groups
       Entry: 7
-      Data: 100|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+      Data: 103|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 101|GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 104|GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime
     - Name: title
       Entry: 1
       Data: Create Group
@@ -4317,7 +4365,7 @@ MonoBehaviour:
       Data: 
     - Name: innerNodeGUIDs
       Entry: 7
-      Data: 102|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 105|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 8
@@ -4741,7 +4789,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 1103, y: -900, z: 0}
-  scale: {x: 0.43232757, y: 0.43232757, z: 1}
+  position: {x: 1983, y: -2006, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
     version: 1

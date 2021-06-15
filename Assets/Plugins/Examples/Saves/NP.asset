@@ -45,16 +45,16 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 421
+      Data: 380.5
     - Name: 
       Entry: 4
-      Data: 265
+      Data: 268.5
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 88
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 75
     - Name: 
       Entry: 8
       Data: 
@@ -213,124 +213,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|RelayNode, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: a586b85d-37f5-4603-ab4f-038ed7a97296
-    - Name: computeOrder
-      Entry: 3
-      Data: 2
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 536
-    - Name: 
-      Entry: 4
-      Data: 471
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: input
-      Entry: 7
-      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: values
-      Entry: 6
-      Data: 
-    - Name: names
-      Entry: 6
-      Data: 
-    - Name: types
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: output
-      Entry: 7
-      Data: RelayNode+PackedRelayData, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: values
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[System.Object, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: names
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: types
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[System.Type, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: unpackOutput
-      Entry: 5
-      Data: false
-    - Name: packInput
-      Entry: 5
-      Data: false
-    - Name: inputEdgeCount
-      Entry: 3
-      Data: 0
-    - Name: inputType
-      Entry: 7
-      Data: 7|GraphProcessor.SerializableType, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: serializedType
-      Entry: 1
-      Data: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|NodeGraphProcessor.Examples.WaitFrameNode, NodeGraphProcessor.Examples
+      Data: 3|NodeGraphProcessor.Examples.WaitFrameNode, NodeGraphProcessor.Examples
     - Name: nodeCustomName
       Entry: 6
       Data: 
@@ -339,22 +222,22 @@ MonoBehaviour:
       Data: b6b15262-8c21-4f48-85f4-163ebf27ad67
     - Name: computeOrder
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: position
       Entry: 7
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 611
+      Data: 507
     - Name: 
       Entry: 4
-      Data: 263
+      Data: 303
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 194
     - Name: 
       Entry: 4
-      Data: 100
+      Data: 99
     - Name: 
       Entry: 8
       Data: 
@@ -386,11 +269,1236 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: onProcessFinished
-      Entry: 6
+      Entry: 7
+      Data: 4|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: invocationList
+      Entry: 7
+      Data: 5|System.Delegate[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 25
+    - Name: 
+      Entry: 7
+      Data: 6|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 7|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 7
+      Data: 8|NodeGraphProcessor.Examples.ConditionalProcessor, NodeGraphProcessor.Examples
+    - Name: pause
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 7
+      Data: 9|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 7
+      Data: 10|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 11|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 14|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 15|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 17|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 18|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 20|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 21|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 22|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 23|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 24|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 26|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 27|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 28|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 29|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 30|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 31|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 32|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 33|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 34|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 35|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 36|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 37|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 38|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 39|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 40|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 41|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 42|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 43|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 44|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 45|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 46|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 47|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 48|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 49|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 50|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 51|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 52|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 53|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 54|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 55|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 56|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 57|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 58|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 59|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 60|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 61|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 62|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 63|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 64|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 65|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 66|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 67|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 68|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 69|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 70|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 71|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 72|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 73|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 74|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 75|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 76|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 77|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 78|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 79|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 80|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 81|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 82|System.Action`1[[NodeGraphProcessor.Examples.WaitableNode, NodeGraphProcessor.Examples]],
+        mscorlib
+    - Name: target
+      Entry: 7
+      Data: 83|NodeGraphProcessor.Examples.ConditionalProcessor+<>c__DisplayClass14_0,
+        NodeGraphProcessor.Examples
+    - Name: <waitableNode>5__2
+      Entry: 9
+      Data: 3
+    - Name: <>4__this
+      Entry: 9
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declaringType
+      Entry: 9
+      Data: 9
+    - Name: methodName
+      Entry: 1
+      Data: <RunTheGraph>b__0
+    - Name: delegateType
+      Entry: 9
+      Data: 10
+    - Name: signature
+      Entry: 7
+      Data: 84|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 9
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: frame
       Entry: 3
-      Data: 1
+      Data: 1000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 85|NodeGraphProcessor.Examples.ConsoleNode, NodeGraphProcessor.Examples
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 0536982d-5380-48a3-afe7-be5e9cfe57b2
+    - Name: computeOrder
+      Entry: 3
+      Data: 3
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 692
+    - Name: 
+      Entry: 4
+      Data: 459
+    - Name: 
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: executed
+      Entry: 7
+      Data: NodeGraphProcessor.Examples.ConditionalLink, NodeGraphProcessor.Examples
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: executes
+      Entry: 7
+      Data: NodeGraphProcessor.Examples.ConditionalLink, NodeGraphProcessor.Examples
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: obj
+      Entry: 6
+      Data: 
+    - Name: logText
+      Entry: 1
+      Data: 9999
+    - Name: logType
+      Entry: 3
+      Data: 3
+    - Name: TestDic
+      Entry: 7
+      Data: 86|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 87|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -402,7 +1510,7 @@ MonoBehaviour:
       Data: 
     - Name: groups
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+      Data: 88|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
         mscorlib
     - Name: 
       Entry: 12
@@ -414,23 +1522,47 @@ MonoBehaviour:
       Entry: 8
       Data: 
   serializedNodes: []
-  edges: []
+  edges:
+  - GUID: 0ac3e32f-4522-42e4-a951-2041e49ebab3
+    owner: {fileID: 11400000}
+    inputNodeGUID: b6b15262-8c21-4f48-85f4-163ebf27ad67
+    outputNodeGUID: f00162c7-1f73-40a0-94c1-172694335340
+    inputFieldName: executed
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 0
+  - GUID: b73b98a8-b0a4-4461-bd76-767825fcd177
+    owner: {fileID: 11400000}
+    inputNodeGUID: b6b15262-8c21-4f48-85f4-163ebf27ad67
+    outputNodeGUID: 7ef599fc-5796-4db4-aaef-b8b8fc969310
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: f0c3414b-f742-46b3-8046-c50845571df8
+    owner: {fileID: 11400000}
+    inputNodeGUID: 0536982d-5380-48a3-afe7-be5e9cfe57b2
+    outputNodeGUID: b6b15262-8c21-4f48-85f4-163ebf27ad67
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   stackNodes: []
   pinnedElements:
   - position:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 405
       width: 150
       height: 200
-    opened: 0
+    opened: 1
     editorType:
       serializedType: ConditionalProcessorView, NodeGraphProcessor.Examples, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 74, y: 27, z: 0}
-  scale: {x: 0.8695652, y: 0.8695652, z: 1}
+  position: {x: 19, y: 8, z: 0}
+  scale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 1
