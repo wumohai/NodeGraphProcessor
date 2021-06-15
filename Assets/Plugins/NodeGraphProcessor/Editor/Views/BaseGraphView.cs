@@ -1264,7 +1264,7 @@ namespace GraphProcessor
 			if (graph == null)
 				return ;
 
-			GraphSaveHelper.SaveGraphToDisk(graph);
+			GraphCreateAndSaveHelper.SaveGraphToDisk(graph);
 		}
 
 		public void ToggleView< T >() where T : PinnedElementView

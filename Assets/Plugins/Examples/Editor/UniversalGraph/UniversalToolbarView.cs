@@ -20,7 +20,7 @@ namespace Examples.Editor._05_All
 
         private readonly Texture2D m_CreateNewToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/CreateNew.png");
-        
+
         private readonly Texture2D m_MiniMapToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/MiniMap.png");
 
@@ -44,12 +44,24 @@ namespace Examples.Editor._05_All
 
         protected override void AddButtons()
         {
-            AddToggle(new GUIContent("", m_CreateNewToggleIcon, "新建Graph资产"),
-                false,
-                (v) => graphView.ToggleView<ExposedParameterView>());
-            
+            AddButton(new GUIContent("", m_CreateNewToggleIcon, "新建Graph资产"), () =>
+            {
+                GenericMenu genericMenu = new GenericMenu();
+                foreach (var graphType in TypeCache.GetTypesDerivedFrom<BaseGraph>())
+                {
+                    genericMenu.AddItem(new GUIContent($"{graphType.Name}"), false,
+                        data =>
+                        {
+                            BaseGraph baseGraph = GraphCreateAndSaveHelper.CreateGraph(data as System.Type);
+                            GraphAssetCallbacks.InitializeGraph(baseGraph);
+                        }, graphType);
+                }
+
+                genericMenu.ShowAsContext();
+            }, true);
+
             //AddSeparator(5);
-            
+
             AddToggle(new GUIContent("", m_ExposedParamsToggleIcon, "开/关参数面板"),
                 graphView.GetPinnedElementStatus<ExposedParameterView>() != DropdownMenuAction.Status.Hidden,
                 (v) => graphView.ToggleView<ExposedParameterView>());
@@ -64,13 +76,14 @@ namespace Examples.Editor._05_All
             AddToggle(new GUIContent(m_ConditionalToggleIcon, "开/关运行的面板"),
                 graphView.GetPinnedElementStatus<ConditionalProcessorView>() !=
                 DropdownMenuAction.Status.Hidden, (v) => graphView.ToggleView<ConditionalProcessorView>());
-            
-            AddSeparator(5); 
-            
+
+            AddSeparator(5);
+
             AddCustom(() =>
             {
-                GUI.color = new Color(128/255f,128/255f,128/255f);
-                GUILayout.Label(m_BaseGraph.GetType().Name, EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
+                GUI.color = new Color(128 / 255f, 128 / 255f, 128 / 255f);
+                GUILayout.Label(m_BaseGraph.GetType().Name,
+                    EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
                 GUI.color = Color.white;
             });
 

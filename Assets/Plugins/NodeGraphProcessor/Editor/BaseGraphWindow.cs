@@ -97,7 +97,7 @@ namespace GraphProcessor
 			if (this.graph != null && graph != this.graph)
 			{
 				// Save the graph to the disk
-				GraphSaveHelper.SaveGraphToDisk(this.graph);
+				GraphCreateAndSaveHelper.SaveGraphToDisk(this.graph);
 				// Unload the graph
 				graphUnloaded?.Invoke(this.graph);
 			}
