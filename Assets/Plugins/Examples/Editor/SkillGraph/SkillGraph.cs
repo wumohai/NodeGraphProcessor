@@ -5,11 +5,16 @@
 //------------------------------------------------------------
 
 using GraphProcessor;
+using Sirenix.OdinInspector;
 
 namespace Examples.Editor._05_All
 {
     public class SkillGraph: NPBehaveGraph
     {
-
+        [Button("ExpoertSkillData")]
+        public void ExpoertSkillData()
+        {
+            
+        }
     }
 }

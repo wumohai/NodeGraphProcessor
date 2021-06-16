@@ -5,6 +5,7 @@
 //------------------------------------------------------------
 
 using GraphProcessor;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Examples.Editor._05_All
@@ -13,5 +14,11 @@ namespace Examples.Editor._05_All
     {
         [HideInInspector]
         public NP_BlackBoard NpBlackBoard = new NP_BlackBoard();
+        
+        [Button("ExpoertNPBehaveData")]
+        public void ExpoertNPBehaveData()
+        {
+            
+        }
     }
 }

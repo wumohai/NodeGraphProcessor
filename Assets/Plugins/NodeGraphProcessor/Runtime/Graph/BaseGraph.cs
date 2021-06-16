@@ -48,6 +48,7 @@ namespace GraphProcessor
 		/// <typeparam name="JsonElement"></typeparam>
 		/// <returns></returns>
 		[SerializeField, Obsolete("Use BaseGraph.nodes instead")]
+		[HideInInspector]
 		public List< JsonElement >						serializedNodes = new List< JsonElement >();
 
 		/// <summary>
@@ -72,6 +73,7 @@ namespace GraphProcessor
 		/// <typeparam name="SerializableEdge"></typeparam>
 		/// <returns></returns>
 		[SerializeField]
+		[HideInInspector]
 		public List< SerializableEdge >					edges = new List< SerializableEdge >();
 		/// <summary>
 		/// Dictionary of edges per GUID, faster than a search in a list
@@ -87,6 +89,7 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="Group"></typeparam>
 		/// <returns></returns>
+		[HideInInspector]
 		public List< Group >                     		groups = new List< Group >();
 
 		/// <summary>
@@ -94,6 +97,7 @@ namespace GraphProcessor
 		/// </summary>
 		/// <typeparam name="stackNodes"></typeparam>
 		/// <returns></returns>
+		[HideInInspector]
 		[SerializeField, SerializeReference] // Polymorphic serialization
 		public List< BaseStackNode >					stackNodes = new List< BaseStackNode >();
 
@@ -103,6 +107,7 @@ namespace GraphProcessor
 		/// <typeparam name="PinnedElement"></typeparam>
 		/// <returns></returns>
 		[SerializeField]
+		[HideInInspector]
 		public List< PinnedElement >					pinnedElements = new List< PinnedElement >();
 
 		/// <summary>
@@ -111,12 +116,15 @@ namespace GraphProcessor
 		/// <typeparam name="ExposedParameter"></typeparam>
 		/// <returns></returns>
 		[SerializeField, SerializeReference]
+		[HideInInspector]
 		public List< ExposedParameter >					exposedParameters = new List< ExposedParameter >();
 
+		[HideInInspector]
 		[SerializeField, FormerlySerializedAs("exposedParameters")] // We keep this for upgrade
 		List< ExposedParameter >						serializedParameterList = new List<ExposedParameter>();
 
 		[SerializeField]
+		[HideInInspector]
 		public List< StickyNote >						stickyNotes = new List<StickyNote>();
 
 		[System.NonSerialized]
@@ -126,7 +134,9 @@ namespace GraphProcessor
 		Scene							linkedScene;
 
 		//graph visual properties
+		[HideInInspector]
 		public Vector3					position = Vector3.zero;
+		[HideInInspector]
 		public Vector3					scale = Vector3.one;
 
 		/// <summary>
