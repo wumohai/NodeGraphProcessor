@@ -16,7 +16,8 @@ Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自�
  - 支持List，Dictionary，HashSet，Stack等泛型集合序列化与可视化
  - 重写GraphView生命周期，优化初始化流程和加载时间
  - 节点之间值传递通过泛型优化为0GC
- - 支持端口图标自定义
+ - 支持Node端口图标自定义
+ - 支持ExposedParameter模块的Icon以及Value的渲染
  - 支持快速自定义Graph，GraphView，GraphWindow，GraphToolbar
  - 支持GraphEditorWindow中新建GraphAssets
 
