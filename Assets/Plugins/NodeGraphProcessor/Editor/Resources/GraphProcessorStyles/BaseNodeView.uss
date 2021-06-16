@@ -254,3 +254,8 @@ ParameterNodeView #controls EnumField > VisualElement > VisualElement {
     height: 12px;
     background-image: resource("Icons/Function@x3");
 }
+
+.NodeTexturePreview{
+    width: 200px;
+    height: 200px;
+}
