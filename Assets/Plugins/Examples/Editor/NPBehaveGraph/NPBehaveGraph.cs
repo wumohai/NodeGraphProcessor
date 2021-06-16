@@ -5,10 +5,13 @@
 //------------------------------------------------------------
 
 using GraphProcessor;
+using UnityEngine;
 
 namespace Examples.Editor._05_All
 {
     public class NPBehaveGraph: BaseGraph
     {
+        [HideInInspector]
+        public NP_BlackBoard NpBlackBoard = new NP_BlackBoard();
     }
 }

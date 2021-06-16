@@ -17,6 +17,7 @@ namespace Examples.Editor._05_All
     {
         protected readonly MiniMap m_MiniMap;
         protected readonly BaseGraph m_BaseGraph;
+        protected readonly BaseGraphView m_BaseGraphView;
 
         private readonly Texture2D m_CreateNewToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
             $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/CreateNew.png");
@@ -40,6 +41,7 @@ namespace Examples.Editor._05_All
             m_MiniMap.visible = false;
 
             m_BaseGraph = baseGraph;
+            m_BaseGraphView = graphView;
         }
 
         protected override void AddButtons()
@@ -77,6 +79,13 @@ namespace Examples.Editor._05_All
                 graphView.GetPinnedElementStatus<ConditionalProcessorView>() !=
                 DropdownMenuAction.Status.Hidden, (v) => graphView.ToggleView<ConditionalProcessorView>());
 
+            AddButton(new GUIContent("", m_GotoFileButtonIcon, "定位至资产文件"),
+                () =>
+                {
+                    EditorGUIUtility.PingObject(graphView.graph);
+                    Selection.activeObject = graphView.graph;
+                });
+            
             AddSeparator(5);
 
             AddCustom(() =>
@@ -86,13 +95,6 @@ namespace Examples.Editor._05_All
                     EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
                 GUI.color = Color.white;
             });
-
-            AddButton(new GUIContent("", m_GotoFileButtonIcon, "定位至资产文件"),
-                () =>
-                {
-                    EditorGUIUtility.PingObject(graphView.graph);
-                    Selection.activeObject = graphView.graph;
-                }, false);
         }
     }
 }

@@ -105,12 +105,14 @@ namespace GraphProcessor
 			graphLoaded?.Invoke(graph);
 			this.graph = graph;
 
-			if (graphView == null)
+			if (graphView != null)
 			{
-				InitializeWindow(graph);
-				rootView.Add(graphView);
+				rootView.Remove(graphView);
 			}
 
+			InitializeWindow(graph);
+			rootView.Add(graphView);
+			
 			graphView = rootView.Children().FirstOrDefault(e => e is BaseGraphView) as BaseGraphView;
 
 			if (graphView == null)

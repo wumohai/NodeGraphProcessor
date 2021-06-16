@@ -18,18 +18,5 @@ namespace Examples.Editor._05_All
         public SkillToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph) : base(graphView, miniMap, baseGraph)
         {
         }
-        
-        protected override void AddButtons()
-        {
-            base.AddButtons();
-            
-            AddCustom(() =>
-            {
-                GUI.color = new Color(128/255f,128/255f,128/255f);
-                GUILayout.Label("黑板数据库_2", EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
-                GUI.color = Color.white;
-            });
-            
-        }
     }
 }

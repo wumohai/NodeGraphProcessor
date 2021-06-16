@@ -1521,16 +1521,54 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: NpBlackBoard
+      Entry: 7
+      Data: 89|Examples.Editor._05_All.NP_BlackBoard, NodeGraphProcessor.Examples
+    - Name: TestEvent
+      Entry: 7
+      Data: 90|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 91|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: TestId
+      Entry: 7
+      Data: 92|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[System.Int64,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 93|System.Collections.Generic.GenericEqualityComparer`1[[System.Int64,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   serializedNodes: []
   edges:
-  - GUID: 0ac3e32f-4522-42e4-a951-2041e49ebab3
-    owner: {fileID: 11400000}
-    inputNodeGUID: b6b15262-8c21-4f48-85f4-163ebf27ad67
-    outputNodeGUID: f00162c7-1f73-40a0-94c1-172694335340
-    inputFieldName: executed
-    outputFieldName: output
-    inputPortIdentifier: 
-    outputPortIdentifier: 0
   - GUID: b73b98a8-b0a4-4461-bd76-767825fcd177
     owner: {fileID: 11400000}
     inputNodeGUID: b6b15262-8c21-4f48-85f4-163ebf27ad67

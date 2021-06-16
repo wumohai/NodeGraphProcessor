@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 51
+      Data: 52
     - Name: 
       Entry: 7
       Data: 1|FloatNode, NodeGraphProcessor.Examples
@@ -4028,10 +4028,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -1052.30432
+      Data: -1075
     - Name: 
       Entry: 4
-      Data: 3047.39136
+      Data: 3194.5
     - Name: 
       Entry: 4
       Data: 289
@@ -4297,6 +4297,54 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 103|AbstractNodeChild2, NodeGraphProcessor.Examples
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 6fc4b2d0-a7d7-45f0-a725-dff1717f5363
+    - Name: computeOrder
+      Entry: 3
+      Data: 51
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -951
+    - Name: 
+      Entry: 4
+      Data: 3067
+    - Name: 
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: input
+      Entry: 4
+      Data: 0
+    - Name: output
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -4304,14 +4352,14 @@ MonoBehaviour:
       Data: 
     - Name: groups
       Entry: 7
-      Data: 103|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+      Data: 104|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 104|GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime
+      Data: 105|GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime
     - Name: title
       Entry: 1
       Data: Create Group
@@ -4365,7 +4413,7 @@ MonoBehaviour:
       Data: 
     - Name: innerNodeGUIDs
       Entry: 7
-      Data: 105|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 106|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 8
@@ -4754,6 +4802,14 @@ MonoBehaviour:
     outputFieldName: output_List
     inputPortIdentifier: 
     outputPortIdentifier: 
+  - GUID: 0703f15c-072e-4ab2-acbb-306f010340da
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6fc4b2d0-a7d7-45f0-a725-dff1717f5363
+    outputNodeGUID: c88d3dae-29e7-4de0-94e9-5010e56350fe
+    inputFieldName: input
+    outputFieldName: output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   stackNodes: []
   pinnedElements:
   - position:
@@ -4789,7 +4845,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 1983, y: -2006, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  position: {x: 1279, y: -1442, z: 0}
+  scale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 1

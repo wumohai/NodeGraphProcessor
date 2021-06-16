@@ -10,5 +10,6 @@ namespace Examples.Editor._05_All
 {
     public class SkillGraph: NPBehaveGraph
     {
+
     }
 }

@@ -5,6 +5,7 @@
 //------------------------------------------------------------
 
 using GraphProcessor;
+using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
@@ -15,21 +16,42 @@ namespace Examples.Editor._05_All
 {
     public class NPBehaveToolbarView : UniversalToolbarView
     {
-        public NPBehaveToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph) : base(graphView, miniMap, baseGraph)
+        public class BlackboardInspectorViewer : SerializedScriptableObject
+        {
+            public NP_BlackBoard Blackboard;
+        }
+
+        private static BlackboardInspectorViewer _BlackboardInspectorViewer;
+
+        private static BlackboardInspectorViewer s_BlackboardInspectorViewer
+        {
+            get
+            {
+                if (_BlackboardInspectorViewer == null)
+                {
+                    _BlackboardInspectorViewer = ScriptableObject.CreateInstance<BlackboardInspectorViewer>();
+                }
+
+                return _BlackboardInspectorViewer;
+            }
+        }
+
+        public NPBehaveToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph) : base(graphView,
+            miniMap, baseGraph)
         {
         }
-        
+
         protected override void AddButtons()
         {
             base.AddButtons();
-            
-            AddCustom(() =>
-            {
-                GUI.color = new Color(128/255f,128/255f,128/255f);
-                GUILayout.Label("黑板数据库", EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
-                GUI.color = Color.white;
-            });
-            
+
+            AddButton(new GUIContent("Blackboard", "打开Blackboard数据面板"),
+                () =>
+                {
+                    NPBehaveToolbarView.s_BlackboardInspectorViewer.Blackboard =
+                        (this.m_BaseGraph as NPBehaveGraph).NpBlackBoard;
+                    Selection.activeObject = s_BlackboardInspectorViewer;
+                }, false);
         }
     }
 }
