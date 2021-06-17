@@ -21,6 +21,28 @@ Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自�
  - 支持快速自定义Graph，GraphView，GraphWindow，GraphToolbar
  - 支持GraphEditorWindow中新建GraphAssets
 
+## 基于此项目的拓展内容
+
+### 技能编辑器
+[基于行为树的MOBA技能系统（国内码云）](https://gitee.com/NKG_admin/NKGMobaBasedOnET)
+[基于行为树的MOBA技能系统（国外GitHub，暂未同步更新）](https://github.com/wqaetly/NKGMobaBasedOnET)
+
+![](./Pngs/QQ图片20210617221108.png)
+
+## 截图
+
+### 在GraphView选中节点后，由Odin在Inspector面板显示节点信息
+
+![](./Pngs/QQ截图20210404172629.png)
+
+### 端口自定义图标演示
+
+![](./Pngs/QQ截图20210611221735.png)
+
+### 选中Graph Asset文件后，由Odin在Inspector面板显示整个Graph信息
+
+![](./Pngs/QQ截图20210404172956.png)
+
 ## 使用
 
 ### 节点端口值的获取与操作
@@ -198,17 +220,3 @@ public class Inheritance2 : Inheritance1
  - [x] ~~不同的Graph需要有不同的节点搜索范围。例如行为树Graph在创建节点时只会搜索行为树相关节点内容而不会搜索到碰撞关系编辑器相关节点内容~~ （这是原生库自带的功能，填充NodeMenuItem的onlyCompatibleWithGraph即可，手动流汗黄豆）
  - [x] 优化节点之间值传递消耗为0GC (由于支持自定义每个端口的处理，而框架不可能知道我们自定义节点端口的逻辑是什么样的，所以自定义节点值传递已无优化空间，只能通过反射进行，但这种反射传递值只发生在进行自定义端口处理的时候，默认情况下是直接通过表达式树赋值的，效率尚可），但如果想要进一步优化拆装箱和反射消耗，我们可以自己手写那些原本被框架所托管的代码来达到优化的目的。
  - [x] 优化一些反射操作的扫描程序集范围，现在耗时非常严重，甚至还扫描了mscorlib程序集中的类型
-
-## 截图
-
-### 在GraphView选中节点后，由Odin在Inspector面板显示节点信息
-
-![](./Pngs/QQ截图20210404172629.png)
-
-### 端口自定义图标演示
-
-![](./Pngs/QQ截图20210611221735.png)
-
-### 选中Graph Asset文件后，由Odin在Inspector面板显示整个Graph信息
-
-![](./Pngs/QQ截图20210404172956.png)
