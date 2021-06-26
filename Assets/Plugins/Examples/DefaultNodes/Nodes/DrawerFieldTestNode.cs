@@ -7,44 +7,45 @@ using System.Linq;
 [System.Serializable, NodeMenuItem("Custom/Drawer Field Test")]
 public class DrawerFieldTestNode : BaseNode
 {
+    [Input(name = "Vector 4"), ShowAsDrawer]
+    public Vector4 vector4;
 
-	[Input(name = "Vector 4"), ShowAsDrawer]
-	public Vector4 vector4;
+    [Input(name = "Vector 3"), ShowAsDrawer]
+    public Vector3 vector3;
 
-	[Input(name = "Vector 3"), ShowAsDrawer]
-	public Vector3 vector3;
+    [Input(name = "Vector 2"), ShowAsDrawer]
+    public Vector2 vector2;
 
-	[Input(name = "Vector 2"), ShowAsDrawer]
-	public Vector2 vector2;
+    [Input(name = "Float"), ShowAsDrawer] public float floatInput;
 
-	[Input(name = "Float"), ShowAsDrawer]
-	public float floatInput;
+    [Input(name = "Vector 3 Int"), ShowAsDrawer]
+    public Vector3Int vector3Int;
 
-	[Input(name = "Int"), ShowAsDrawer]
-	public int intInput;
+    [Input(name = "Vector 2 Int"), ShowAsDrawer]
+    public Vector2Int vector2Int;
 
-	[Input(name = "Empty")]
-	public int intInput2;
+    [Input(name = "Int"), ShowAsDrawer] public int intInput;
 
-	[Input(name = "String"), ShowAsDrawer]
-	public string stringInput;
+    [Input(name = "Empty")] public int intInput2;
 
-	[Input(name = "Color"), ShowAsDrawer]
-	new public Color color;
+    [Input(name = "String"), ShowAsDrawer] public string stringInput;
 
-	[Input(name = "Game Object"), ShowAsDrawer]
-	public GameObject gameObject;
+    [Input(name = "Color"), ShowAsDrawer] new public Color color;
 
-	[Input(name = "Animation Curve"), ShowAsDrawer]
-	public AnimationCurve animationCurve;
+    [Input(name = "Game Object"), ShowAsDrawer]
+    public GameObject gameObject;
 
-	[Input(name = "Rigidbody"), ShowAsDrawer]
-	public Rigidbody rigidbody;
+    [Input(name = "Animation Curve"), ShowAsDrawer]
+    public AnimationCurve animationCurve;
 
-	[Input("Layer Mask"), ShowAsDrawer]
-	public LayerMask layerMask;
+    [Input(name = "Rigidbody"), ShowAsDrawer]
+    public Rigidbody rigidbody;
 
-	public override string name => "Drawer Field Test";
+    [Input("Layer Mask"), ShowAsDrawer] public LayerMask layerMask;
 
-	protected override void Process() {}
+    public override string name => "Drawer Field Test";
+
+    protected override void Process()
+    {
+    }
 }
