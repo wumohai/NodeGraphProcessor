@@ -7,9 +7,11 @@ using UnityEditor;
 
 public class UniversalGraphView : BaseGraphView
 {
+    public UniversalGraphWindow universalGraphWindow;
     // Nothing special to add for now
     public UniversalGraphView(EditorWindow window) : base(window)
     {
+        universalGraphWindow = window as UniversalGraphWindow;
     }
 
     public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)

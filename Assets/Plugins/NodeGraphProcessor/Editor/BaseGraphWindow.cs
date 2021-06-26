@@ -135,6 +135,14 @@ namespace GraphProcessor
 			reloadWorkaround = false;
 		}
 
+		/// <summary>
+		/// 主动刷新EditorWindow
+		/// </summary>
+		public void RefreshWindow()
+		{
+			reloadWorkaround = true;
+		}
+		
 		void LinkGraphWindowToScene(Scene scene)
 		{
 			EditorSceneManager.sceneClosed += CloseWindowWhenSceneIsClosed;

@@ -3096,6 +3096,33 @@ MonoBehaviour:
     - Name: floatInput
       Entry: 4
       Data: 0
+    - Name: vector3Int
+      Entry: 7
+      Data: UnityEngine.Vector3Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vector2Int
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: intInput
       Entry: 3
       Data: 0
@@ -4652,6 +4679,33 @@ MonoBehaviour:
     - Name: floatInput
       Entry: 4
       Data: 0
+    - Name: vector3Int
+      Entry: 7
+      Data: UnityEngine.Vector3Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: vector2Int
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: intInput
       Entry: 3
       Data: 0
@@ -5691,8 +5745,8 @@ MonoBehaviour:
   - id: 15
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 3070, y: -4921, z: 0}
-  scale: {x: 1.520875, y: 1.520875, z: 1}
+  position: {x: 3947, y: -6652, z: 0}
+  scale: {x: 2, y: 2, z: 1}
   references:
     version: 1
     00000000:

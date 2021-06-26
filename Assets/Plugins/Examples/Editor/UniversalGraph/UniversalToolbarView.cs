@@ -85,7 +85,7 @@ namespace Examples.Editor._05_All
                     EditorGUIUtility.PingObject(graphView.graph);
                     Selection.activeObject = graphView.graph;
                 });
-            
+
             AddSeparator(5);
 
             AddCustom(() =>
@@ -95,6 +95,9 @@ namespace Examples.Editor._05_All
                     EditorGUIStyleHelper.GetGUIStyleByName(nameof(EditorStyles.toolbarButton)));
                 GUI.color = Color.white;
             });
+
+            AddButton(new GUIContent("Reload", "主动重载界面"),
+                () => { (this.m_BaseGraphView as UniversalGraphView)?.universalGraphWindow.RefreshWindow(); }, false);
         }
     }
 }
