@@ -13,10 +13,15 @@ namespace GraphProcessor
 {
     public static class GraphCreateAndSaveHelper
     {
+        /// <summary>
+        /// NodeGraphProcessor路径前缀
+        /// </summary>
+        public const string NodeGraphProcessorPathPrefix = "Assets/Plugins/NodeGraphProcessor";
+
         public static BaseGraph CreateGraph(Type graphType)
         {
             BaseGraph baseGraph = ScriptableObject.CreateInstance(graphType) as BaseGraph;
-            string panelPath = "Assets/Plugins/Examples/Saves/";
+            string panelPath = $"{NodeGraphProcessorPathPrefix}/Examples/Saves/";
             Directory.CreateDirectory(panelPath);
             string panelFileName = "Graph";
             string path = EditorUtility.SaveFilePanelInProject("Save Graph Asset", panelFileName, "asset", "", panelPath);

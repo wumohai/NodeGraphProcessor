@@ -10,11 +10,6 @@ using UnityEngine.UIElements;
 
 public abstract class UniversalGraphWindow : BaseGraphWindow
 {
-    /// <summary>
-    /// NodeGraphProcessor路径前缀
-    /// </summary>
-    public const string NodeGraphProcessorPathPrefix = "Assets/Plugins/NodeGraphProcessor";
-
     protected UniversalToolbarView m_ToolbarView;
     protected MiniMap m_MiniMap;
 
@@ -25,7 +20,7 @@ public abstract class UniversalGraphWindow : BaseGraphWindow
         base.OnEnable();
 
         titleContent = new GUIContent("Universal Graph",
-            AssetDatabase.LoadAssetAtPath<Texture2D>($"{NodeGraphProcessorPathPrefix}/Editor/Icon_Dark.png"));
+            AssetDatabase.LoadAssetAtPath<Texture2D>($"{GraphCreateAndSaveHelper.NodeGraphProcessorPathPrefix}/Editor/Icon_Dark.png"));
         m_HasInitGUIStyles = false;
     }
 

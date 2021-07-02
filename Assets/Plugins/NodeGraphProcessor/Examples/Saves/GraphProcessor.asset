@@ -18,6 +18,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 2800000, guid: d016d99390140c34487e582e89608964, type: 3}
     - {fileID: 1636575971871760, guid: f78111bdbdeaf6644806fc49fcaf1d30, type: 3}
+    - {fileID: 2800000, guid: e435479f756e86648830e61eae8c2ccc, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -3724,10 +3725,10 @@ MonoBehaviour:
       Data: false
     - Name: inA
       Entry: 4
-      Data: 0
+      Data: -1.8
     - Name: inB
       Entry: 4
-      Data: 0
+      Data: 1.33
     - Name: compared
       Entry: 5
       Data: false
@@ -4834,16 +4835,16 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: -1654
+      Data: -1706.93042
     - Name: 
       Entry: 4
-      Data: 3719
+      Data: 3742.00049
     - Name: 
       Entry: 4
-      Data: 214
+      Data: 208
     - Name: 
       Entry: 4
-      Data: 305
+      Data: 300
     - Name: 
       Entry: 8
       Data: 
@@ -5011,7 +5012,7 @@ MonoBehaviour:
       Data: 
     - Name: output
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: parameterGUID
       Entry: 1
       Data: bf5d0730-874e-4f03-86a7-18a385ae0705
@@ -5745,8 +5746,8 @@ MonoBehaviour:
   - id: 15
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 3947, y: -6652, z: 0}
-  scale: {x: 2, y: 2, z: 1}
+  position: {x: 1320, y: -1386, z: 0}
+  scale: {x: 0.43232757, y: 0.43232757, z: 1}
   references:
     version: 1
     00000000:
@@ -5762,7 +5763,7 @@ MonoBehaviour:
         input: 1
         settings:
           id: 16
-        val: {fileID: 2800000, guid: d016d99390140c34487e582e89608964, type: 3}
+        val: {fileID: 2800000, guid: e435479f756e86648830e61eae8c2ccc, type: 3}
     00000001:
       type: {class: ColorParameter, ns: GraphProcessor, asm: com.alelievr.NodeGraphProcessor.Runtime}
       data:

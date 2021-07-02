@@ -20,19 +20,19 @@ namespace Examples.Editor._05_All
         protected readonly BaseGraphView m_BaseGraphView;
 
         private readonly Texture2D m_CreateNewToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-            $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/CreateNew.png");
+            $"{GraphCreateAndSaveHelper.NodeGraphProcessorPathPrefix}/Editor/CreateNew.png");
 
         private readonly Texture2D m_MiniMapToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-            $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/MiniMap.png");
+            $"{GraphCreateAndSaveHelper.NodeGraphProcessorPathPrefix}/Editor/MiniMap.png");
 
         private readonly Texture2D m_ConditionalToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-            $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/Run.png");
+            $"{GraphCreateAndSaveHelper.NodeGraphProcessorPathPrefix}/Editor/Run.png");
 
         private readonly Texture2D m_ExposedParamsToggleIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-            $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/Blackboard.png");
+            $"{GraphCreateAndSaveHelper.NodeGraphProcessorPathPrefix}/Editor/Blackboard.png");
 
         private readonly Texture2D m_GotoFileButtonIcon = AssetDatabase.LoadAssetAtPath<Texture2D>(
-            $"{UniversalGraphWindow.NodeGraphProcessorPathPrefix}/Editor/GotoFile.png");
+            $"{GraphCreateAndSaveHelper.NodeGraphProcessorPathPrefix}/Editor/GotoFile.png");
 
         public UniversalToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph) : base(graphView)
         {

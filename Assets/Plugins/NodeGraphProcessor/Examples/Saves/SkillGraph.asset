@@ -328,7 +328,15 @@ MonoBehaviour:
       Entry: 8
       Data: 
   serializedNodes: []
-  edges: []
+  edges:
+  - GUID: 42921aec-6984-4440-af19-7a9bd66ddf03
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2b98678c-700e-4343-800b-cd2cb7f5587e
+    outputNodeGUID: a006e07a-69a2-425a-874d-41678e108577
+    inputFieldName: executed
+    outputFieldName: executes
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   stackNodes: []
   pinnedElements:
   - position:
@@ -344,7 +352,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 195, y: 51, z: 0}
   scale: {x: 1, y: 1, z: 1}
   references:
     version: 1
