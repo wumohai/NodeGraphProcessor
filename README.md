@@ -20,6 +20,7 @@ Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自�
  - 支持ExposedParameter模块的Icon以及Value的渲染
  - 支持快速自定义Graph，GraphView，GraphWindow，GraphToolbar
  - 支持GraphEditorWindow中新建GraphAssets
+ - 支持预览节点间数据流向
 
 ## 基于此项目的拓展内容
 
@@ -42,6 +43,10 @@ Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自�
 ### 选中Graph Asset文件后，由Odin在Inspector面板显示整个Graph信息
 
 ![](./Pngs/QQ截图20210404172956.png)
+
+### SkillGraph提供了预览节点数据流向示例
+
+![](./Pngs/13.gif)
 
 ## 使用
 

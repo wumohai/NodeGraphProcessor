@@ -5746,8 +5746,8 @@ MonoBehaviour:
   - id: 15
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 1892, y: -3502, z: 0}
-  scale: {x: 1.520875, y: 1.520875, z: 1}
+  position: {x: 1140, y: -832, z: 0}
+  scale: {x: 0.43232757, y: 0.43232757, z: 1}
   references:
     version: 1
     00000000:

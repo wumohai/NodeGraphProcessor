@@ -34,29 +34,21 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: groups
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   serializedNodes: []
   edges: []
-  groups:
-  - title: New Comment Block
-    color: {r: 0, g: 0, b: 0, a: 0}
-    position:
-      serializedVersion: 2
-      x: 377
-      y: 38
-      width: 460
-      height: 370
-    size: {x: 300, y: 100}
-    innerNodeGUIDs: []
-  - title: Print
-    color: {r: 0.4627451, g: 0.14901963, b: 0.20610665, a: 1}
-    position:
-      serializedVersion: 2
-      x: -67.000015
-      y: 53.999996
-      width: 260
-      height: 346.99997
-    size: {x: 300, y: 100}
-    innerNodeGUIDs: []
   stackNodes:
   - id: 0
   pinnedElements:
