@@ -26,7 +26,7 @@ public class SkillGraphWindow : UniversalGraphWindow
 
     private float m_FlowPointGap = 60f;
 
-    private float m_FlowPointMoveSpeed = 0.009f;
+    private float m_FlowPointMoveSpeed = 0.003f;
 
     public void ShowOrHideEdgeFlowPoint()
     {
@@ -36,7 +36,6 @@ public class SkillGraphWindow : UniversalGraphWindow
     protected override void Update()
     {
         base.Update();
-        Profiler.BeginSample("EdgeFlowPoint");
         if (ShowFlowPoint)
         {
             ShowEdgeFlowPoint();
@@ -45,10 +44,16 @@ public class SkillGraphWindow : UniversalGraphWindow
         {
             HideEdgeFlowPoint();
         }
-
-        Profiler.EndSample();
     }
 
+    /// <summary>
+    /// 展示FlowPoint，自己计算位置信息
+    ///
+    /// ---------------------------------------------------------------------------------------
+    /// 
+    /// 也可以继承Manipulator实现一个控制器，对EdgeView添加AddManipulator，Manipulator即可自动同步位置
+    /// 只需要设置Manipulator的left和top间距即可，可参见https://github.com/HalfLobsterMan/3.0_GraphProcessor/blob/56c2928a1790994df4a1f8a9c2a30477bbe6e21d/Editor/Views/BaseEdgeView.cs
+    /// </summary>
     private void ShowEdgeFlowPoint()
     {
         foreach (var edgeView in graphView.edgeViews)
@@ -109,6 +114,7 @@ public class SkillGraphWindow : UniversalGraphWindow
                                        new Vector2(8 * i, 0),
                         }
                     };
+                    
                     //可以自定义流点颜色，但注意将其alpha通道设置为1
                     //visualElement.style.unityBackgroundImageTintColor = edgeView.serializedEdge.outputNode.color;
                     edgeView.FlowPointProgress.Add(initalPercentage);
