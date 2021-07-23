@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System;
+using Unity.EditorCoroutines.Editor;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
@@ -30,6 +31,16 @@ namespace GraphProcessor
 		public event Action< BaseGraph >	graphUnloaded;
 
 		/// <summary>
+		/// 上一帧记录时间点
+		/// </summary>
+		public static double LastTimePoint = 0;
+		
+		/// <summary>
+		/// 加载Views单次Tick最长耗时，单位为ms，用于分帧加载
+		/// </summary>
+		public static double LoadViewsMaxLimitTime = 33;
+		
+		/// <summary>
 		/// Called by Unity when the window is enabled / opened
 		/// 只会在EditorWindow初次打开/重新编译/进入PlayMode的时候才会执行一次
 		/// </summary>
@@ -54,6 +65,8 @@ namespace GraphProcessor
 				InitializeGraph(graph);
 				reloadWorkaround = false;
 			}
+
+			LastTimePoint = EditorApplication.timeSinceStartup;
 		}
 		
 		/// <summary>
@@ -121,7 +134,7 @@ namespace GraphProcessor
 				return ;
 			}
 
-			graphView.Initialize(graph);
+			EditorCoroutineUtility.StartCoroutine(graphView.Initialize(graph), this);
 
 			InitializeGraphView(graphView);
 
