@@ -21,6 +21,7 @@ Odin插件官网地址：https://odininspector.com/ （使用本仓库需要自�
  - 支持快速自定义Graph，GraphView，GraphWindow，GraphToolbar
  - 支持GraphEditorWindow中新建GraphAssets
  - 支持预览节点间数据流向
+ - 支持GraphView的分帧加载
 
 ## 基于此项目的拓展内容
 
