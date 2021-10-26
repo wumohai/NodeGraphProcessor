@@ -725,7 +725,7 @@ namespace GraphProcessor
 			UpdateNodeInspectorSelection();
 		}
 
-		public IEnumerator Initialize(BaseGraph graph)
+		public void Initialize(BaseGraph graph)
 		{
 			if (this.graph != null)
 			{
@@ -752,14 +752,12 @@ namespace GraphProcessor
 			ClearGraphElements();
 
 			InitializeGraphView();
-			
-			yield return InitializeNodeViews();
-			
-			yield return InitializeEdgeViews();
-			yield return InitializeViews();
-			yield return InitializeGroups();
-			yield return InitializeStickyNotes();
-			yield return InitializeStackNodes();
+			InitializeNodeViews();
+			InitializeEdgeViews();
+			InitializeViews();
+            InitializeGroups();
+			InitializeStickyNotes();
+			InitializeStackNodes();
 
 			initialized?.Invoke();
 			UpdateComputeOrder();
@@ -832,26 +830,23 @@ namespace GraphProcessor
 			onExposedParameterListChanged?.Invoke();
 		}
 
-		IEnumerator InitializeNodeViews()
+		void InitializeNodeViews()
 		{
 			graph.nodes.RemoveAll(n => n == null);
 
 			foreach (var node in graph.nodes)
 			{
-				yield return 0;
 				var v = AddNodeView(node);
 			}
 		}
 
-		IEnumerator InitializeEdgeViews()
+		void InitializeEdgeViews()
 		{
 			// Sanitize edges in case a node broke something while loading
 			graph.edges.RemoveAll(edge => edge == null || edge.inputNode == null || edge.outputNode == null);
 
 			foreach (var serializedEdge in graph.edges)
 			{
-				if(EditorApplication.timeSinceStartup - BaseGraphWindow.LastTimePoint > BaseGraphWindow.LoadViewsMaxLimitTime)
-					yield return 0;
 				nodeViewsPerNode.TryGetValue(serializedEdge.inputNode, out var inputNodeView);
 				nodeViewsPerNode.TryGetValue(serializedEdge.outputNode, out var outputNodeView);
 				if (inputNodeView == null || outputNodeView == null)
@@ -867,47 +862,33 @@ namespace GraphProcessor
 			}
 		}
 
-		IEnumerator InitializeViews()
+		void InitializeViews()
 		{
 			foreach (var pinnedElement in graph.pinnedElements)
 			{
-				if(EditorApplication.timeSinceStartup - BaseGraphWindow.LastTimePoint > BaseGraphWindow.LoadViewsMaxLimitTime)
-					yield return 0;
 				if (pinnedElement.opened)
 					OpenPinned(pinnedElement.editorType.type);
 			}
 		}
 
-        IEnumerator InitializeGroups()
+        void InitializeGroups()
         {
-	        foreach (var group in graph.groups)
-	        {
-		        if(EditorApplication.timeSinceStartup - BaseGraphWindow.LastTimePoint > BaseGraphWindow.LoadViewsMaxLimitTime)
-			        yield return 0;
-		        AddGroupView(group);
-	        }
+            foreach (var group in graph.groups)
+                AddGroupView(group);
         }
 
-		IEnumerator InitializeStickyNotes()
+		void InitializeStickyNotes()
 		{
 #if UNITY_2020_1_OR_NEWER
-			foreach (var group in graph.stickyNotes)
-			{
-				if(EditorApplication.timeSinceStartup - BaseGraphWindow.LastTimePoint > BaseGraphWindow.LoadViewsMaxLimitTime)
-					yield return 0;
-				AddStickyNoteView(group);
-			}
+            foreach (var group in graph.stickyNotes)
+                AddStickyNoteView(group);
 #endif
 		}
 
-		IEnumerator InitializeStackNodes()
+		void InitializeStackNodes()
 		{
 			foreach (var stackNode in graph.stackNodes)
-			{
-				if(EditorApplication.timeSinceStartup - BaseGraphWindow.LastTimePoint > BaseGraphWindow.LoadViewsMaxLimitTime)
-					yield return 0;
 				AddStackNodeView(stackNode);
-			}
 		}
 
 		protected virtual void InitializeManipulators()
@@ -1399,7 +1380,7 @@ namespace GraphProcessor
 		/// </summary>
         public void Dispose()
         {
-	        ClearGraphElements();
+			ClearGraphElements();
 			RemoveFromHierarchy();
 			Undo.undoRedoPerformed -= ReloadView;
 			Object.DestroyImmediate(nodeInspector);
