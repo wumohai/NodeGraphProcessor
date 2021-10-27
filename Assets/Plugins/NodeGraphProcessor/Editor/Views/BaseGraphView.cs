@@ -9,7 +9,7 @@ using System.Linq;
 using System;
 using UnityEditor.SceneManagement;
 using System.Reflection;
-
+using Unity.EditorCoroutines.Editor;
 using Status = UnityEngine.UIElements.DropdownMenuAction.Status;
 using Object = UnityEngine.Object;
 
@@ -685,44 +685,7 @@ namespace GraphProcessor
 			// so the one that are not serialized need to be synchronized)
 			graph.Deserialize();
 
-			// Get selected nodes
-			var selectedNodeGUIDs = new List<string>();
-			foreach (var e in selection)
-			{
-				if (e is BaseNodeView v && this.Contains(v))
-					selectedNodeGUIDs.Add(v.nodeTarget.GUID);
-			}
-
-			// Remove everything
-			RemoveNodeViews();
-			RemoveEdges();
-			RemoveGroups();
-#if UNITY_2020_1_OR_NEWER
-			RemoveStrickyNotes();
-#endif
-			RemoveStackNodeViews();
-
-			UpdateSerializedProperties();
-
-			// And re-add with new up to date datas
-			InitializeNodeViews();
-			InitializeEdgeViews();
-            InitializeGroups();
-			InitializeStickyNotes();
-			InitializeStackNodes();
-
-			Reload();
-
-			UpdateComputeOrder();
-
-			// Restore selection after re-creating all views
-			// selection = nodeViews.Where(v => selectedNodeGUIDs.Contains(v.nodeTarget.GUID)).Select(v => v as ISelectable).ToList();
-			foreach (var guid in selectedNodeGUIDs)
-			{
-				AddToSelection(nodeViews.FirstOrDefault(n => n.nodeTarget.GUID == guid));
-			}
-
-			UpdateNodeInspectorSelection();
+			EditorCoroutineUtility.StartCoroutine(this.Initialize(this.graph), this);
 		}
 
 		public IEnumerator Initialize(BaseGraph graph)
