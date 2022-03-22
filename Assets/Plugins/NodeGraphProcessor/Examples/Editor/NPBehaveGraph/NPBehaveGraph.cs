@@ -18,7 +18,7 @@ namespace Examples.Editor._05_All
         [Button("ExpoertNPBehaveData")]
         public void ExpoertNPBehaveData()
         {
-            
+          Debug.Log("ExpoertNPBehaveData");   
         }
     }
 }

@@ -39,4 +39,9 @@ public class ForLoopNode : ConditionalNode
 		return outputPorts.FirstOrDefault(n => n.fieldName == nameof(loopCompleted))
 			.GetEdges().Select(e => e.inputNode as ConditionalNode);
 	}
+
+	public override void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+	{
+		base.TryGetOutputValue(outputPort, inputPort, ref value);
+	}
 }

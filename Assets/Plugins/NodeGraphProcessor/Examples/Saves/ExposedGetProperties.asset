@@ -13,95 +13,15 @@ MonoBehaviour:
   m_Name: ExposedGetProperties
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
+    SerializedFormat: 0
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 0}
-    SerializedBytesString: 
+    SerializedBytesString: AQEFAAAAbgBvAGQAZQBzAC8AAAAAAW8AAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsARwByAGEAcABoAFAAcgBvAGMAZQBzAHMAbwByAC4AQgBhAHMAZQBOAG8AZABlACwAIABjAG8AbQAuAGEAbABlAGwAaQBlAHYAcgAuAE4AbwBkAGUARwByAGEAcABoAFAAcgBvAGMAZQBzAHMAbwByAC4AUgB1AG4AdABpAG0AZQBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgAAAAAABgEAAAAAAAAAAi8BAAAAAUUAAABHAHIAYQBwAGgAUAByAG8AYwBlAHMAcwBvAHIALgBQAGEAcgBhAG0AZQB0AGUAcgBOAG8AZABlACwAIABjAG8AbQAuAGEAbABlAGwAaQBlAHYAcgAuAE4AbwBkAGUARwByAGEAcABoAFAAcgBvAGMAZQBzAHMAbwByAC4AUgB1AG4AdABpAG0AZQABAAAALQEOAAAAbgBvAGQAZQBDAHUAcwB0AG8AbQBOAGEAbQBlACcBBAAAAEcAVQBJAEQAASQAAAA1ADgANAA1ADIAMwA3ADEALQA5ADAANwA0AC0ANABmADYAMgAtADgAMgBhADIALQA5AGQAOABmAGUANAAwAGIAOQA4ADIAOAAXAQwAAABjAG8AbQBwAHUAdABlAE8AcgBkAGUAcgAAAAAAAwEIAAAAcABvAHMAaQB0AGkAbwBuAC8CAAAAASgAAABVAG4AaQB0AHkARQBuAGcAaQBuAGUALgBSAGUAYwB0ACwAIABVAG4AaQB0AHkARQBuAGcAaQBuAGUALgBDAG8AcgBlAE0AbwBkAHUAbABlACB6kzXGIAPQCUYgAAD0QiAAABRCBSsBCAAAAGUAeABwAGEAbgBkAGUAZAAAKwEFAAAAZABlAGIAdQBnAAArAQgAAABuAG8AZABlAEwAbwBjAGsAAC0BBQAAAGkAbgBwAHUAdAALAQYAAABvAHUAdABwAHUAdAAAAAAAJwENAAAAcABhAHIAYQBtAGUAdABlAHIARwBVAEkARAABJAAAAGMAOABkAGUAMQA4AGYAOAAtADgAOAAwAGQALQA0ADgAYQA4AC0AYQAzADgAYQAtADkANAA2ADcAYgAxADIANQAwAGUAZgBiAB0BCAAAAGEAYwBjAGUAcwBzAG8AcgAAAAAAAAAAAAUHBQEBBgAAAGcAcgBvAHUAcABzAC8DAAAAAWwAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsARwByAGEAcABoAFAAcgBvAGMAZQBzAHMAbwByAC4ARwByAG8AdQBwACwAIABjAG8AbQAuAGEAbABlAGwAaQBlAHYAcgAuAE4AbwBkAGUARwByAGEAcABoAFAAcgBvAGMAZQBzAHMAbwByAC4AUgB1AG4AdABpAG0AZQBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgACAAAABgAAAAAAAAAABwU=
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: nodes
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[GraphProcessor.BaseNode, com.alelievr.NodeGraphProcessor.Runtime]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|GraphProcessor.ParameterNode, com.alelievr.NodeGraphProcessor.Runtime
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: 58452371-9074-4f62-82a2-9d8fe40b9828
-    - Name: computeOrder
-      Entry: 3
-      Data: 0
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: -11620.8691
-    - Name: 
-      Entry: 4
-      Data: 8820.003
-    - Name: 
-      Entry: 4
-      Data: 122
-    - Name: 
-      Entry: 4
-      Data: 37
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: input
-      Entry: 6
-      Data: 
-    - Name: output
-      Entry: 10
-      Data: 0
-    - Name: parameterGUID
-      Entry: 1
-      Data: c8de18f8-880d-48a8-a38a-9467b1250efb
-    - Name: accessor
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: groups
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   serializedNodes: []
   edges: []
   stackNodes: []
@@ -214,8 +134,8 @@ MonoBehaviour:
     settings:
       id: 12
   stickyNotes: []
-  position: {x: 15945, y: -11291, z: 0}
-  scale: {x: 1.3225, y: 1.3225, z: 1}
+  position: {x: 9252.5, y: -6298, z: 0}
+  scale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
     version: 1
     00000000:

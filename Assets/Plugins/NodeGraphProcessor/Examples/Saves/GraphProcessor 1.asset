@@ -13,196 +13,14 @@ MonoBehaviour:
   m_Name: GraphProcessor 1
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
+    SerializedFormat: 0
     SerializedBytes: 
     ReferencedUnityObjects: []
-    SerializedBytesString: 
+    SerializedBytesString: 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
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: nodes
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[GraphProcessor.BaseNode, com.alelievr.NodeGraphProcessor.Runtime]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 1|AbstractNodeChild2, NodeGraphProcessor.Examples
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: f060433b-37cf-4db0-bfdc-6ce265cc8908
-    - Name: computeOrder
-      Entry: 3
-      Data: 0
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 404
-    - Name: 
-      Entry: 4
-      Data: 166
-    - Name: 
-      Entry: 4
-      Data: 100
-    - Name: 
-      Entry: 4
-      Data: 100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: input
-      Entry: 4
-      Data: 0
-    - Name: output
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: 23304731-bfcc-447a-a187-216ea9a7928e
-    - Name: computeOrder
-      Entry: 3
-      Data: 1
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 597
-    - Name: 
-      Entry: 4
-      Data: 141
-    - Name: 
-      Entry: 4
-      Data: 241
-    - Name: 
-      Entry: 4
-      Data: 141
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: inA
-      Entry: 4
-      Data: 0
-    - Name: inB
-      Entry: 4
-      Data: 0
-    - Name: compared
-      Entry: 5
-      Data: false
-    - Name: compareFunction
-      Entry: 3
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|NodeGraphProcessor.Examples.Comparison, NodeGraphProcessor.Examples
-    - Name: nodeCustomName
-      Entry: 6
-      Data: 
-    - Name: GUID
-      Entry: 1
-      Data: 33eae0b3-ad70-453d-a559-706acd57683d
-    - Name: computeOrder
-      Entry: 3
-      Data: 2
-    - Name: position
-      Entry: 7
-      Data: UnityEngine.Rect, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 356
-    - Name: 
-      Entry: 4
-      Data: 338
-    - Name: 
-      Entry: 4
-      Data: 241
-    - Name: 
-      Entry: 4
-      Data: 162
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: expanded
-      Entry: 5
-      Data: false
-    - Name: debug
-      Entry: 5
-      Data: false
-    - Name: nodeLock
-      Entry: 5
-      Data: false
-    - Name: inA
-      Entry: 4
-      Data: 0
-    - Name: inB
-      Entry: 4
-      Data: 0
-    - Name: compared
-      Entry: 5
-      Data: false
-    - Name: compareFunction
-      Entry: 3
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: groups
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   serializedNodes: []
   edges:
   - GUID: 3859ab67-3f9d-499a-a930-b56102f56644
@@ -228,7 +46,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 0, y: 0, z: 0}
+  position: {x: -27, y: -71.5, z: 0}
   scale: {x: 1, y: 1, z: 1}
   references:
     version: 1
